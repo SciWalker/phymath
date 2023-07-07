@@ -1,0 +1,75 @@
+<h2>Chili Detection - Beta Test Page</h2>
+<p>Please upload image file to receive the detection result within 10 seconds.</p>
+
+<img id="output_image" height = 300 px width = 300 px>
+<div>
+<input type="file" accept="image/*" onchange="preview_image(event)">
+</div>
+<p id="showResult"></p>
+<img id="img1"></div>
+<script >
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function(file){
+      document.getElementById("showResult").innerHTML ="Loading..."
+      var image = new Image();
+      image.src = file.target.result;
+      var output = document.getElementById('output_image');
+        output.src = reader.result;
+      image.onload=function(){
+        console.log(image.height)
+        var canvas = document.createElement('CANVAS');
+        var ctx = canvas.getContext('2d');
+        var dataURL;
+        canvas.height = image.height;
+        canvas.width = image.width;
+      ctx.drawImage(output, 0, 0,canvas.width,canvas.height);
+      dataURL = canvas.toDataURL("image/jpeg")
+      console.log(dataURL)
+      var data_json=JSON.stringify({
+                          "image": dataURL
+                        });
+      
+      //console.log(output.src);
+      
+           fetch('https://gjxn70gu7l.execute-api.ap-southeast-1.amazonaws.com/prod/gh/chili-det', {
+                method: 'POST',
+                crossDomain: true, 
+                mode: 'cors',
+                cache:'no-cache',
+                body: data_json,
+                headers: {
+                'Content-Type': 'application/json'
+                }
+            })
+			.then(response =>{
+				
+				//console.log('preprint response');
+				//console.log(response);
+
+                return response.json();
+                    }) 
+                    //if (rt3=="Embedded") {
+                    //FR.readAsDataURL( this.files[0] );
+                    //})
+				
+			
+			.then(response_2=>{
+				//console.log(response_2["Image"]);
+				  //document.getElementById("showResult").innerHTML = JSON.stringify(response_2["Image"]);
+				  document.getElementById("showResult").innerHTML ="Successful!"
+                  var imageOut = new Image();
+                  
+                  document.getElementById("img1").src = 'data:image/jpeg;base64,'+(response_2["Image"]);
+			})
+      }
+
+
+
+    }
+    var rt1=reader.readAsDataURL(event.target.files[0]);
+
+    
+
+  }
+</script>

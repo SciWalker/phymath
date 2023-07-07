@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Milesridge Green House API</title>
+
+  <style>
+    .ddl {
+      position: relative;
+      display: inline-block;
+    }
+    .ddl-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      z-index: 1;
+    }
+    .ddl-content button {
+      color: black;
+      width: 96px;
+      text-decoration: none;
+      display: block;
+    }
+    .ddl-content button:hover {background-color: #ddd;}
+    .ddl:hover .ddl-content {display: block;}
+  </style>
+</head>
+
+<body onload="init_show()">
+  <div class="container">   
+    <h1 class="text-center">
+      MARDI Sensor Data
+    </h1>
+  </div>
+
+  <div class="container">         
+    <table class="table table-borderless table-sm">
+      <thead class="text-center">
+        <tr>
+          <th style="width: 10%">Device ID</th>
+          <th style="width: 30%">Updated</th>
+          <th style="width: 60%">Ambient Temperature</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr>
+          <td>
+            <div class="ddl">
+              <button id="ddl-at-1" class="btn btn-primary dropdown-toggle" style="width:96px" type="button">
+                at-001
+              </button>
+              <div class="ddl-content">
+                <button onclick="list_click('ddl-at-1','at-001')" class="btn btn-info btn-sm">at-001</button>
+                <button onclick="list_click('ddl-at-1','at-002')" class="btn btn-info btn-sm">at-002</button>
+                <button onclick="list_click('ddl-at-1','at-003')" class="btn btn-info btn-sm">at-003</button>
+                <button onclick="list_click('ddl-at-1','at-004')" class="btn btn-info btn-sm">at-004</button>
+              </div>
+            </div>
+          </td>
+          <td class="table-success rounded" style="background-color: #96D4D4">
+            <div id="datetime-at_1"></div>
+          </td>
+          <td class="table-success rounded" style="background-color: #96D4D4">
+            <div id="data-at_1"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table class="table table-borderless table-sm text-center">
+              <tbody class="text-center">
+                <tr>
+                  <td class="table-sm rounded">
+                    <button type="button" class="btn btn-success" onclick="toggle_display('his-at-1','graph-at-1')">
+                      History
+                    </button>
+                  </td>
+                  <td class="table-sm rounded">
+                    <button type="button" class="btn btn-success" onclick="toggle_display('graph-at-1','his-at-1')">
+                      Graph
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td colspan="2">
+            <div class="collapse table-success rounded" id="his-at-1">
+              <table class="table table-borderless table-sm text-center">
+                <thead>
+                  <tr>
+                    <th>Updated</th>
+                    <th>History Data</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  <tr>
+                    <td class="table-success rounded" style="background-color: #96D4D4">
+                      <div id="datetime-his_at_1"></div>
+                    </td>
+                    <td class="table-success rounded" style="background-color: #96D4D4">
+                      <div id="data-his_at_1"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+    </table>
+  </div>
+  <div class="container collapse mx-auto" style="width: 90%;" id="graph-at-1">
+    <canvas id="atChart-1"></canvas>
+  </div>
+
+  <div class="container">         
+    <table class="table table-borderless table-sm">
+      <thead class="text-center">
+        <tr>
+          <th style="width: 10%">Device ID</th>
+          <th style="width: 30%">Updated</th>
+          <th style="width: 60%">Ambient Temperature</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr>
+          <td>
+            <div class="ddl">
+              <button id="ddl-at-2" class="btn btn-primary dropdown-toggle" style="width:96px" type="button">
+                at-001
+              </button>
+              <div class="ddl-content">
+                <button onclick="list_click('ddl-at-2','at-001')" class="btn btn-info btn-sm">at-001</button>
+                <button onclick="list_click('ddl-at-2','at-002')" class="btn btn-info btn-sm">at-002</button>
+                <button onclick="list_click('ddl-at-2','at-003')" class="btn btn-info btn-sm">at-003</button>
+                <button onclick="list_click('ddl-at-2','at-004')" class="btn btn-info btn-sm">at-004</button>
+              </div>
+            </div>
+          </td>
+          <td class="table-success rounded" style="background-color: #96D4D4">
+            <div id="datetime-at_2"></div>
+          </td>
+          <td class="table-success rounded" style="background-color: #96D4D4">
+            <div id="data-at_2"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table class="table table-borderless table-sm text-center">
+              <tbody class="text-center">
+                <tr>
+                  <td class="table-sm rounded">
+                    <button type="button" class="btn btn-success" onclick="toggle_display('his-at-2','graph-at-2')">
+                      History
+                    </button>
+                  </td>
+                  <td class="table-sm rounded">
+                    <button type="button" class="btn btn-success" onclick="toggle_display('graph-at-2','his-at-2')">
+                      Graph
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td colspan="2">
+            <div class="collapse table-success rounded" id="his-at-2">
+              <table class="table table-borderless table-sm text-center">
+                <thead>
+                  <tr>
+                    <th>Updated</th>
+                    <th>History Data</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  <tr>
+                    <td class="table-success rounded" style="background-color: #96D4D4">
+                      <div id="datetime-his_at_2"></div>
+                    </td>
+                    <td class="table-success rounded" style="background-color: #96D4D4">
+                      <div id="data-his_at_2"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+    </table>
+  </div>
+  <div class="container collapse mx-auto" style="width: 90%;" id="graph-at-2">
+    <canvas id="atChart-2"></canvas>
+  </div>
+  
+  <div class="container">         
+    <table class="table table-borderless table-sm text-center">
+      <thead>
+        <tr>
+          <th style="width: 10%">Device ID</th>
+          <th style="width: 30%">Updated</th>
+          <th style="width: 60%">CO1</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr>
+          <td>
+            <div class="ddl">
+              <button id="ddl-co" class="btn btn-primary dropdown-toggle" style="width:96px" type="button">
+                co-001
+              </button>
+              <div class="ddl-content">
+                <button onclick="list_click('ddl-co','co-001')" class="btn btn-info btn-sm">co-001</button>
+                <button onclick="list_click('ddl-co','co-002')" class="btn btn-info btn-sm">co-002</button>
+              </div>
+            </div>
+          </td>
+          <td class="table-success rounded" style="background-color: #96D4D4">
+            <div id="datetime-co"></div>
+          </td>
+          <td class="table-success rounded" style="background-color: #96D4D4">
+            <div id="data-co"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table class="table table-borderless table-sm text-center">
+              <tbody class="text-center">
+                <tr>
+                  <td class="table-sm rounded">
+                    <button type="button" class="btn btn-success" onclick="toggle_display('his-co','graph-co')">
+                      History
+                    </button>
+                  </td>
+                  <td class="table-sm rounded">
+                    <button type="button" class="btn btn-success" onclick="toggle_display('graph-co','his-co')">
+                      Graph
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td colspan="2">
+            <div class="collapse table-success rounded" id="his-co">
+              <table class="table table-borderless table-sm text-center">
+                <thead>
+                  <tr>
+                    <th>Updated</th>
+                    <th>History Data</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  <tr>
+                    <td class="table-success rounded" style="background-color: #96D4D4">
+                      <div id="datetime-his_co"></div>
+                    </td>
+                    <td class="table-success rounded" style="background-color: #96D4D4">
+                      <div id="data-his_co"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+    </table>
+  </div>
+  <div class="collapse mx-auto" style="width: 90%;" id="graph-co">
+    <canvas id="coChart"></canvas>
+  </div>
+    </div>
+
+  <br>
+  <div class="container">         
+    <table class="table table-borderless table-sm">
+      <thead class="text-center">
+        <tr>
+          <th style="width: 10%">Device ID</th>
+          <th style="width: 30%">Updated</th>
+          <th style="width: 60%">Soil Moisture</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr>
+          <td>
+            <div class="ddl">
+              <button id="ddl-sm" class="btn btn-primary dropdown-toggle" style="width:96px" type="button">
+                sm-001
+              </button>
+              <div class="ddl-content">
+                <button onclick="list_click('ddl-sm','sm-001')" class="btn btn-info btn-sm">sm-001</button>
+                <button onclick="list_click('ddl-sm','sm-002')" class="btn btn-info btn-sm">sm-002</button>
+              </div>
+            </div>
+          </td>
+          <td class="table-success rounded" style="background-color: #96D4D4">
+            <div id="datetime-sm"></div>
+          </td>
+          <td class="table-success rounded" style="background-color: #96D4D4">
+            <table class="table text-center table-borderless">
+              <tr id="data-sm"></tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table class="table table-borderless table-sm text-center">
+              <tbody class="text-center">
+                <tr>
+                  <td class="table-sm rounded">
+                    <button type="button" class="btn btn-success" onclick="toggle_display('his-sm','graph-sm')">
+                      History
+                    </button>
+                  </td>
+                  <td class="table-sm rounded">
+                    <button type="button" class="btn btn-success" onclick="toggle_display('graph-sm','his-sm')">
+                      Graph
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td colspan="2">
+            <div class="collapse table-success rounded" id="his-sm">
+              <table class="table table-borderless table-sm text-center">
+                <thead>
+                  <tr>
+                    <th>Updated</th>
+                    <th>History Data</th>
+                    <th class="collapse mx-auto">Updated</th>
+                    <th>History Data</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  <tr>
+                    <td class="table-success rounded" style="background-color: #96D4D4">
+                      <div id="datetime-his_sm_1"></div>
+                    </td>
+                    <td class="table-success rounded" style="background-color: #96D4D4">
+                      <div id="data-his_sm_1"></div>
+                    </td>
+                    <td class="table-success rounded collapse mx-auto" style="background-color: #96D4D4">
+                      <div id="datetime-his_sm_2"></div>
+                    </td>
+                    <td class="table-success rounded" style="background-color: #96D4D4">
+                      <div id="data-his_sm_2"></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+    </table>
+  </div>
+  <div class="collapse mx-auto" style="width: 90%;" id="graph-sm">
+    <canvas id="smChart"></canvas>
+  </div>
+
+  <script>  
+  url="https://zf244029ck.execute-api.us-east-1.amazonaws.com/gh_prod/GetDB"
+  // Array for Graph
+  at1_y_array = []
+  at1_x_array = []
+  at2_y_array = []
+  at2_x_array = []
+  co_y_array = []
+  co_x_array = []
+  sm1_y_array = []
+  sm2_y_array = []
+  sm_x_array = []
+
+  function init_show() {
+    loadingword("data-at_1");
+    loadingword("datetime-at_1");
+    apicall("dht11", "data-at_1","latest");
+    loadingword("data-at_2");
+    loadingword("datetime-at_2");
+    apicall("dht11", "data-at_2","latest");
+    loadingword("data-co");
+    loadingword("datetime-co");
+    apicall("mq-7-co1-sensor", "data-co","latest");
+    loadingword("data-sm");
+    loadingword("datetime-sm");
+    apicall("capacitive-soil-moisture-sensor", "data-sm","latest");
+
+    loadingword("data-his_at_1"); 
+    loadingword("datetime-his_at_1");
+    apicall("dht11", "data-his_at_1","all");
+    loadingword("data-his_at_2"); 
+    loadingword("datetime-his_at_2");
+    apicall("dht11", "data-his_at_2","all");
+    loadingword("data-his_co"); 
+    loadingword("datetime-his_co");
+    apicall("mq-7-co1-sensor", "data-his_co","all");
+    loadingword("data-his_sm_1"); 
+    loadingword("datetime-his_sm_1");
+    apicall("capacitive-soil-moisture-sensor", "data-his_sm_1","all");
+    loadingword("data-his_sm_2"); 
+    loadingword("datetime-his_sm_2");
+    apicall("capacitive-soil-moisture-sensor", "data-his_sm_2","all");
+  }
+
+  function list_click(sensor_type, sel_id) {
+    document.getElementById(sensor_type).innerHTML = sel_id;
+    switch(sensor_type) {
+      case "ddl-at-1":
+        loadingword("data-at_1");
+        loadingword("datetime-at_1");
+        apicall("dht11", "data-at_1","latest");
+        loadingword("data-his_at_1"); 
+        loadingword("datetime-his_at_1");
+        apicall("dht11", "data-his_at_1","all");
+        atChart1.render();
+        break;
+      case "ddl-at-2":
+        loadingword("data-at_2");
+        loadingword("datetime-at_2");
+        apicall("dht11", "data-at_2","latest");
+        loadingword("data-his_at_2"); 
+        loadingword("datetime-his_at_2");
+        apicall("dht11", "data-his_at_2","all");
+        break;
+      case "ddl-co":
+        loadingword("data-co");  
+        loadingword("datetime-co");
+        apicall("mq-7-co1-sensor", "data-co","latest");
+        loadingword("data-his_co"); 
+        loadingword("datetime-his_co");
+        apicall("mq-7-co1-sensor", "data-his_co","all");
+        break;
+      case "ddl-sm":
+        loadingword("data-sm"); 
+        loadingword("datetime-sm");
+        apicall("capacitive-soil-moisture-sensor", "data-sm","latest");
+        loadingword("data-his_sm_1"); 
+        loadingword("datetime-his_sm_1");
+        apicall("capacitive-soil-moisture-sensor", "data-his_sm_1","all");
+        loadingword("data-his_sm_2"); 
+        loadingword("datetime-his_sm_2");
+        apicall("capacitive-soil-moisture-sensor", "data-his_sm_2","all");
+        break;
+      default:
+        break;
+    }
+  }
+    
+  function apicall(sensor_type, sensor_data, mode) {
+    sensor_data_datetime = "datetime-"+sensor_data.split("-")[1];
+    data={
+    "device_id": sensor_type,
+    "mode": mode
+    }
+    fetch(url, {
+      method: 'POST', 
+      mode: 'cors',
+      crossDomain: true, 
+      cache: 'no-cache', 
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    })
+      .then((response) => {
+          document.getElementById(sensor_data).innerHTML = "";
+      return response.json();
+    })
+      .then(function (data) {
+
+          appendData(data, sensor_data);
+          
+          appendDatetime(data, sensor_data);
+          
+      })
+      .catch(function (err) {
+          console.log('error: ' + err);
+      });
+  }
+
+  function appendData(data, sensor_data) {
+      var mainContainer = document.getElementById(sensor_data);
+      for (var i = 0; i < data.length; i++) {
+          var div = document.createElement("div");
+          
+          display_data = data[i].data;
+          display_data = display_data.slice(1,-1).replace(/['"]+/g, '');
+          display_data= display_data.split(","); 
+          if (sensor_data == "data-at_1") {
+            div.innerHTML = display_data[0];
+          }
+          else if (sensor_data == "data-at_2") {
+            div.innerHTML = display_data[1];
+          }
+          else if (sensor_data == "data-his_at_1") {
+            display_data = display_data[0].split(":");
+            div.innerHTML = display_data[1];
+            at1_y_array.push(display_data[1]);
+          }
+          else if (sensor_data == "data-his_at_2") {
+            display_data = display_data[1].split(":");
+            div.innerHTML = display_data[1];
+            at2_y_array.push(display_data[1]);
+          }
+          else if (sensor_data == "data-his_co") {
+            console.log(sensor_data)
+            display_data = display_data[0].split(":");
+            div.innerHTML = display_data[1];
+            co_y_array.push(display_data[1]);
+            
+          }
+          else if (sensor_data == "data-his_sm_1") {
+            display_data = display_data[0].split(":");
+            div.innerHTML = display_data[1];
+            sm1_y_array.push(display_data[1]);
+          }
+          else if (sensor_data == "data-his_sm_2") {
+            display_data = display_data[1].split(":");
+            div.innerHTML = display_data[1];
+            sm2_y_array.push(display_data[1]);
+          }
+          else {
+            div.innerHTML = display_data;
+          }
+          mainContainer.appendChild(div);
+          if (sensor_data == "data-sm"){
+            display_twice(display_data, "data-sm");
+          }
+      }
+  }
+
+  function appendDatetime(data, sensor_data) {
+      
+      var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
+         "Aug", "Sep", "Oct", "Nov", "Dec"];
+      sensor_data_datetime = "datetime-"+sensor_data.split("-")[1];
+      document.getElementById(sensor_data_datetime).innerHTML = "";
+      var mainContainer = document.getElementById(sensor_data_datetime);
+      
+      for (var i = 0; i < data.length; i++) {
+        var div = document.createElement("div");
+        
+        timestamp = data[i].datetime;
+        if (sensor_data == "data-his_co") {
+          iso_dateTime = iso8601_DateTime(timestamp);
+          co_x_array.push(iso_dateTime);
+        }
+        else if (sensor_data == "data-his_at_1") {
+          iso_dateTime = iso8601_DateTime(timestamp);
+          at1_x_array.push(iso_dateTime);
+        }
+        else if (sensor_data == "data-his_at_2") {
+          iso_dateTime = iso8601_DateTime(timestamp);
+          at2_x_array.push(iso_dateTime);
+        }
+        else if (sensor_data == "data-his_sm_1" || sensor_data == "data-his_sm_2") {
+          iso_dateTime = iso8601_DateTime(timestamp);
+          sm_x_array.push(iso_dateTime);
+        }
+        var date = new Date(timestamp*1000);
+        var day = date.getDate();
+        var month= months[date.getMonth()];
+        var year = date.getFullYear();
+        // Hours part from the timestamp
+        var hours =date.getHours();
+        // Minutes part from the timestamp
+        var minutes = ":" + date.getMinutes();
+        // Seconds part from the timestamp
+        var seconds = ":" + date.getSeconds();
+        datetime=year+'-'+month+'-'+day+' '+hours+minutes+seconds;
+
+        div.innerHTML = datetime;
+        mainContainer.appendChild(div);
+      }
+  }
+
+  function loadingword(data) {
+        document.getElementById(data).innerHTML = "";
+        var mainContainer = document.getElementById(data);
+        var div = document.createElement("div");
+        div.innerHTML = "loading";
+        mainContainer.appendChild(div);
+  }
+
+  function display_twice(display_data, sensor_data) {
+    document.getElementById(sensor_data).innerHTML = "";
+    var display_area_1 = document.createElement("td");
+    display_area_1.innerHTML = display_data[0];
+    document.getElementById(sensor_data).appendChild(display_area_1).setAttribute("class","col");
+    var display_area_2 = document.createElement("td");
+    display_area_2.innerHTML = display_data[1];
+    document.getElementById(sensor_data).appendChild(display_area_2).setAttribute("class","col");
+  }
+
+  // Convert to iso 8601 date & time standard (YYYY-MM-DD HH:mm:ss)
+  function iso8601_DateTime(raw) {
+    var date = new Date(raw*1000);
+    // Configure Date
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    month = zeroPad(month);
+    var day = date.getDate();
+    day = zeroPad(day);
+    //Configure Time
+    var hours = date.getHours();
+    hours = zeroPad(hours);
+    var minutes = date.getMinutes();
+    minutes = zeroPad(minutes);
+    var seconds = date.getSeconds();
+    seconds = zeroPad(seconds);
+    datetime = year + '-' + month + '-' + day + ' ' + hours + ":" + minutes + ":" + seconds;
+    return datetime;
+  }
+
+  // Zero Padding
+  function zeroPad(value) {
+    if (value < 10){
+      value = '0' + value;
+    }
+    return value;
+  }
+
+  
+  // Toggle History and Graph
+  function toggle_display(clicked, that) {
+    here  = document.getElementById(clicked).className;
+    there = document.getElementById(that).className;
+    switch (here.search(" show")) {
+      case -1: 
+        document.getElementById(clicked).className = here.concat(" show");
+        document.getElementById(that).className = there.replace(" show", "");
+        break;
+      default: 
+      document.getElementById(clicked).className = here.replace(" show", "");
+        break;
+    }
+  }
+
+  // Graph-AT - humidity
+  var atChart1 = new Chart("atChart-1", {
+    type: "line",
+    data: {
+      labels: at1_x_array,
+      datasets: [{
+        label: 'Humidity',
+        fill: false,
+        lineTension: 0,
+        backgroundColor: "rgba(75, 108, 192)",
+        borderColor: "rgba(0,0,255,0.1)",
+        data: at1_y_array
+      }]
+    },
+    options: {
+      legend: {display: false},
+      scales: {
+        yAxes: [{ticks: {min: 6, max:16}}],
+      },
+    }
+  });
+
+  // Graph-AT - temperature
+  new Chart("atChart-2", {
+    type: "line",
+    data: {
+      labels: at2_x_array,
+      datasets: [{
+        label: 'Temperature (celcius)',
+        fill: false,
+        lineTension: 0,
+        backgroundColor: "rgb(75, 192, 192)",
+        borderColor: "rgba(0,0,255,0.1)",
+        data: at2_y_array
+      }]
+    },
+    options: {
+      legend: {display: false},
+      scales: {
+        yAxes: [{ticks: {min: 6, max:16}}],
+      },
+    }
+  });
+
+  // Graph-CO
+  console.log(co_x_array);
+  console.log(co_y_array);
+  new Chart("coChart", {
+    type: "line",
+    data: {
+      labels: co_x_array,
+      datasets: [{
+        label: 'Co1',
+        fill: false,
+        lineTension: 0,
+        backgroundColor: "rgba(0,0,255,1.0)",
+        borderColor: "rgba(0,0,255,0.1)",
+        data: co_y_array
+      }]
+    },
+    options: {
+      legend: {display: false},
+      scales: {
+        yAxes: [{ticks: {min: 6, max:16}}],
+      },
+    }
+  });
+
+  // Graph-SM
+  console.log(sm2_y_array);
+  new Chart("smChart", {
+    type: "line",
+    data: {
+      labels: sm_x_array,
+      datasets: [{
+        label: 'Soil Moisture',
+        fill: false,
+        lineTension: 0,
+        backgroundColor: "rgba(135, 75, 192)",
+        borderColor: "rgba(0,0,255,0.1)",
+        data: sm1_y_array
+      }]
+    },
+    options: {
+      legend: {display: false},
+      scales: {
+        yAxes: [{ticks: {min: 6, max:16}}],
+      },
+    }
+  });
+  </script> 
+
+  <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<header><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+  </script><script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> <style>
+canvas {<br />
+    border:1px solid #d3d3d3;<br />
+    background-color: #f1f1f1;<br />
+    background:url(/images/mixspaceearth.png)<br />
+}<br />
+</style>
+
+</header>
+<body>
+
+<script>
+var myGamePiece;
+var myObstacles = [];
+var myScore;
+var showpos;
+
+onload=function startGame() {
+    myGamePiece = new component(30, 30, "red", 700, 490);
+    myGamePiece.gravity = 0.2;
+    myGamePiece.acceleratehorizontal=0;
+    myScore = new component("30px", "Consolas", "black", 210, 55, "text");
+    showpos= new component("30px", "Consolas", "black", 10, 22, "text");
+    myGameArea.start();
+    myGamePiece2 = new component(30, 30, "blue", 200, 490);
+    myGamePiece2.gravity = 0.8;
+    myGamePiece2.acceleratehorizontal=0;
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+
+    start : function() {
+        this.canvas.width = 920;
+        this.canvas.height = 520;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 0;
+        this.interval = setInterval(updateGameArea, 20);
+        },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+}
+
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    this.score = 0;
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = -10;    
+    this.x = x;
+    this.y = y;
+    this.gravity = 10;
+    this.gravitySpeed = 0;
+    this.update = function() {
+        ctx = myGameArea.context;
+        if (this.type == "text") {
+            ctx.font = this.width + " " + this.height;
+            ctx.fillStyle = color;
+            ctx.fillText(this.text, this.x, this.y);
+
+        } else {
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+    this.newPos = function() {
+        this.gravitySpeed += this.gravity;
+        this.speedX+=this.acceleratehorizontal;
+        this.x += this.speedX;
+        this.y += this.speedY + this.gravitySpeed;
+        this.hitBottom();
+    }
+    this.hitBottom = function() {
+        var rockbottom = myGameArea.canvas.height - this.height;
+        if (this.y > rockbottom) {
+            this.y = rockbottom;
+            this.gravitySpeed = 0;
+    		this.speedY = 0;    
+        }
+    }
+    this.crashWith = function(otherobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
+            crash = false;
+        }
+        return crash;
+    }
+}
+
+function updateGameArea() {
+
+    var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+    myGameArea.clear();
+    myGameArea.frameNo += 1;
+ //   myScore.text="a_x "+myGamePiece.acceleratehorizontal+" a_y "+myGamePiece.gravity;
+ myScore.text="";
+    myScore.update();
+    myGamePiece.newPos();
+    myGamePiece2.newPos();
+     showpos.text="";
+ //   showpos.text="Position = "+myGamePiece.x.toFixed(2)+", "+myGamePiece.y.toFixed(2);
+    showpos.update();
+    myGamePiece.update();
+    myGamePiece2.update();
+}
+
+</script>
+<div>
+<input type="button" value = "Let them jump!" onclick="myGamePiece2.speedY = -10;myGamePiece.speedY=-10; "></div>
+
+The Moon landing was one of the greatest achievements of mankind, it marks the time we set foot on the alien soil for the first time. If you watched the video of Apollo crews exploring the surface of the Moon? You probably noticed that he appeared slow and sluggish while he is walking and hopping around the Moon surface. There were even <a href="”http://thedailybanter.com/2014/07/45-years-apollo-11-debunking-top-11-moon-landing-conspiracy-theories/”"> conspiracy theorists </a>who claimed that the Moon landing was a hoax and that all the clips of moon landing were actually shot in Hollywood and was played at a slower rate. So how do we counter this argument?
+
+<header><a href="http://www.phymath.com/wp-content/uploads/2017/04/jumpsalute.gif"><img class="alignnone size-full wp-image-751" src="http://www.phymath.com/wp-content/uploads/2017/04/jumpsalute.gif" alt="" width="320" height="182" /></a></header><header>Figure: Astronaut jumping along on the moon</header><header></header><header></header><header>Is time really progressing slower when you are on the Moon? To tackle this problem, let’s compare the astronaut on the Moon with a teenager on the Earth, both jumping off with the same upward velocity $9.0\ \mathrm{ms^{-1}}$, who will stay above the ground for the longer time? (gravitational acceleration on the Earth’s surface is $9.81\ \mathrm{ms^{-2}}$ whereas gravitational acceleration on the Moon is $1.62\ \mathrm{ms^{-2}}$.Let’s denote the gravitational acceleration on the Earth as $a_E$ and the acceleration on the Moon as $a_M$. We have the following quantities:
+\begin{equation}
+\begin{split}
+a_E&amp;=-9.81 \mathrm{ms^{-2} \ \ (note \ the\ negative\ sign)}\\
+a_M&amp;=-1.62 \mathrm{ms^{-2}}\\
+u_E&amp;=u_M=10.0 \mathrm{ms^{-2}}\\
+\end{split}
+\end{equation}They go up and fall back to the ground, so the displacement is zero as there is no change in their positions,
+$s_E=s_M=0$.
+Now, we try to calculate the difference in their time:
+We make sure of the formula $s=ut+\frac{1}{2}at^2$
+$\begin{aligned}
+0&amp; =u+\frac{1}{2}at\\
+t&amp; =\frac{2 u}{a}
+\end{aligned} $
+Working with this calculation, we obtain
+$\begin{aligned}
+t_E&amp;=2.0 \mathrm{s}\\t_M&amp;=12.3\mathrm{s}
+\end{aligned} $Therefore, we know that the astronaut just appeared to stay longer in air due to the low gravity on the Moon. This, however, does not mean that time is faster on the Earth compared with on the Moon.</header><header>Now, let's look at the pendulum system, the interactive figure shown below is a pair of pendulums with the same length but on different environment, one is on the Earth, the other one is on the Moon. As you can see there, the pendulum on the Earth swings at the faster rate compared with the pendulum on the Moon. This is again due to the lower gravity of the Moon that affects the period of oscillation of the pendulum according to this equation:
+$\begin{aligned}
+T=2\pi \sqrt(\frac{l}{g})
+\end{aligned}$
+Where $l$ is the length of pendulum and $g$ is the acceleration due to gravity.So from this equation, it is clear that the time period is smaller when the value of g is greater. Since the Earth has higher gravity than Moon, the pendulum indeed swing faster.
+<h2>Time Actually Progresses A Little Faster on The Moon</h2>
+Counter-intuitively, time actually progresses faster on the Moon, although at a very small fraction. According to Albert Einstein’s <a href="https://en.wikipedia.org/wiki/Time_dilation"> general relativity theory</a>, the stronger is the gravitational potential, the slower the time passes. This is because time passes slower for anything undergoing an acceleration, and as gravity is just an acceleration towards a centre of mass, then time will move more slowly relative to something under a smaller gravity. This theory has already been attested by the well known<a href="http://www.circlon-theory.com/HTML/poundRebka.html"> Pound–Rebka experiment.</a> So next time you happen to go to the Moon, please enjoy this temporary faster pace of life.
+
+</header>
+</body>

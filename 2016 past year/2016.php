@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>2016 Past Year Papers</title>
+<link href="http://phymath.com/layout.css" rel="stylesheet"/>
+</head>
+<?php include("/home/sciwalker/public_html/header.html");?>
+<?php include("/home/sciwalker/public_html/sidebar.html");?>
+<body>
+<h1>2016 Past Year Papers</h1>
+<p><a href="https://drive.google.com/file/d/1GQfju-fVpNRGwbRtmN1sfv_NN-Lq-YsD/edit">9702_y16_sci_3.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1spe-F_xVZtEImCwED50veYktZeaKteaP/edit">9702_y16_sm_2.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1hHkv_QN4Wcf1uA3Damn9XSS7U2SoN8aN/edit">9702_y16_sm_3.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1bBx_DyaSFjooWGJ17eI7w8WWIAVafaYL/edit">9702_y16_sm_4.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1C_m1hluN8gQMZpHYXqlKErKtwBrTSW-J/edit">9702_y16_sm_5.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1vfTbywGbzPKIAg9NcrrWtVlAW_N3wwMk/edit">9702_y16_sp_2.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1sZsqXq3KvaLf8SDfF13So7FtCaIQOPIM/edit">9702_y16_sp_3.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/157fOGIrgKYA6RWFjUTtl2f942zJeQmIL/edit">9702_y16_sp_4.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1Jrpx8sSS7673UUG5De1464aE6AQrkxWm/edit">9702_y16_sp_5.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1_e4QdYrhn6c62dZlcXHNdKwxHijhiKzy/edit">9702_m16_ci_33.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1RXqFjKGJcDaoxrtJ4sSiFAyt4AKi10LR/edit">9702_m16_er.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1d2FSuT8aCbiWnge2IDFIAfqW_IqGjT8n/edit">9702_m16_gt.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1XMcHD9EOEOHThwPxJJlUtbCaL31qSSUE/edit">9702_m16_ms_12.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1jju_w_yVSbumCfxQK9zrNSTS3DpTPbhp/edit">9702_m16_ms_22.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1iBHp-o5-I4xI7ctnZC9IyRa_9QFj6q0c/edit">9702_m16_ms_33.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1SJ0saMP_DMPR5K-oCYEw0_ZeLiDYBNCX/edit">9702_m16_ms_42.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1ulARxRSsGUoPIf1LcVaMvFX3NdKiyYbx/edit">9702_m16_ms_52.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/17vL06BvAnrvMu-u-00MnLbrDT0p_KrB1/edit">9702_m16_qp_12.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1l6WLqXntCY0kAykbM7VU3ZQ8xu7dJOfl/edit">9702_m16_qp_22.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1AXixL1D3DeaQhHSaCam99tDs23CgK7qa/edit">9702_m16_qp_33.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1XdA6L2kG8qSKqXw5UatxnUYLdabvFSd7/edit">9702_m16_qp_42.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1h0qRaA5xksZHZ4UslvIaRKUTH4jSebv3/edit">9702_m16_qp_52.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1uiICKsN6GJmmjYrc_4C8WMklijWHJdAC/edit">9702_s16_er.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/19zHvvGV4ovhO62NBmfhY6fqydoI_l0Zu/edit">9702_s16_gt.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1huZzQ2qnifUnOkbc028x_Z61nUt7Kd54/edit">9702_w16_er.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/18X3POxfhXmZmt0Hwqcx5BHT8CCRZSkrE/edit">9702_w16_gt.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1PDsgdz-jgHu8qWtyE30sudq44AKAqIlB/edit">9702_s16_qp_11.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/19LyFvvIidLLzzAvUfSWwvAWOehjjTzUR/edit">9702_s16_qp_12.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1akvLOhfh4R8UiQm-F8TchZfLPrNKDsKC/edit">9702_s16_qp_13.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/15ucBg5scYfN8ieW653c1r-c837FlW5Ma/edit">9702_s16_qp_21.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/16ZDkqcRl8ve17_cVHK0hwPezgyUs4kmc/edit">9702_s16_qp_22.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1i-mmgnocXcnqHp3wfOhjVjM8hRGbWhdc/edit">9702_s16_qp_23.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1NdyoxAFnvIcV_0NwiZtZVEMpmR3Jd6Gz/edit">9702_s16_qp_31.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1eygkRYrU4UCZFmnb8GDveK3NpidtEqa_/edit">9702_s16_qp_32.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/11LGxoEMYwKV7OAcgtKDvhBCrm9pr_vbv/edit">9702_s16_qp_33.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1lEje8YGev9-PSiUhiyRho30SL6IkgGjz/edit">9702_s16_qp_34.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1S5CvtFhMQhvCI9mtC14CYiCkvx6nQYxU/edit">9702_s16_qp_35.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/19pPmZEnix2MlOXTY87nRck_8MWbMHlF_/edit">9702_s16_qp_41.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1l-ZTV60vlNgw7jWvMOHE-Ib4IIyGDMZI/edit">9702_s16_qp_42.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1n0M0zy1xKVXXvYe7WKnFTcRUVQC5Ujq1/edit">9702_s16_qp_43.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1YJo8i6wnThRPIKf7JStHNtd7Gw9vr_0a/edit">9702_s16_qp_51.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1UThxhDfFCcpIS-27s1DfdMjJ_rkYlpL8/edit">9702_s16_qp_52.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1EprQlEOBUr1n8oO4GC-Py8jojwkhWchh/edit">9702_s16_qp_53.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1QK5PSs1c2LL4wlessy6Xg_lcPMjnya7c/edit">9702_s16_ir_31.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1IrklJNo16OB80w9GXumiEWu4rwAYpy71/edit">9702_s16_ir_33.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1WYSaRy_EUh0iVJY-KuPx00AXBgidWJpT/edit">9702_s16_ir_34.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1Y6mSKMuDecpUE86HD9rsXrRbrsJ138kZ/edit">9702_s16_ir_35.pdf</a></p>
+<p><a href="http://phymath.com/2016 past year/2016/June/9702_s16_ir_36.pdf">9702_s16_ir_36.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/12IVZbez1w9ooPDH4HUNK6OQItxR3WF2m/edit">9702_s16_ms_11.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1PvWaOeVljgeK9rWcq8t0s4h7OTKLzhzs/edit">9702_s16_ms_12.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1KGQDCl6QlVht9lZbcwbOv--M1SyMOuLI/edit">9702_s16_ms_13.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1hb-OX7SgcuIUdUJHOvXcqUbzl64V41oB/edit">9702_s16_ms_21.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1sYtOdJoZzjCHoyvdiSmqgCwYXP34rZby/edit">9702_s16_ms_22.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1DI7JlPJY2luDTqurScAEfeHgMD7yKRmM/edit">9702_s16_ms_23.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1eHhd5XTImWOOkrUVQFVWyDkAYXkvVR4r/edit">9702_s16_ms_31.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/18zs-jM0Rtd_z2zCxn-tIi5rMf9k5WnWS/edit">9702_s16_ms_32.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/17kmgcX6usYil-nDczkv6a7-ZKY7THzq_/edit">9702_s16_ms_33.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1oGGCXpB9P25clEuW7Pv_y4hUgrVhzM1F/edit">9702_s16_ms_34.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/18HzUask-b_YjDjadipk_gGooAV6aYsAf/edit">9702_s16_ms_35.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1dJRq7JpB4MlKzr35M1uwBcjhUTCLcWZl/edit">9702_s16_ms_41.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1lbp3y7AywKDAP13nIHaAU_chE0MeIGt6/edit">9702_s16_ms_42.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1ExVnF_exQByoXLO3u0ZJtFMYcsLjuFqg/edit">9702_s16_ms_43.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/19pWmDtq_c3CFHm4aVaXQ8DxAuTD95Tr0/edit">9702_s16_ms_51.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1SzruCM0Mpr8xKu9wxjVBHo0uVuELXGgn/edit">9702_s16_ms_52.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1XGV7faR6jhUAptBR_dSvsFypCKcl65kZ/edit">9702_s16_ms_53.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1jiQR3Z7z-PQbOsPC24vd9R-vcKK4L6yP/edit">9702_w16_qp_11.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1KIziQMQ436HjOE2m1MsM5LDmdop84EvX/edit">9702_w16_qp_12.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1xUZwpvNEOupmFNuAjjC2z7YZMjtG9UVX/edit">9702_w16_qp_13.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1v8OtGh8dbM4FBB0gJZ__168SXxBE567x/edit">9702_w16_qp_21.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1tjoKB01xagSUtfMR4wyXg1cqYV9iNifh/edit">9702_w16_qp_22.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1muwJn0FOczsLpKdXfHpNLR1Wnqw5H3CQ/edit">9702_w16_qp_23.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1Uvqu5eJN-N8LXg4iVbZahWq4NDJ-vmO0/edit">9702_w16_qp_31.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1Oua21ODLlEb7PHBn8wlpWyxMvENlRSrS/edit">9702_w16_qp_33.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1AlWLczETOoEFcBSgtMhchnH_oDFA_CK1/edit">9702_w16_qp_34.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1wQNl3VG4OO8_gdtJCYDSVGQA__bLX0Oy/edit">9702_w16_qp_35.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1ch7QV5iGmK_fSmGXHjg2Jj4G8P17Zzel/edit">9702_w16_qp_36.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1h_g1N_8pkSjusl0VADZLwKBgn3Ao7VH_/edit">9702_w16_qp_41.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1xfz9U_o-JOH0F8Bl1Z2QgB278DqGcSJw/edit">9702_w16_qp_42.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1i3oHFVO-Jftq6VNyPFqk8oCH0bpLMXf1/edit">9702_w16_qp_43.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1X7Wdc0onrGYRVtvxc3nzP-6ausgUGS7c/edit">9702_w16_qp_51.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1QZkAKzQIXM8v3U1fLNvqZIkob5AxGpWk/edit">9702_w16_qp_52.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1bEG1VdpQSAo6ipRWHm7n4Igobx8KxqjS/edit">9702_w16_qp_53.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1qf5dSvp7mqB-ylqoWvFu41t4FpYA09eV/edit">9702_w16_ir_31.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1ljwuxv-FEx9a73xKDaWGbu-7rMV6fQoM/edit">9702_w16_ir_33.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1NgRivhbcvW4QsZ9WF3ScC1Rg9CRnmWPr/edit">9702_w16_ir_34.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1RL_CBQ_zmDdqLLA5q21jaPwjuTSWN9tY/edit">9702_w16_ir_35.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1jnYivzOCm6u32pPrQsvvwwQerZ_Qne0-/edit">9702_w16_ir_36.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1FampVyPLHcOn32cYdafpbLbICkJb_FDs/edit">9702_w16_ms_11.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/18uwvwZNJOo5hRdrM2wIdf9XqdaiX1kwY/edit">9702_w16_ms_12.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1l3LxKDGg1ZpgSM65zxRHt3tpM_lfAFwL/edit">9702_w16_ms_13.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1y1bnihsvj6_ow6JeNluPBk0BA5_ObTqF/edit">9702_w16_ms_21.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1WxkNIx_XuV3dWT4VDp1cawX4U2cNqGgV/edit">9702_w16_ms_22.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1uEFKxOhUNBIgxexrS0Ppu6WHfonD97Q-/edit">9702_w16_ms_23.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1O4NTykNCOIPXrx7MKj63ZJGWdwEtLEox/edit">9702_w16_ms_31.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1WCJXL-XRTtETxaXvjViZrdGQwZnDlZkW/edit">9702_w16_ms_33.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/18m2Wl3apqlCbM7tkUt6kfYY3IB1kZFxU/edit">9702_w16_ms_34.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1AMVHnq_RhiHjvaY7owl2CMyyaYcegYXs/edit">9702_w16_ms_35.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1lDCf-Qi611XMm5F-lsfoL1eYLLVuTsrd/edit">9702_w16_ms_36.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1YL1gKsSQ8w0XJsYCDt7rOfEpAlTet8Ch/edit">9702_w16_ms_41.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1pXbIiLZ7qzBv4sqX7Z84szUFihW2tUQO/edit">9702_w16_ms_42.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/128hAdRy8zoSeyVTnjNOd7fcxrPy1KX_u/edit">9702_w16_ms_43.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/11PFzr3T29dRHFViMiKfQIAv0ndSNa8v1/edit">9702_w16_ms_51.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1yJ-_CS6LfacldxK1Wn2VK9MX0U-OtKa6/edit">9702_w16_ms_52.pdf</a></p>
+<p><a href="https://drive.google.com/file/d/1rmTDjcAsE3mIHopUrghgyOOpyNph9dUM/edit">9702_w16_ms_53.pdf</a></p>
+</body>
+<?php include("/home/sciwalker/public_html/footer.html");?>
+</html>

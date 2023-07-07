@@ -1,0 +1,7 @@
+#DirectoryIndex home.php
+#RewriteEngine On 
+#RewriteCond %{SERVER_PORT} 80 
+#RewriteRule ^(.*)$ https://www.phymath.com/$1 [R,L]
+
+# Resolve .php file for extensionless php urls
+#RewriteRule ^([^/.]+)$ $1.php [L]

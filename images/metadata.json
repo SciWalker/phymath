@@ -1,0 +1,37 @@
+{"attributes": [
+    {
+      "display_type": "date", 
+      "trait_type": "birthday", 
+      "value": 546360800
+    },
+    {
+      "trait_type": "weapon",
+      "value": "Spear of Zeus"
+    },
+    {
+      "trait_type": "Level", 
+      "value": 5
+    }, 
+    {
+      "trait_type": "attack power",
+      "value": 5000,
+      "max_value":99999
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 150
+    },
+    {
+      "trait_type": "defense power",
+      "value": "100"
+    },    
+    {
+      "display_type": "boost_percentage", 
+      "trait_type": "Attack Power Increase", 
+      "value": 10
+    } 
+  ],
+    "description" : "This is a test nft",
+    "image" : "https://www.phymath.com/images/vikings.png",
+    "name" : "test-nft-26112021"
+}
