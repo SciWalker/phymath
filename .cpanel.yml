@@ -4,5 +4,5 @@ deployment:
  - export DEPLOYPATH=/home/sciwalker/public_html/
  - /bin/cp README.md $DEPLOYPATH
  - export DEPLOYPATH_ASSETS=/home/sciwalker/public_html/assets/img/
- - /bin/cp test.py $DEPLOYPATH_ASSETS
+ - /bin/cp /assets/img/test.py $DEPLOYPATH_ASSETS
 #  - /bin/cp style.css $DEPLOYPATH
