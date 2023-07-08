@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Step by Step derivation for the sum of the N<sup>2</sup></title>
+
+
+<style>
+body2{padding-left:4cm;font-size:115%; font-family: Arial, Helvetica, sans-serif;}
+.intsuma {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.intsuma > span {
+    display: block;
+    font-size: 70%;
+}
+.intsuma .lim-up {
+    margin-bottom: -0.8ex;
+}
+
+.intsuma .sum {
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+.intsuma .sum-frac {
+    font-size: 1.5em;
+    font-weight: 100;
+}
+.good, .eq-c, .fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.good > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}
+
+</style>
+
+</head>
+
+<?php include("/public_html/header.html");?>
+
+
+<h2> Step by step derivation for the Sum of n<sup>2</sup> and the Sum of higher integer power.</h2>
+
+<body2>
+
+Question : How to derive the formula for the sum of <i>n</i><sup>2</sup>, which is stated as
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>2</sup>&nbsp;=
+<div class="fraction">
+<span class="fup">(<i>n</i>)(<i>n</i> + 1)(2<i>n</i>+1)</span>
+<span class="bar">/</span>
+<span class="fdn">6</span>
+</div>
+</div>?
+<br>
+<br>
+</body2>
+
+<body2 id="top">Solution : We make use of the fact that both equation (1) and (2) as shown below are true.</body2>
+<br>
+<br>
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup>&nbsp;-&nbsp;
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(<i>k</i>&nbsp;-1)<sup>3</sup>&nbsp;=&nbsp;<i>n</i><sup>3</sup>
+</div> &nbsp;&nbsp;&nbsp;. . . . . . . . . . . . . . . . . . . . .(1)&nbsp;&nbsp;[<a href="#proof1">proof</a>]
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup>&nbsp;-&nbsp;
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(<i>k</i>&nbsp;-1)<sup>3</sup>&nbsp;=&nbsp;
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(3<i>k</i><sup>2</sup>&nbsp;-3<i>k</i>&nbsp;+1)
+</div> &nbsp; &nbsp;. . . . . . . . . . .(2)&nbsp;&nbsp;[<a href="#proof2">proof</a>]
+<br>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Thus,
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(3<i>k</i><sup>2</sup>&nbsp;-3<i>k</i>&nbsp;+1)&nbsp;=&nbsp;<i>n</i><sup>3</sup>
+</div>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+3<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>2</sup>&nbsp;-
+3<span class="intsuma">
+<span class="lim-up">n</span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i>&nbsp;+
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;1&nbsp;=&nbsp;<i>n</i><sup>3</sup>
+</div>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+3<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>2</sup>&nbsp;=&nbsp;<i>n</i><sup>3</sup>&nbsp;+&nbsp;
+3<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i>&nbsp;-
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;1
+</div>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= <i>n</i><sup>3</sup>&nbsp;+
+3<div class="good">[
+<div class="fraction">
+<span class="fup">(<i>n</i>)(<i>n</i> + 1)</span>
+<span class="bar">/</span>
+<span class="fdn">2</span></div><div class="good">]&nbsp;- <i>n</i></div>
+</div>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>2</sup>&nbsp;
+=&nbsp;<div class="fraction">
+<span class="fup">2<i>n</i><sup>3</sup>&nbsp;+3<i>n</i>(<i>n</i> + 1)&nbsp;-2<i>n</i></span>
+<span class="bar">/</span>
+<span class="fdn">6</span></div>
+=&nbsp;<div class="fraction">
+<span class="fup"><i>n</i>(2<i>n</i><sup>2</sup>&nbsp;+3<i>n</i>+ 1)&nbsp;</span>
+<span class="bar">/</span>
+<span class="fdn">6</span></div>
+=&nbsp;<div class="fraction">
+<span class="fup"><i>n</i>(<i>n</i>&nbsp;+1)(2<i>n</i>+ 1)&nbsp;</span>
+<span class="bar">/</span>
+<span class="fdn">6</span></div>&nbsp;[Shown]
+</div>
+<br>
+</body2>
+
+
+<br> 
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+By applying this criteria, We can get the sum of ANY higher integer power, eg.
+
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup></div> ,
+<div class="eq-c"> 
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>4</sup></div> ,
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>5</sup></div> ... ...
+</body2>
+<br>
+
+<br>
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Below is a working example to get 
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup>&nbsp;=
+<div class="fraction">
+<span class="fup">(<i>n</i>)<sup>2</sup>(<i>n</i> + 1)<sup>2</sup></span>
+<span class="bar">/</span>
+<span class="fdn">4</span>
+</div>
+</div>
+</body2>
+<br>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Again, we make use of the fact that both equation (3) and (4) as shown below are true.
+<br>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>4</sup>&nbsp;-&nbsp;
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(<i>k</i>&nbsp;-1)<sup>4</sup>&nbsp;=&nbsp;<i>n</i><sup>4</sup>
+</div> &nbsp;&nbsp;&nbsp;. . . . . . . . . . . . . . . . . . . . .(3)&nbsp;&nbsp;
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup>&nbsp;-&nbsp;
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(<i>k</i>&nbsp;-1)<sup>3</sup>&nbsp;=&nbsp;
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(4<i>k</i><sup>3</sup>&nbsp;-6<i>k</i><sup>2</sup>&nbsp;+4<i>k</i>&nbsp;-1)
+</div> &nbsp; &nbsp;. . . . . . . . . . .(4)&nbsp;&nbsp;
+<br>
+</body2>
+
+<br>
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Thus,
+</body2>
+<br>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(4<i>k</i><sup>3</sup>&nbsp;-6<i>k</i><sup>2</sup>&nbsp;+4<i>k</i>&nbsp;-1)
+=&nbsp;<i>n</i><sup>4</sup>
+</div>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+4<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup>&nbsp;-
+6<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>2</sup>&nbsp;+
+4<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i>&nbsp;-
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;1&nbsp;=&nbsp;<i>n</i><sup>4</sup>
+</div>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+4<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup>&nbsp;= <i>n</i><sup>4</sup>+
+6<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>2</sup>&nbsp;-
+4<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i>&nbsp;-
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;1&nbsp;
+</div>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<div class="good">
+<i>n</i><sup>4</sup>&nbsp;
++6[<div class="fraction">
+<span class="fup">(<i>n</i>)(<i>n</i> + 1)(2<i>n</i> + 1)</span>
+<span class="bar">/</span>
+<span class="fdn">6</span></div>]- 
+4<div class="good">[
+<div class="fraction">
+<span class="fup">(<i>n</i>)(<i>n</i> + 1)</span>
+<span class="bar">/</span>
+<span class="fdn">2</span></div><div class="good">]&nbsp;+<i>n</n>
+</div>
+</div>
+</div>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup>&nbsp;
+=<div class="fraction">
+<span class="fup"><i>n</i><sup>4</sup>+2<i>n</i><sup>3</sup>&nbsp;+ 3<i>n</i><sup>2</sup> &nbsp;+ <i>n</i>&nbsp;-2<i>n</i><sup>2</sup>&nbsp;-2<i>n</i>&nbsp;+<i>n</i></span>
+<span class="bar">/</span>
+<span class="fdn">4</span></div>
+</div>
+<br>
+</body2>
+
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<div class="fraction">
+<span class="fup"><i>n</i><sup>4</sup>+2<i>n</i><sup>3</sup>&nbsp;+ <i>n</i><sup>2</sup></span>
+<span class="bar">/</span>
+<span class="fdn">4</span></div>
+=<div class="fraction">
+<span class="fup"><i>n</i><sup>2</sup>(2<i>n</i><sup>2</sup>&nbsp;+2<i>n</i>&nbsp;+1)<sup>2</sup></span>
+<span class="bar">/</span>
+<span class="fdn">4</span></div>
+</body2>
+<br>
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<div class="fraction">
+<span class="fup">(<i>n</i>)<sup>2</sup>(<i>n</i> + 1)<sup>2</sup></span>
+<span class="bar">/</span>
+<span class="fdn">4</span>
+</div>&nbsp;&nbsp;(Shown)
+</body>
+<br>
+<br>
+<br>
+<br>
+
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appendix</h4>
+<h4 id="proof1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proof for equation(1):</h4>
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup>&nbsp;-&nbsp;
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(<i>k</i>&nbsp;-1)<sup>3</sup>&nbsp;
+=&nbsp;[(1<sup>3</sup>&nbsp;+2<sup>3</sup>&nbsp;+3<sup>3</sup>&nbsp;+4<sup>3</sup>&nbsp;+... ...&nbsp;+(<i>n<i>-1)<sup>3</sup>&nbsp;+<i>n</i><sup>3</sup>]&nbsp;-&nbsp;[(1<sup>3</sup>&nbsp;+2<sup>3</sup>&nbsp;+3<sup>3</sup>&nbsp;+4<sup>3</sup>&nbsp;+... ...&nbsp;+(<i>n<i>-1)<sup>3</sup>]
+=<i>n</i><sup>3</sup></div>&nbsp;&nbsp;[proven]
+</body2>
+<br>
+<h4 id="proof2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proof for equation(2):</h4>
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="eq-c">
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup>&nbsp;-&nbsp;
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(<i>k</i>&nbsp;-1)<sup>3</sup>&nbsp;=&nbsp;
+<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;<i>k</i><sup>3</sup>&nbsp-(<i>k</i><sup>3</sup>&nbsp;-3<i>k</i><sup>2</sup>&nbsp;+3<i>k</i>&nbsp;-1)&nbsp;
+=<span class="intsuma">
+<span class="lim-up"><i>n</i></span>
+<span class="sum-frac">&sum;</span>
+<span class="lim"><i>k</i>=1</span></span>&nbsp;(3<i>k</i><sup>2</sup>&nbsp;-3<i>k</i>&nbsp;+1)</div>&nbsp;&nbsp;[proven]
+</body2>
+<br>
+<br>
+<br>
+<body2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<a href="#top">back to solution</a>]
+</body2>
+</html>

@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <!-- Moralis SDK code -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
+  </head>
+  <body>
+
+    <button onclick="transfer_token()" id ="btn-logout">transfer</button>
+    <div id = "content"></div>
+<script>
+
+// sending a token with token id = 1
+const options = {type: "erc721",  
+                 receiver: "0x9d613f1110D15ae307C363D0F7F42087445480e7",
+                 contractAddress: "0x0ccfa8300f19ce924708a5458ff68918e9633451",
+                 tokenId: 2}
+function transfer_token(){
+Moralis.transfer(options)
+}
+</script>
+</body>
+</html>

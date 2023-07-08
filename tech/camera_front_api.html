@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<video style="width:75%"></video><br>
+<button disabled>
+  take a snapshot</button>
+</body>
+<script>
+		const vid = document.querySelector('video');
+		console.log(vid);
+		navigator.mediaDevices.getUserMedia({video: {
+        width: { ideal: 8192 },
+        height: { ideal: 4096 } ,
+    	facingMode: "user"
+    } }) // request cam
+		.then(stream => {
+		  vid.srcObject = stream; // don't use createObjectURL(MediaStream)
+		  return vid.play(); // returns a Promise
+		})
+		.then(()=>{ // enable the button
+		  const btn = document.querySelector('button');
+		  btn.disabled = false;
+		  btn.onclick = e => {
+		    takeASnap(vid);
+		  };
+		});
+
+		function takeASnap(vid){
+		  const canvas = document.createElement('canvas'); // create a canvas
+ 		  canvas.width = vid.videoWidth*0.5; // set its size to the one of the video
+		  canvas.height = vid.videoHeight*0.5;
+		  canvas.getContext('2d').drawImage(vid, 0, 0,  canvas.width, canvas.height); 
+		  a=canvas.toDataURL("image/jpeg");
+		  var data_json=JSON.stringify({
+                          "image": a
+                        });
+          console.log(data_json)
+        fetch('https://gjxn70gu7l.execute-api.ap-southeast-1.amazonaws.com/prod/gh/chili-det', {
+                method: 'POST',
+                crossDomain: true, 
+                mode: 'cors',
+                cache:'no-cache',
+                body: data_json
+            })
+			.then(response =>{
+				return response.json();
+			})
+			.then(response_2=>{
+			    console.log('test');
+				console.log(response_2);
+			})
+		}
+		var handleSuccess = function(stream){
+			vid.srcObject = stream;
+			return vid.play(); 
+		}
+	</script>
+</html>

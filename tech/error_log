@@ -1,0 +1,99 @@
+[21-Jul-2020 08:46:22 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 97
+[21-Jul-2020 08:46:22 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 100
+[21-Jul-2020 08:46:22 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 101
+[21-Jul-2020 08:46:22 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 102
+[21-Jul-2020 08:46:22 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 103
+[21-Jul-2020 08:48:08 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 97
+[21-Jul-2020 08:48:08 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 100
+[21-Jul-2020 08:48:08 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 101
+[21-Jul-2020 08:48:08 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 102
+[21-Jul-2020 08:48:08 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 103
+[21-Jul-2020 08:56:24 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 97
+[21-Jul-2020 08:56:24 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 100
+[21-Jul-2020 08:56:24 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 101
+[21-Jul-2020 08:56:24 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 102
+[21-Jul-2020 08:56:24 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 103
+[21-Jul-2020 08:57:04 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 97
+[21-Jul-2020 08:57:04 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 100
+[21-Jul-2020 08:57:04 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 101
+[21-Jul-2020 08:57:04 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 102
+[21-Jul-2020 08:57:04 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 103
+[21-Jul-2020 08:57:05 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 97
+[21-Jul-2020 08:57:05 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 100
+[21-Jul-2020 08:57:05 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 101
+[21-Jul-2020 08:57:05 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 102
+[21-Jul-2020 08:57:05 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 103
+[21-Jul-2020 08:57:09 UTC] PHP Warning:  Creating default object from empty value in /home/sciwalker/public_html/tech/embeddedqr.php on line 33
+[21-Jul-2020 08:57:10 UTC] PHP Warning:  file_get_contents(http://hash-1987.azurewebsites.net/api/visual_qr): failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home/sciwalker/public_html/tech/embeddedqr.php on line 45
+[21-Jul-2020 08:57:10 UTC] PHP Warning:  move_uploaded_file(upload/img_saved.png): failed to open stream: No such file or directory in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[21-Jul-2020 08:57:10 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpwaupxe' to 'upload/img_saved.png' in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[21-Jul-2020 08:57:14 UTC] PHP Warning:  Creating default object from empty value in /home/sciwalker/public_html/tech/embeddedqr.php on line 33
+[21-Jul-2020 08:57:14 UTC] PHP Warning:  file_get_contents(http://hash-1987.azurewebsites.net/api/visual_qr): failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home/sciwalker/public_html/tech/embeddedqr.php on line 45
+[21-Jul-2020 08:57:14 UTC] PHP Warning:  move_uploaded_file(upload/img_saved.jpg): failed to open stream: No such file or directory in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[21-Jul-2020 08:57:14 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpqX49k3' to 'upload/img_saved.jpg' in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[21-Jul-2020 08:58:24 UTC] PHP Warning:  Creating default object from empty value in /home/sciwalker/public_html/tech/embeddedqr.php on line 33
+[21-Jul-2020 08:58:24 UTC] PHP Warning:  file_get_contents(http://hash-1987.azurewebsites.net/api/visual_qr): failed to open stream: HTTP request failed! HTTP/1.1 500 Internal Server Error
+ in /home/sciwalker/public_html/tech/embeddedqr.php on line 45
+[21-Jul-2020 08:58:24 UTC] PHP Warning:  move_uploaded_file(/Visual_QR/upload/new_myqr.png): failed to open stream: No such file or directory in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[21-Jul-2020 08:58:24 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpMvnv6H' to '/Visual_QR/upload/new_myqr.png' in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[14-Aug-2020 00:07:48 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 97
+[14-Aug-2020 00:07:48 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 100
+[14-Aug-2020 00:07:48 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 101
+[14-Aug-2020 00:07:48 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 102
+[14-Aug-2020 00:07:48 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 103
+[14-Sep-2020 04:01:52 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 97
+[14-Sep-2020 04:01:52 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 100
+[14-Sep-2020 04:01:52 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 101
+[14-Sep-2020 04:01:52 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 102
+[14-Sep-2020 04:01:52 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 103
+[24-Sep-2020 04:49:13 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 97
+[24-Sep-2020 04:49:13 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 100
+[24-Sep-2020 04:49:13 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 101
+[24-Sep-2020 04:49:13 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 102
+[24-Sep-2020 04:49:13 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 103
+[24-Sep-2020 04:49:17 UTC] PHP Warning:  Creating default object from empty value in /home/sciwalker/public_html/tech/embeddedqr.php on line 33
+[24-Sep-2020 04:49:18 UTC] PHP Warning:  file_get_contents(http://210.195.188.134:30004/uploader): failed to open stream: Connection refused in /home/sciwalker/public_html/tech/embeddedqr.php on line 45
+[24-Sep-2020 04:49:18 UTC] PHP Warning:  move_uploaded_file(/Visual_QR/upload/726b92cccb6ef987a42a38ded8da8ee9.gif): failed to open stream: No such file or directory in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[24-Sep-2020 04:49:18 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsUvcys' to '/Visual_QR/upload/726b92cccb6ef987a42a38ded8da8ee9.gif' in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[24-Sep-2020 04:51:01 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 87
+[24-Sep-2020 04:51:01 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 97
+[24-Sep-2020 04:51:01 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 100
+[24-Sep-2020 04:51:01 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 101
+[24-Sep-2020 04:51:01 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 102
+[24-Sep-2020 04:51:01 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 103
+[24-Sep-2020 04:51:05 UTC] PHP Warning:  Creating default object from empty value in /home/sciwalker/public_html/tech/embeddedqr.php on line 33
+[24-Sep-2020 04:51:06 UTC] PHP Warning:  file_get_contents(http://210.195.188.134:30004/uploader): failed to open stream: Connection refused in /home/sciwalker/public_html/tech/embeddedqr.php on line 45
+[24-Sep-2020 04:51:06 UTC] PHP Warning:  move_uploaded_file(/Visual_QR/upload/726b92cccb6ef987a42a38ded8da8ee9.gif): failed to open stream: No such file or directory in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[24-Sep-2020 04:51:06 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpPmmLYX' to '/Visual_QR/upload/726b92cccb6ef987a42a38ded8da8ee9.gif' in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[24-Sep-2020 04:53:51 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 87
+[24-Sep-2020 04:53:51 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 97
+[24-Sep-2020 04:53:51 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 100
+[24-Sep-2020 04:53:51 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 101
+[24-Sep-2020 04:53:51 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 102
+[24-Sep-2020 04:53:51 UTC] PHP Notice:  Undefined index: photo in /home/sciwalker/public_html/tech/embeddedqr.php on line 103
+[24-Sep-2020 04:53:54 UTC] PHP Warning:  Creating default object from empty value in /home/sciwalker/public_html/tech/embeddedqr.php on line 33
+[24-Sep-2020 04:53:55 UTC] PHP Warning:  file_get_contents(http://210.195.188.134:30004/uploader): failed to open stream: Connection refused in /home/sciwalker/public_html/tech/embeddedqr.php on line 45
+[24-Sep-2020 04:53:55 UTC] PHP Warning:  move_uploaded_file(/Visual_QR/upload/726b92cccb6ef987a42a38ded8da8ee9.gif): failed to open stream: No such file or directory in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[24-Sep-2020 04:53:55 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php9x1SsZ' to '/Visual_QR/upload/726b92cccb6ef987a42a38ded8da8ee9.gif' in /home/sciwalker/public_html/tech/embeddedqr.php on line 80
+[05-Nov-2020 03:45:23 UTC] PHP Notice:  Undefined variable: name in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:45:23 UTC] PHP Notice:  Undefined variable: email in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:45:23 UTC] PHP Notice:  Undefined variable: message in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:45:23 UTC] PHP Notice:  Undefined variable: email in /home/sciwalker/public_html/tech/PhymathQR.php on line 418
+[05-Nov-2020 03:45:23 UTC] PHP Notice:  Undefined variable: subject in /home/sciwalker/public_html/tech/PhymathQR.php on line 419
+[05-Nov-2020 03:46:47 UTC] PHP Notice:  Undefined variable: name in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:46:47 UTC] PHP Notice:  Undefined variable: email in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:46:47 UTC] PHP Notice:  Undefined variable: message in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:46:47 UTC] PHP Notice:  Undefined variable: email in /home/sciwalker/public_html/tech/PhymathQR.php on line 418
+[05-Nov-2020 03:46:47 UTC] PHP Notice:  Undefined variable: subject in /home/sciwalker/public_html/tech/PhymathQR.php on line 419
+[05-Nov-2020 03:52:36 UTC] PHP Notice:  Undefined variable: name in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:52:36 UTC] PHP Notice:  Undefined variable: email in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:52:36 UTC] PHP Notice:  Undefined variable: message in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:52:36 UTC] PHP Notice:  Undefined variable: email in /home/sciwalker/public_html/tech/PhymathQR.php on line 418
+[05-Nov-2020 03:52:36 UTC] PHP Notice:  Undefined variable: subject in /home/sciwalker/public_html/tech/PhymathQR.php on line 419
+[05-Nov-2020 03:55:04 UTC] PHP Notice:  Undefined variable: name in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:55:04 UTC] PHP Notice:  Undefined variable: email in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:55:04 UTC] PHP Notice:  Undefined variable: message in /home/sciwalker/public_html/tech/PhymathQR.php on line 416
+[05-Nov-2020 03:55:04 UTC] PHP Notice:  Undefined variable: email in /home/sciwalker/public_html/tech/PhymathQR.php on line 418
+[05-Nov-2020 03:55:04 UTC] PHP Notice:  Undefined variable: subject in /home/sciwalker/public_html/tech/PhymathQR.php on line 419

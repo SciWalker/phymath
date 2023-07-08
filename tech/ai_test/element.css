@@ -1,0 +1,15 @@
+#input_image{
+   width:500px;
+   height:100%;
+   object-fit: cover;
+ }
+ #output{
+  width:500px;
+  height:100%;
+  object-fit: cover;
+ }
+#retrieve{
+  width:500px;
+   height:100%;
+   object-fit: cover;
+}
