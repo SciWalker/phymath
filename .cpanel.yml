@@ -1,6 +1,13 @@
 ---
 deployment:
  tasks:
+<<<<<<< HEAD
  - export DEPLOYPATH=/home/sciwalker/public_html/
  - /bin/cp README.md $DEPLOYPATH
+=======
+ - export DEPLOYPATH_ORIGINAL=/home/sciwalker/public_html/
+ - /bin/cp README.md $DEPLOYPATH_ORIGINAL
+ - export DEPLOYPATH=/home/sciwalker/public_html/assets/img/
+ - /bin/cp assets/img/test.py $DEPLOYPATH
+>>>>>>> 766b4a0d188cb0b3df5c0451e1189f051c62a9d3
 #  - /bin/cp style.css $DEPLOYPATH
