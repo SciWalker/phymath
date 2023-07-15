@@ -1,9 +1,5 @@
 DirectoryIndex home.php
-<<<<<<< HEAD
 RewriteEngine Off 
-=======
-RewriteEngine On 
->>>>>>> 766b4a0d188cb0b3df5c0451e1189f051c62a9d3
 RewriteCond %{SERVER_PORT} 80 
 RewriteRule ^(.*)$ https://www.phymath.com/$1 [R,L]
 # Resolve .php file for extensionless php urls
