@@ -5,8 +5,8 @@ deployment:
  - /bin/cp README.md $DEPLOYPATH_ORIGINAL
  - /bin/cp header_2018.html $DEPLOYPATH_ORIGINAL
  - /bin/cp home.php $DEPLOYPATH_ORIGINAL
- - export DEPLOYPATH=/home/sciwalker/public_html/assets/img/
- - /bin/cp assets/img/test.py $DEPLOYPATH
+ - export DEPLOYPATH_ASSET=/home/sciwalker/public_html/assets/img/
+ - /bin/cp assets/img/test.py $DEPLOYPATH_ASSET
  - export DEPLOYPATH_FOLDER=/home/sciwalker/
  - /bin/cp merchandise/* $DEPLOYPATH_FOLDER
 #  - /bin/cp style.css $DEPLOYPATH
