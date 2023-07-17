@@ -7,6 +7,6 @@ deployment:
  - /bin/cp home.php $DEPLOYPATH_ORIGINAL
  - export DEPLOYPATH=/home/sciwalker/public_html/assets/img/
  - /bin/cp assets/img/test.py $DEPLOYPATH
- - export DEPLOYPATH_FOLDER=/home/sciwalker/merchandise/
+ - export DEPLOYPATH_FOLDER=/home/sciwalker/
  - /bin/cp merchandise/* $DEPLOYPATH_FOLDER
 #  - /bin/cp style.css $DEPLOYPATH
