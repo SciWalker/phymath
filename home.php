@@ -51,8 +51,6 @@
         </div>
       </div>
       
-<a target="_blank" href="https://www.amazon.com/b?_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=4067c3640b16086d7db2888cfb452cfc&camp=1789&creative=9325&node=166359011">puzzles and games</a>
-
       <div class="row margin-top-10">
         <!-- Carousel Slideshow -->
         <div id="carousel-example" class="carousel slide" data-ride="carousel">
