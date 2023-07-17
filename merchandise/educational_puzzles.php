@@ -5,7 +5,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<!-- Title -->
-	<title>Dimensions and Dimensional Analysis</title>
+	<title>Educational Puzzles</title>
 	<!-- Meta -->
 	
 	<meta name="description" content="">
