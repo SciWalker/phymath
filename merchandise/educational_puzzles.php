@@ -52,6 +52,11 @@ Here are some of the toys or puzzles that I myself found useful in cultivating k
 <p>
 	This is a toy to let kids learn about sudoku and rubik cube at the same time. 
 </p>
+<li><a target="_blank" href="https://www.amazon.com/Matatalab-Educational-Entry-Level-Programming-Mechanical/dp/B07GPJV51D/ref=sr_1_2?keywords=matatalab&amp;qid=1689622846&amp;sr=8-2&_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=f6cd3d62e69cdc3aa869b554d2a87b78&camp=1789&creative=9325">Matatalab Programming Toys</a>
+</li>
+<p>
+	This is a toy to let kids learn about programming from the early age. 
+</p>
 </ol>
 
 

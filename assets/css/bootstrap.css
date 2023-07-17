@@ -36,12 +36,6 @@ audio:not([controls]) {
 template {
   display: none;
 }
-a {
-  background: transparent;color: blue;
-}
-a:active 
-a:hover 
-  { outline: 0; text-decoration: underline; }
 
 abbr[title] {
   border-bottom: 1px dotted;
@@ -282,7 +276,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #4f4e53;
+  color: #6350b1;
   text-decoration: none;
 }
 a.link {
@@ -293,7 +287,10 @@ a.link:visited{
       background-color: #f44336;
     color: purple;
 }
-a:hover,
+a:hover{
+  color: #1d1c1f;
+  text-decoration: underline;
+},
 a:focus {
   color: #1d1c1f;
   text-decoration: underline;
