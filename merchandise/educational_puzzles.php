@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <?php include("/home/sciwalker/public_html/header_2018.html") ;?>
+  <?php  include("../header_2018.html") ;?>
     <!-- === END HEADER === -->
     <!-- === BEGIN CONTENT === -->
     <div id="content" class="container">
@@ -47,7 +47,7 @@ As a father myself, I know it is good to let kids explore some useful but yet fu
 Here are some of the toys or puzzles that I myself found useful in cultivating kids' natural curiosity and creativity.
 </p>
 <ol>
-<li><a target="_blank" href="https://www.amazon.com/Sudoku-Puzzle-Cube-Portable-Classic/dp/B000PGWXYK/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=CULsu&amp;content-id=amzn1.sym.0250fb24-4363-44d0-b635-ac15f859c3b5%253Aamzn1.symc.40e6a10e-cbc4-4fa5-81e3-4435ff64d03b&amp;pf_rd_p=0250fb24-4363-44d0-b635-ac15f859c3b5&amp;pf_rd_r=NGCMYPH70642TKBQDNR9&amp;pd_rd_wg=fazd7&amp;pd_rd_r=2e157fb7-1710-43af-b27f-369d266423f1&amp;pd_rd_i=B000PGWXYK&_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=5e3e6242b53a07f4d094dc9c0cc6924a&camp=1789&creative=9325">sudoku rubik cube</a>
+<li><a target="_blank" href="https://www.amazon.com/Sudoku-Puzzle-Cube-Portable-Classic/dp/B000PGWXYK/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=CULsu&amp;content-id=amzn1.sym.0250fb24-4363-44d0-b635-ac15f859c3b5%253Aamzn1.symc.40e6a10e-cbc4-4fa5-81e3-4435ff64d03b&amp;pf_rd_p=0250fb24-4363-44d0-b635-ac15f859c3b5&amp;pf_rd_r=NGCMYPH70642TKBQDNR9&amp;pd_rd_wg=fazd7&amp;pd_rd_r=2e157fb7-1710-43af-b27f-369d266423f1&amp;pd_rd_i=B000PGWXYK&_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=5e3e6242b53a07f4d094dc9c0cc6924a&camp=1789&creative=9325">Sudoku Rubik Cube</a>
 </li>
 <p>
 	This is a toy to let kids learn about sudoku and rubik cube at the same time. 
@@ -55,8 +55,13 @@ Here are some of the toys or puzzles that I myself found useful in cultivating k
 <li><a target="_blank" href="https://www.amazon.com/Matatalab-Educational-Entry-Level-Programming-Mechanical/dp/B07GPJV51D/ref=sr_1_2?keywords=matatalab&amp;qid=1689622846&amp;sr=8-2&_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=f6cd3d62e69cdc3aa869b554d2a87b78&camp=1789&creative=9325">Matatalab Programming Toys</a>
 </li>
 <p>
-	This is a toy to let kids learn about programming from the early age. 
+	This is a toy to let kids learn about programming from early age. 
 </p>
+<li><a target="_blank" href="https://www.amazon.com/Desire-Deluxe-Magnetic-Blocks-Building/dp/B07MGYKZ36/ref=sxin_16_pa_sp_search_thematic_sspa?content-id=amzn1.sym.4a292f39-c27c-4e62-9abd-d68116d07607%253Aamzn1.sym.4a292f39-c27c-4e62-9abd-d68116d07607&amp;crid=ZAOFJHYJHANN&amp;cv_ct_cx=educational+toys&amp;keywords=educational+toys&amp;pd_rd_i=B07MGYKZ36&amp;pd_rd_r=c98f727b-0324-4f34-b434-65ec05cc9c29&amp;pd_rd_w=MYCnu&amp;pd_rd_wg=jioHu&amp;pf_rd_p=4a292f39-c27c-4e62-9abd-d68116d07607&amp;pf_rd_r=Y2A83KVBAQQMKR8RCPG1&amp;qid=1689643144&amp;sbo=RZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D&amp;sprefix=educational+to%252Caps%252C324&amp;sr=1-2-2b34d040-5c83-4b7f-ba01-15975dfb8828-spons&amp;sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&amp;psc=1&_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=5492b4375116bd09da3000089e07ef5c&camp=1789&creative=9325">Magnetic Blocks</a></li>
+<p>
+This set includes 94 colorful magnetic tiles that can be easily snapped together to create different shapes and structures. It helps develop their spatial awareness, fine motor skills, and logical thinking. 
+</p>
+
 </ol>
 
 
