@@ -38,14 +38,13 @@
     }
 
     .content-div {
-      margin-top: 400px; /* Adjust the margin-top value as needed */
+      margin-top: 500px; /* Adjust the margin-top value as needed */
       margin-bottom: 100px; /* Adjust the margin-bottom value as needed */
     }
 </style>
 </head>
   <?php include("../header_2018.html") ;?>
 <body onload="startGame()">
-
 <div style="position: absolute; background-color:rgba(255, 255, 255, 1.00); width:1400; height:300px; z-index: 3">
 <script>var myGamePiece;
 var myGamePiece2;
@@ -72,21 +71,6 @@ function startGame() {
 
 
 
-function resetGame() {
-    myGamePiece = new component(30, 30, "red", 10, 490);
-    myGamePiece2 = new component(30, 30, "blue", 900, 490);
-    myGamePiece.gravity =0.05;
-    myGamePiece.acceleratehorizontal=0.0;
-    myGamePiece2.gravity = 0.05;
-    myGamePiece2.acceleratehorizontal=0.0;
-    myGamePiecemass= parseFloat(document.getElementById("mass1").value);
-    myGamePiece2mass= parseFloat(document.getElementById("mass2").value);
-    myGamePiece2.speedX= parseFloat(document.getElementById("bspeed").value)/10;
-    myGamePiece.speedX= parseFloat(document.getElementById("rspeed").value)/10;/*document.getElementById("rspeed").value;*/
-    myScore = new component("30px", "Consolas", "black", 280, 55, "text");
-    showpos= new component("30px", "Consolas", "black", 10, 22, "text");
-
-}
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
@@ -173,7 +157,6 @@ function component(width, height, color, x, y, type,state,crash) {
 
     }
 }
-
 function updateGameArea() {
     var rockbottom = myGameArea.canvas.height - myGamePiece.height;
     var x, height, gap, minHeight, maxHeight, minGap, maxGap, state;
@@ -194,53 +177,6 @@ function updateGameArea() {
         }
 }
 
-function everyinterval(n) {
-    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
-    return false;
-}
-
-function accelerate(n) {
-    myGamePiece.gravity = n;
-}
-function acchori(n) {
-    myGamePiece.acceleratehorizontal= n;
-}
-    
-document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    switch (evt.keyCode) {
-        case 65:
-            acchori(-0.01) ;
-            break;
-        case 87:
-            accelerate(-0.01);
-            break;
-        case 68:
-             acchori(0.01) ;
-            break;
-        case 83:
-             accelerate(0.01);
-            break;
-    }
-};
-
-document.onkeyup = function(evt) {
-    evt = evt || window.event;
-    switch (evt.keyCode) {
-        case 65:
-            acchori(0) ;
-            break;
-        case 87:
-            accelerate(0.005);
-            break;
-        case 68:
-             acchori(0) ;
-            break;
-        case 83:
-             accelerate(0.005);
-            break;
-    }
-}
 </script>
 </div>
 <br>
