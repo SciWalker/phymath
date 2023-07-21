@@ -51,9 +51,6 @@
   <head>
 <title>Derivations: Change of Equilibrium Position</title>
 </head>
-<body>
-    <?php include("header.html");?>
-        <?php include("sidebar.html");?>
 <h2>Change of The Equilibrium Position of a Pivoted Wooden Strip</h2>
 Our next formula derivation is from a year 2011 question(<a href="https://drive.google.com/file/d/1ITF6eGt9szsUXpgDyOWc4f63b2BvP74n">9702_s11_qp_32.pdf</a>). The derivation of this example would again require the knowledge of moment (torque). Here is the excerpt of the diagram from the past year,
 <br>
