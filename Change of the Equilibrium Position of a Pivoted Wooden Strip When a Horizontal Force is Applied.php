@@ -6,10 +6,10 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
   <!-- Title -->
-  <title>Konigsberg Bridge</title>
+  <title>Change of the Equilibrium Position of a Pivoted Wooden Strip When a Horizontal Force is Applied</title>
   <!-- Meta -->
   
-  <meta name="description" content="Konigsberg Bridge">
+  <meta name="description" content="Change of the Equilibrium Position of a Pivoted Wooden Strip When a Horizontal Force is Applied">
   <meta name="author" content="Elijah Wong">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
   <!-- Favicon -->
@@ -27,7 +27,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <?php include("/home/sciwalker/public_html/header_2018.html") ;?>
+  <?php include("header_2018.html") ;?>
     <!-- === END HEADER === -->
     <!-- === BEGIN CONTENT === -->
     <div id="content" class="container">
@@ -71,7 +71,7 @@ To start with, we label the heights and lengths on the diagram as follows:
 <br>
 We denote the weight of the wooden strip as $W$, the horizontal force due to the wooden strip as $mg$, the horizontal distance between the centre of gravity of the wooden strip and the nail as $x_2$, the vertical height from the centre of gravity to the nail as $h'$, and the total height from the ground to the nail as $H$. After we have defined the symbols, let's write down the formula of the triangles as:
 \begin{equation}
-\sin \theta = \frac{x_2}{\frac{L}{2}}, \cos \theta =\frac{H-h}{l},
+\sin \theta = \frac{x_2}{\frac{L}{2} }, \cos \theta =\frac{H-h}{l},
 \end{equation}
 where the angle $\theta$ is the angle made by the wooden strip to the horizontal.
 We apply the principle of moment about the position of the nail,
