@@ -15,13 +15,13 @@
   <!-- Favicon -->
   <link href="favicon.html" rel="shortcut icon">
   <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="http://www.phymath.com/assets/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.phymath.com/assets/css/bootstrap.css" rel="stylesheet">
   <!-- Template CSS -->
-  <link rel="stylesheet" href="http://www.phymath.com/assets/css/animate.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://www.phymath.com/assets/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://www.phymath.com/assets/css/nexus.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://www.phymath.com/assets/css/responsive.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://www.phymath.com/assets/css/custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.phymath.com/assets/css/animate.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.phymath.com/assets/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.phymath.com/assets/css/nexus.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.phymath.com/assets/css/responsive.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.phymath.com/assets/css/custom.css" rel="stylesheet">
   <!-- Google Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
@@ -38,8 +38,7 @@
           <!-- Main Column -->
           <div class="col-md-9">
             <!-- Main Content -->
-<header>
-<script type="text/x-mathjax-config">
+<header><script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
