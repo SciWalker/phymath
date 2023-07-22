@@ -51,7 +51,7 @@
 <h2>Change of The Equilibrium Position of a Pivoted Wooden Strip</h2>
 Our next formula derivation is from a year 2011 question(<a href="https://drive.google.com/file/d/1ITF6eGt9szsUXpgDyOWc4f63b2BvP74n">9702_s11_qp_32.pdf</a>). The derivation of this example would again require the knowledge of moment (torque). Here is the excerpt of the diagram from the past year,
 <br>
-<a href="http://www.phymath.com/Fig-ruler.PNG"><img src="http://www.phymath.com/Fig-ruler.PNG" class="img" align="middle" style="width:40%;height:40%;" /></a>
+<a href="http://www.phymath.com/Fig-ruler.PNG"><img src="http://www.phymath.com/Fig-ruler.PNG" class="img" align="middle" /></a>
 <br>
 and the formula.
 <br>
@@ -122,7 +122,7 @@ So we have again derived the formula for another past year. Got question? Feel f
         </div>
       </div>
       <!-- === END CONTENT === -->
-<?php include("/home/sciwalker/public_html/footer_2018.html") ?>
+<?php include("footer_2018.html") ?>
 
   <!-- JS -->
   <script type="text/javascript" src="/home/sciwalker/assets/js/jquery.min.js" type="text/javascript"></script>
