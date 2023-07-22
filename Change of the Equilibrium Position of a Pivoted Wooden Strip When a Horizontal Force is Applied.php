@@ -38,6 +38,7 @@
           <!-- Main Column -->
           <div class="col-md-9">
             <!-- Main Content -->
+<header>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
@@ -47,7 +48,7 @@
   });
   </script><script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> 
 
-
+</header>
   <head>
 <title>Derivations: Change of Equilibrium Position</title>
 </head>
