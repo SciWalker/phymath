@@ -116,7 +116,6 @@ m^2g^2&=\frac{W^2L^2}{4(H-h)^2}-W^2\frac{L^2}{4l^2}\\
 \end{aligned}
 
 So we have again derived the formula for another past year. Got question? Feel free to write your opinion at the column below for discussion.
- <?php include("footer.html");?>
 
   
 
