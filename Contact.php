@@ -69,7 +69,7 @@ if ($action == "") {
         <label><strong>Enter Captcha:</strong></label><br />
         <input type="text" name="captcha" />
         <p><br />
-            <img src="captcha.php?rand=<?php echo rand(); ?>" id='captcha_image'>
+            <img src="Captcha.php?rand=<?php echo rand(); ?>" id='captcha_image'>
         </p>
         <p>Can't read the image?
             <a href='javascript: refreshCaptcha();'>click here</a>
