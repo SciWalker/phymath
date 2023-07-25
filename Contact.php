@@ -38,10 +38,10 @@
 					<div class="col-md-9">
 						<!-- Main Content -->
 
-<h1>Ask how we can help you:</h1>
+<h1>Please contact us for any business opportunities!</h1>
 <br>
-<p>&bull; We deliver online tuition for physics and mathematics.</p>
-<p>&#x2022; We make simulations for physics and mathematics.</p>
+<p>&bull; We sell educational puzzles and brain teaser toys</p>
+<p>&#x2022; We make simulations for physics and mathematics</p>
 <p>&bull; We make quizzes and exercises for students and teachers alike.</p>
 <br>
 <h1>Ready to chat? Contact us via these following channels:</h1>
@@ -49,41 +49,74 @@
 <p> Email: <a class = "link" href="mailto:admin@phymath.com">admin@phymath.com</a></p>
 <p>Facebook: <a class = "link" href="https://www.facebook.com/phymathpage">https://www.facebook.com/phymathpage</a></p>
 <p>Twitter: <a class = "link" href="https://twitter.com/PhyMath_Admin">https://twitter.com/PhyMath_Admin</a></p>
-
 <?php
-$action=$_REQUEST['action'];
-if ($action=="")    /* display the contact form */
-    {
+session_start();
+$action = $_REQUEST['action'];
+
+if ($action == "") {
+    /* Display the contact form */
+
+    // Your existing contact form code here:
     ?>
-    <form  action="" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="action" value="submit">
-    Your name:<br>
-    <input name="name" type="text" value="" size="30"/><br>
-    Your email:<br>
-    <input name="email" type="text" value="" size="30"/><br>
-    Your message:<br>
-    <textarea name="message" rows="7" cols="30"></textarea><br>
-    <input type="submit" value="Send email"/>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="action" value="submit">
+        Your name:<br>
+        <input name="name" type="text" value="" size="30"/><br>
+        Your email:<br>
+        <input name="email" type="text" value="" size="30"/><br>
+        Your message:<br>
+        <textarea name="message" rows="7" cols="30"></textarea><br>
+        <label><strong>Enter Captcha:</strong></label><br />
+        <input type="text" name="captcha" />
+        <p><br />
+            <img src="captcha.php?rand=<?php echo rand(); ?>" id='captcha_image'>
+        </p>
+        <p>Can't read the image?
+            <a href='javascript: refreshCaptcha();'>click here</a>
+            to refresh</p>
+        <input type="submit" value="Send email"/>
     </form>
     <?php
-    } 
-else                /* send the submitted data */
-    {
-    $name=$_REQUEST['name'];
-    $email=$_REQUEST['email'];
-    $message=$_REQUEST['message'];
-    if (($name=="")||($email=="")||($message==""))
-        {
-        echo "All fields are required, please fill <a href=\"\">the form</a> again.";
+} else {
+    /* Send the submitted data */
+
+    $name = $_REQUEST['name'];
+    $email = $_REQUEST['email'];
+    $message = $_REQUEST['message'];
+
+    // Captcha verification code (same as before)
+    if (isset($_POST['captcha']) && ($_POST['captcha'] != '')) {
+        // Validation: Checking entered captcha code with the generated captcha code
+        if (strcasecmp($_SESSION['captcha'], $_POST['captcha']) != 0) {
+            // Note: the captcha code is compared case insensitively.
+            // if you want case sensitive match, check above with strcmp()
+            echo "Captcha verification failed. Please try again.";
+        } else {
+            // Captcha is correct, process the contact form here.
+            if (($name == "") || ($email == "") || ($message == "")) {
+                echo "All fields are required, please fill <a href=\"\">the form</a> again.";
+            } else {
+                $from = "From: $name<$email>\r\nReturn-path: $email";
+                $subject = "Message sent using your contact form";
+                mail("admin@phymath.com", $subject, $message, $from);
+                echo "Email sent!";
+            }
         }
-    else{        
-        $from="From: $name<$email>\r\nReturn-path: $email";
-        $subject="Message sent using your contact form";
-        mail("admin@phymath.com", $subject, $message, $from);
-        echo "Email sent!";
-        }
-    }  
+    } else {
+        echo "Please enter the captcha code.";
+    }
+}
 ?>
+
+<script>
+    // Refresh Captcha
+    function refreshCaptcha() {
+        var img = document.images['captcha_image'];
+        img.src = img.src.substring(
+            0, img.src.lastIndexOf("?")
+        ) + "?rand=" + Math.random() * 1000;
+    }
+</script>
 						<!-- End Main Content -->
 					</div>
 					<!-- End Main Column -->
