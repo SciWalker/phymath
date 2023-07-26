@@ -6,6 +6,7 @@ deployment:
  - /bin/cp Captcha.php $DEPLOYPATH_ORIGINAL
  - /bin/cp Contact.php $DEPLOYPATH_ORIGINAL
  - /bin/cp header_2018.html $DEPLOYPATH_ORIGINAL
+ - /bin/cp footer_2018.html $DEPLOYPATH_ORIGINAL
  - /bin/cp home.php $DEPLOYPATH_ORIGINAL
  - /bin/cp -R merchandise $DEPLOYPATH_ORIGINAL
  - /bin/cp -R assets $DEPLOYPATH_ORIGINAL
