@@ -93,11 +93,12 @@ if ($action == "") {
             echo "Captcha verification failed. Please try again.";
         } else {
             // Captcha is correct, process the contact form here.
+			$enteredCaptcha = $_POST['captcha']; 
             if (($name == "") || ($email == "") || ($message == "")) {
                 echo "All fields are required, please fill <a href=\"\">the form</a> again.";
             } else {
                 $from = "From: $name<$email>\r\nReturn-path: $email";
-                $subject = "Message sent using your contact form:";
+                $subject = "Message sent using your contact form:$enteredCaptcha";
                 mail("admin@phymath.com", $subject, $message, $from);
                 echo "Email sent!";
             }
