@@ -3,20 +3,21 @@ session_start();
 //You can customize your captcha settings here
 
 $captcha_code = '';
-$captcha_image_height = 50;
-$captcha_image_width = 130;
-$total_characters_on_image = 6;
+$captcha_image_height = 70;
+$captcha_image_width = 170;
+$total_characters_on_image = 7;
 
 //The characters that can be used in the CAPTCHA code.
 //avoid all confusing characters and numbers (For example: l, 1 and i)
-$possible_captcha_letters = 'bcdfghjkmnpqrstvwxyz23456789';
-$captcha_font = './monofont.ttf';
+$possible_captcha_letters = 'ABCDEFGHJKLMNOPQRSTUWXYZ23456789@%$';
+$captcha_font = './Natalic.ttf';
 
-$random_captcha_dots = 50;
-$random_captcha_lines = 25;
-$captcha_text_color = "0x142864";
-$captcha_noise_color = "0x142864";
-
+$random_captcha_dots = 150;
+$random_captcha_lines = 50;
+$captcha_text_color = "0x641428";
+# color red for noise captcha
+$captcha_noise_color ="0x142864";
+$font_size_scale=0.15;
 
 $count = 0;
 while ($count < $total_characters_on_image) { 
@@ -27,7 +28,7 @@ $captcha_code .= substr(
 $count++;
 }
 
-$captcha_font_size = $captcha_image_height * 0.65;
+$captcha_font_size = $captcha_image_width * $font_size_scale;
 $captcha_image = @imagecreate(
 	$captcha_image_width,
 	$captcha_image_height
@@ -90,15 +91,17 @@ $text_box = imagettfbbox(
 	); 
 $x = ($captcha_image_width - $text_box[4])/2;
 $y = ($captcha_image_height - $text_box[5])/2;
+$angle = mt_rand(-10, 10); // Random rotation angle
 imagettftext(
 	$captcha_image,
 	$captcha_font_size,
-	0,
+  $angle,
 	$x,
 	$y,
 	$captcha_text_color,
 	$captcha_font,
-	$captcha_code
+	$captcha_code,
+
 	);
 
 /* Show captcha image in the html page */

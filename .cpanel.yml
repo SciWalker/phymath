@@ -2,12 +2,12 @@
 deployment:
  tasks:
  - export DEPLOYPATH_ORIGINAL=/home/sciwalker/public_html/
- - /bin/cp monofont.ttf $DEPLOYPATH_ORIGINAL
+ - /bin/cp Natalic.ttf $DEPLOYPATH_ORIGINAL
  - /bin/cp Captcha.php $DEPLOYPATH_ORIGINAL
  - /bin/cp Contact.php $DEPLOYPATH_ORIGINAL
  - /bin/cp header_2018.html $DEPLOYPATH_ORIGINAL
  - /bin/cp footer_2018.html $DEPLOYPATH_ORIGINAL
- - /bin/cp home.php $DEPLOYPATH_ORIGINAL
+ - /bin/cp "Change of the Equilibrium Position of a Pivoted Wooden Strip When a Horizontal Force is Applied.php" $DEPLOYPATH_ORIGINAL
  - /bin/cp -R merchandise $DEPLOYPATH_ORIGINAL
  - /bin/cp -R assets $DEPLOYPATH_ORIGINAL
 #  - export DEPLOYPATH_ASSET=/home/sciwalker/public_html/assets/img/

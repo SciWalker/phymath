@@ -49,6 +49,18 @@
 
 </header>
 <h2>Change of The Equilibrium Position of a Pivoted Wooden Strip</h2>
+<p>
+Let's explore the significance and applications of this experiment in real-life scenarios related to the concept of torque, which plays a crucial role in rotational motion, stability, and balance of objects. Understanding torque is essential for various practical situations, such as opening doors, turning steering wheels, using wrenches, and balancing seesaws. By grasping the principles of torque, you can effectively design and control machines and structures that involve rotational motion.
+</p>
+<p>
+Now, let's discuss the need to derive the formula and its benefits in understanding how the horizontal force F (caused by the weight) depends on the variables m, g, L, and d. By deriving the formula, we can observe the relationship between the force (mg) and these variables, and how changing any of them affects the force F. For instance, we can notice that (mg)^2 is directly proportional to W^2 and L^2. This means that increasing the mass (m) or the lever arm length (L) will result in a larger force (F), while increasing the distance (d) from the pivot point will lead to a smaller force (F).
+</p>
+<p>
+Deriving the formula also serves another essential purpose: validating the experimental results. By comparing the measured force (F) with the calculated force (using the formula), we can verify the accuracy of our experiment. Additionally, this process of derivation helps us understand how to apply simple theorems like the principle of moments and Pythagoras theorem to arrive at an equation that represents the relationship between the variables.
+</p>
+
+
+
 Our next formula derivation is from a year 2011 question(<a href="https://drive.google.com/file/d/1ITF6eGt9szsUXpgDyOWc4f63b2BvP74n">9702_s11_qp_32.pdf</a>). The derivation of this example would again require the knowledge of moment (torque). Here is the excerpt of the diagram from the past year,
 <br>
 <a href="http://www.phymath.com/Fig-ruler.PNG"><img src="http://www.phymath.com/Fig-ruler.PNG" class="img" align="middle" /></a>
@@ -58,6 +70,9 @@ and the formula.
 <a href="http://www.phymath.com/formula.PNG"><img src="http://www.phymath.com/formula.PNG" class="img" /></a>
 <h2>Derivation</h2>
 The wooden strip is held stationary by three forces, namely the weight of the wooden strip, the horizontal force acted by the string due to the slotted masses, and the contact force exerted by the nail at the top of the strip. There is a rotational equilibrium whereby all the moments exerted by the three forces were balanced in the anticlockwise and the clockwise directions.
+
+
+
 
 To start with, we label the heights and lengths on the diagram as follows:
 <br>
@@ -114,6 +129,8 @@ m^2g^2&=\frac{W^2L^2}{4(H-h)^2}-W^2\frac{L^2}{4l^2}\\
 
 So we have again derived the formula for another past year. Got question? Feel free to write your opinion at the column below for discussion.
 
+<br>
+In summary, this experiment on torque and force provides valuable insights into the fundamental concepts governing rotational motion, which has practical applications in various day-to-day activities and engineering endeavors. The derived formula allows us to analyze how different variables influence the force, enabling us to design and optimize machines and structures for efficient rotational motion. Moreover, the process of derivation aids in validating experimental findings and reinforces our understanding of basic theorems' applications in physics.
   
 
             <!-- End Main Content -->
