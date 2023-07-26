@@ -97,7 +97,7 @@ if ($action == "") {
                 echo "All fields are required, please fill <a href=\"\">the form</a> again.";
             } else {
                 $from = "From: $name<$email>\r\nReturn-path: $email";
-                $subject = "Message sent using your contact form";
+                $subject = "Message sent using your contact form:$_POST['captcha']";
                 mail("admin@phymath.com", $subject, $message, $from);
                 echo "Email sent!";
             }
