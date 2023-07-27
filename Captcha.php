@@ -9,7 +9,7 @@ $total_characters_on_image = 7;
 
 //The characters that can be used in the CAPTCHA code.
 //avoid all confusing characters and numbers (For example: l, 1 and i)
-$possible_captcha_letters = 'ABCDEFGHJKLMNOPQRSTUWXYZ23456789@%$';
+$possible_captcha_letters = 'ABCDEFGHJKLMNPQRSTUWXYZ23456789@$&?';
 $captcha_font = './Natalic.ttf';
 
 $random_captcha_dots = 150;
