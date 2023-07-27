@@ -50,7 +50,7 @@
 </header>
 <h2>Change of The Equilibrium Position of a Pivoted Wooden Strip</h2>
 <p>
-Let's explore the significance and applications of this experiment in real-life scenarios related to the concept of torque, which plays a crucial role in rotational motion, stability, and balance of objects. Understanding torque is essential for various practical situations, such as opening doors, turning steering wheels, using wrenches, and balancing seesaws. By grasping the principles of torque, you can effectively design and control machines and structures that involve rotational motion.
+Let's explore the significance and applications of this experiment in real-life scenarios related to the concept of torque, which plays a crucial role in rotational motion, stability, and balance of objects. Understanding torque is essential for advanced applications in modern machines and technology. It plays a crucial role in robotics and robotic arms, industrial machinery like CNC mills and lathes, electric vehicles (EVs), wind turbines, aerospace engineering for aircraft control surfaces, 3D printing, robotics exoskeletons, space exploration, CNC machining, and electric power generation in turbines and generators. Precise control of torque allows for precise movements, efficient power generation, stable flight, accurate manufacturing, and enhanced performance, pushing the boundaries of technology and innovation.
 </p>
 <p>
 Now, let's discuss the need to derive the formula and its benefits in understanding how the horizontal force F (caused by the weight) depends on the variables m, g, L, and d. By deriving the formula, we can observe the relationship between the force (mg) and these variables, and how changing any of them affects the force F. For instance, we can notice that (mg)^2 is directly proportional to W^2 and L^2. This means that increasing the mass (m) or the lever arm length (L) will result in a larger force (F), while increasing the distance (d) from the pivot point will lead to a smaller force (F).
@@ -130,7 +130,7 @@ m^2g^2&=\frac{W^2L^2}{4(H-h)^2}-W^2\frac{L^2}{4l^2}\\
 So we have again derived the formula for another past year. Got question? Feel free to write your opinion at the column below for discussion.
 
 <br>
-In summary, this experiment on torque and force provides valuable insights into the fundamental concepts governing rotational motion, which has practical applications in various day-to-day activities and engineering endeavors. The derived formula allows us to analyze how different variables influence the force, enabling us to design and optimize machines and structures for efficient rotational motion. Moreover, the process of derivation aids in validating experimental findings and reinforces our understanding of basic theorems' applications in physics.
+In summary, this experiment on torque and force provides valuable insights into the fundamental concepts governing rotational motion, which has practical applications in various day-to-day activities and engineering endeavors. The derived formula allows us to analyze how different variables influence the force, enabling us to design and optimize machines and structures for efficient rotational motion. Moreover, the process of derivation aids in validating experimental findings and reinforces our understanding of basic theorems' applications in physics. 
   
 
             <!-- End Main Content -->

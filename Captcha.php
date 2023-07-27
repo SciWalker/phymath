@@ -100,8 +100,7 @@ imagettftext(
 	$y,
 	$captcha_text_color,
 	$captcha_font,
-	$captcha_code,
-
+	$captcha_code
 	);
 
 /* Show captcha image in the html page */
