@@ -7,7 +7,7 @@ deployment:
  - /bin/cp Contact.php $DEPLOYPATH_ORIGINAL
  - /bin/cp header_2018.html $DEPLOYPATH_ORIGINAL
  - /bin/cp footer_2018.html $DEPLOYPATH_ORIGINAL
- - /bin/cp "Change of the Equilibrium Position of a Pivoted Wooden Strip When a Horizontal Force is Applied.php" $DEPLOYPATH_ORIGINAL
+ - /bin/cp "formula-derivation-metre-rule-balanced-curved-surface.php" $DEPLOYPATH_ORIGINAL
  - /bin/cp -R merchandise $DEPLOYPATH_ORIGINAL
  - /bin/cp -R assets $DEPLOYPATH_ORIGINAL
 #  - export DEPLOYPATH_ASSET=/home/sciwalker/public_html/assets/img/
