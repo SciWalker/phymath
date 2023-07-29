@@ -64,7 +64,9 @@ if ($action == "") {
         <input name="name" type="text" value="" size="30"/><br>
         Your email:<br>
         <input name="email" type="text" value="" size="30"/><br>
-        Your message:<br>
+		Subject:<br>
+        <input name="subject" type="text" value="" size="30"/><br>
+        Message:<br>
         <textarea name="message" rows="7" cols="30"></textarea><br>
         <label><strong>Enter Captcha:</strong></label><br />
         <input type="text" name="captcha" />
@@ -83,6 +85,7 @@ if ($action == "") {
     $name = $_REQUEST['name'];
     $email = $_REQUEST['email'];
     $message = $_REQUEST['message'];
+	$subject = $_REQUEST['subject'];
 
     // Captcha verification code (same as before)
     if (isset($_POST['captcha']) && ($_POST['captcha'] != '')) {
@@ -98,7 +101,7 @@ if ($action == "") {
                 echo "All fields are required, please fill <a href=\"\">the form</a> again.";
             } else {
                 $from = "From: $name<$email>\r\nReturn-path: $email";
-                $subject = "Message sent using your contact form:$enteredCaptcha";
+                $subject = "$enteredCaptcha: $subject";
                 mail("admin@phymath.com", $subject, $message, $from);
                 echo "Email sent!";
             }

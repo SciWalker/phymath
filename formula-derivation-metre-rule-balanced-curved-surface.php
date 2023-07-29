@@ -54,7 +54,7 @@ table, th, td {
 </header>
 In the A level physics practical, it was a common practice for the examiners to hide the exact form of the formula related to the experiment from the students. In most of the experiments, the students would only know the formula in the general form of equation y=ma+b, where a is the x value, m is the gradient, and b is the y-intercept. Therefore, it was almost impossible for the students to understand how a measured physical quantity is related to another quantity in a precise manner. This is to prevent students from calculating the values without really working on the experiment, however, it jeopardizes the students' opportunity to appreciate the beauty of mathematics that underlies the physical equation. So, I would like to make a series of the derivations of the physics formula in the practical question.
 
-Here is the excerpt of one of the past years (<a class = "link" href="http://phymath.com/2010 past year/2010/Question Paper Oct Nov/9702_w10_qp_34.pdf">9702_w10_qp_34.pdf</a>):
+Here is the excerpt of one of the past years (<a class = "link" href="https://drive.google.com/file/d/1k55qdJKNZFrWtrNK9G6l9u7UVzonEkmn">9702_w10_qp_34.pdf</a>):
 <a href="http://www.phymath.com/wp-content/uploads/2017/08/Capture-4.png"><img src="http://www.phymath.com/wp-content/uploads/2017/08/Capture-4.png" alt="" width="802" height="717" class="alignnone size-full wp-image-1184" /></a>
 The equation is given as:
 \begin{equation}
