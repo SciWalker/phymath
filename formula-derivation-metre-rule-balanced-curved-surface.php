@@ -55,13 +55,13 @@ table, th, td {
 In the A level physics practical, it was a common practice for the examiners to hide the exact form of the formula related to the experiment from the students. In most of the experiments, the students would only know the formula in the general form of equation y=ma+b, where a is the x value, m is the gradient, and b is the y-intercept. Therefore, it was almost impossible for the students to understand how a measured physical quantity is related to another quantity in a precise manner. This is to prevent students from calculating the values without really working on the experiment, however, it jeopardizes the students' opportunity to appreciate the beauty of mathematics that underlies the physical equation. So, I would like to make a series of the derivations of the physics formula in the practical question.
 
 Here is the excerpt of one of the past years (<a class = "link" href="https://drive.google.com/file/d/1k55qdJKNZFrWtrNK9G6l9u7UVzonEkmn">9702_w10_qp_34.pdf</a>):
-<a href="https://drive.google.com/file/d/1QCY_LHqKhOHEL4xgelUrCPvSKPD99OCO/view?usp=drive_link"><img src="https://drive.google.com/file/d/1QCY_LHqKhOHEL4xgelUrCPvSKPD99OCO/view?usp=drive_link" alt="" width="802" height="717" class="alignnone size-full wp-image-1184" /></a>
+<a href="https://drive.google.com/file/d/1QCY_LHqKhOHEL4xgelUrCPvSKPD99OCO/view?usp=drive_link"><img src="https://drive.google.com/file/d/1QCY_LHqKhOHEL4xgelUrCPvSKPD99OCO/view" alt="" width="802" height="717" class="alignnone size-full wp-image-1184" /></a>
 The equation is given as:
 \begin{equation}
 \frac{1}{h_1-h_2}=\frac{a}{n}+b \end{equation}
 <h2>Derivation</h2>
 Before paperclips were hung at the cotton loop, the metre rule of mass M was in the state of equilibrium where the pivot point was located at the midpoint of the metre rule (about 50.0 cm from the edge):
-<a href="https://drive.google.com/file/d/1o3RYD2qCTttcj6OOxq_CUiIxS4Q31L2i/view?usp=drive_link"><img src="https://drive.google.com/file/d/1o3RYD2qCTttcj6OOxq_CUiIxS4Q31L2i/view?usp=drive_link" alt="" width="404" height="396" class="alignnone size-full wp-image-1188" /></a>
+<a href="https://drive.google.com/file/d/1o3RYD2qCTttcj6OOxq_CUiIxS4Q31L2i/view?usp=drive_link"><img src="https://drive.google.com/file/d/1o3RYD2qCTttcj6OOxq_CUiIxS4Q31L2i/view" alt="" width="404" height="396" class="alignnone size-full wp-image-1188" /></a>
 
 After the paperclips were hung at the cotton loop, The pivot has now moved to a new position (denoted as P'). The paperclips acts a force which is equal to the product of the (number of paperclip $\times$ mass of a paperclip ) and the gravitational acceleration, g. 
 There is a net moment in the direction of the force equals to $\tau_c=nmg \sin \theta \times$ (distance from the new pivot).
