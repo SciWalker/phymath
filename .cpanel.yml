@@ -3,7 +3,7 @@ deployment:
  tasks:
  - export DEPLOYPATH_ORIGINAL=/home/sciwalker/public_html/
  - /bin/cp Natalic.ttf $DEPLOYPATH_ORIGINAL
- - /bin/cp Captcha.php $DEPLOYPATH_ORIGINAL
+ - /bin/cp robots.txt $DEPLOYPATH_ORIGINAL
  - /bin/cp Contact.php $DEPLOYPATH_ORIGINAL
  - /bin/cp header_2018.html $DEPLOYPATH_ORIGINAL
  - /bin/cp footer_2018.html $DEPLOYPATH_ORIGINAL
@@ -13,5 +13,4 @@ deployment:
 #  - export DEPLOYPATH_ASSET=/home/sciwalker/public_html/assets/img/
 #  - /bin/cp assets/img/test.py $DEPLOYPATH_ASSET
 #  - export DEPLOYPATH_FOLDER=/home/sciwalker/public_html/merchandise/
-
 #  - /bin/cp style.css $DEPLOYPATH
