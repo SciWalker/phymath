@@ -5,11 +5,11 @@ deployment:
  - /bin/cp Natalic.ttf $DEPLOYPATH_ORIGINAL
  - /bin/cp robots.txt $DEPLOYPATH_ORIGINAL
  - /bin/cp Contact.php $DEPLOYPATH_ORIGINAL
- - /bin/cp merchandise/educational_puzzles.php $DEPLOYPATH_ORIGINAL
+#  - /bin/cp merchandise/educational_puzzles.php $DEPLOYPATH_ORIGINAL
  - /bin/cp footer_2018.html $DEPLOYPATH_ORIGINAL
  - /bin/cp "formula-derivation-metre-rule-balanced-curved-surface.php" $DEPLOYPATH_ORIGINAL
  - /bin/cp -R "Physics Articles" $DEPLOYPATH_ORIGINAL
- - /bin/cp -R assets $DEPLOYPATH_ORIGINAL
+ - /bin/cp -R merchandise $DEPLOYPATH_ORIGINAL
  - export DEPLOYPATH_ASSET=/home/sciwalker/public_html/assets/img/
  - /bin/cp assets/img/logo/logo-phymath.png $DEPLOYPATH_ASSET
 #  - export DEPLOYPATH_FOLDER=/home/sciwalker/public_html/merchandise/
