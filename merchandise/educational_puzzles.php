@@ -49,12 +49,13 @@ Here are some of the toys or puzzles that I myself found useful in cultivating k
 <ol>
 <li><a target="_blank" href="https://www.amazon.com/Sudoku-Puzzle-Cube-Portable-Classic/dp/B000PGWXYK/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=CULsu&amp;content-id=amzn1.sym.0250fb24-4363-44d0-b635-ac15f859c3b5%253Aamzn1.symc.40e6a10e-cbc4-4fa5-81e3-4435ff64d03b&amp;pf_rd_p=0250fb24-4363-44d0-b635-ac15f859c3b5&amp;pf_rd_r=NGCMYPH70642TKBQDNR9&amp;pd_rd_wg=fazd7&amp;pd_rd_r=2e157fb7-1710-43af-b27f-369d266423f1&amp;pd_rd_i=B000PGWXYK&_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=5e3e6242b53a07f4d094dc9c0cc6924a&camp=1789&creative=9325">Sudoku Rubik Cube</a>
 </li>
-<a href="https://www.amazon.com/Sudoku-Puzzle-Cube-Portable-Classic/dp/B000PGWXYK/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=CULsu&amp;content-id=amzn1.sym.0250fb24-4363-44d0-b635-ac15f859c3b5%253Aamzn1.symc.40e6a10e-cbc4-4fa5-81e3-4435ff64d03b&amp;pf_rd_p=0250fb24-4363-44d0-b635-ac15f859c3b5&amp;pf_rd_r=NGCMYPH70642TKBQDNR9&amp;pd_rd_wg=fazd7&amp;pd_rd_r=2e157fb7-1710-43af-b27f-369d266423f1&amp;pd_rd_i=B000PGWXYK&_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=5e3e6242b53a07f4d094dc9c0cc6924a&camp=1789&creative=9325"><img src = "http://anttila.ca/michael/sudokube/SolvedSudokube1.jpg" alt="sudokube" width="300" height="300"></img></a>
+<a href="https://www.amazon.com/Sudoku-Puzzle-Cube-Portable-Classic/dp/B000PGWXYK/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=CULsu&amp;content-id=amzn1.sym.0250fb24-4363-44d0-b635-ac15f859c3b5%253Aamzn1.symc.40e6a10e-cbc4-4fa5-81e3-4435ff64d03b&amp;pf_rd_p=0250fb24-4363-44d0-b635-ac15f859c3b5&amp;pf_rd_r=NGCMYPH70642TKBQDNR9&amp;pd_rd_wg=fazd7&amp;pd_rd_r=2e157fb7-1710-43af-b27f-369d266423f1&amp;pd_rd_i=B000PGWXYK&_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=5e3e6242b53a07f4d094dc9c0cc6924a&camp=1789&creative=9325"><img src = "https://drive.google.com/uc?export=view&id=1dbwUVPkqXVABSMaTJ4KLczTXMKcDxT3T" alt="sudokube" width="300" height="300"></img></a>
 <p>
 	This is a toy to let kids learn about sudoku and rubik cube at the same time. 
 </p>
 <li><a target="_blank" href="https://www.amazon.com/Matatalab-Educational-Entry-Level-Programming-Mechanical/dp/B07GPJV51D/ref=sr_1_2?keywords=matatalab&amp;qid=1689622846&amp;sr=8-2&_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=f6cd3d62e69cdc3aa869b554d2a87b78&camp=1789&creative=9325">Matatalab Programming Toys</a>
 </li>
+<a href="https://www.amazon.com/Matatalab-Educational-Entry-Level-Programming-Mechanical/dp/B07GPJV51D/ref=sr_1_2?keywords=matatalab&amp;qid=1689622846&amp;sr=8-2&_encoding=UTF8&tag=phymath0d-20&linkCode=ur2&linkId=f6cd3d62e69cdc3aa869b554d2a87b78&camp=1789&creative=9325"><img src = "https://drive.google.com/uc?export=view&id=10l9GJwrHdhwL_gEIJf36izVYXGUi91HB" alt="sudokube" width="300" height="300"></img></a>
 <p>
 	This is a toy to let kids learn about programming from early age. 
 </p>
