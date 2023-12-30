@@ -8,5 +8,5 @@ https://github.com/SciWalker/phymath.git
 git push origin master -u --exec=/usr/local/cpanel/3rdparty/bin/git-receive-pack
 
 # fast deploy
-git add . && git commit -m "improvement done"
+git add . && git commit -m "your commit message"
 git push phymath-cpanel-origin master -u --exec=/usr/local/cpanel/3rdparty/bin/git-receive-pack && git push origin master

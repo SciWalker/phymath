@@ -1,3 +1,4 @@
+
 async function loadModel() {
     const session = await ort.InferenceSession.create('squeezenet1.1-7.onnx');
     // const session = await ort.InferenceSession.create('model.onnx', { executionProviders: ['webgl'], graphOptimizationLevel: 'all' });
@@ -13,13 +14,16 @@ async function loadClassMapping() {
     text.split('\n').forEach(line => {
         const parts = line.split(':');
         const index = parts[0].trim();
-        const name = parts[1].trim().replace(/(^"|"$)/g, ''); // Remove leading and trailing quotes
+        const name = parts[1].trim().replace(/(^[{]|[}]$)/g, '');
+
         classMapping[index] = name;
     });
 }
 // Call this function when the page loads
 window.onload = () => {
-    loadClassMapping();
+    // loadClassMapping();
+    classMapping=loadAndTransformImagenetClasses();
+    console.log("classMapping:",classMapping)
 };
 function getImageDataFromCanvas(image, width, height) {
     const canvas = document.createElement('canvas');
@@ -63,7 +67,6 @@ function imageDataToTensor(image, dims) {
     // Extract the R, G, and B values
     const data = imageData.data;
     // var imageBufferData = image.bitmap.data;
-    console.log("here")
     const [redArray, greenArray, blueArray] = new Array(3).fill([]);
     // 2. Loop through the image buffer and extract the R, G, and B channels
     for (let i = 0; i < data.length; i += 4) {
@@ -105,13 +108,14 @@ async function runInference(session, inputTensor,model_type) {
     outputTensor = outputMap['1278'];
 }
     else{
-        const outputMap = await session.run({ data_0: inputTensor });
+        // const outputMap = await session.run({ data_0: inputTensor });
+        const outputMap = await session.run({ data: inputTensor });
         console.log(outputMap)
-    outputTensor = outputMap['softmaxout_1'];
+    outputTensor = outputMap['squeezenet0_flatten0_reshape0'];
     }
     
     const outputData = outputTensor.data;
-    
+    console.log(outputData)
     let maxIndex = -1;
     let maxScore = 0;
     for (let i = 0; i < outputData.length; i++) {
@@ -120,12 +124,116 @@ async function runInference(session, inputTensor,model_type) {
             maxIndex = i;
         }
     }
-
+    // Wait for the classMapping promise to resolve
+    const classMappingObject = await classMapping;
     // Use the mapping to get the human-readable name
-    const className = classMapping[maxIndex.toString()] || 'Unknown';
+    console.log("classMapping:",classMappingObject)
+    const className = classMappingObject[maxIndex] || 'Unknown';
 
     return { index: maxIndex, score: maxScore, name: className };
 }
+// function softmax(arr) {
+//     const max = Math.max(...arr);
+//     const exps = arr.map(x => Math.exp(x - max));
+//     const sum = exps.reduce((a, b) => a + b);
+//     return exps.map(x => x / sum);
+// }
+
+function imagenetClassesTopK(classProbabilities, k = 5) {
+    const probs =
+        _.isTypedArray(classProbabilities) ? Array.prototype.slice.call(classProbabilities) : classProbabilities;
+  
+    const sorted = _.reverse(_.sortBy(probs.map((prob, index) => [prob, index]), (probIndex) => probIndex[0]));
+  
+    const topK = _.take(sorted, k).map((probIndex) => {
+    //   const iClass = imagenetClasses[probIndex[1]];
+    
+      return {
+        id: iClass[0],
+        index: parseInt(probIndex[1].toString(), 10),
+        name: iClass[1].replace(/_/g, ' '),
+        probability: probIndex[0]
+      };
+    });
+    return topK;
+  }
+function softmax(resultArray) {
+    // Get the largest value in the array.
+    const largestNumber = Math.max(...resultArray);
+    // Apply exponential function to each result item subtracted by the largest number, use reduce to get the previous result number and the current number to sum all the exponentials results.
+    const sumOfExp = resultArray.map((resultItem) => Math.exp(resultItem - largestNumber)).reduce((prevNumber, currentNumber) => prevNumber + currentNumber);
+    //Normalizes the resultArray by dividing by the sum of all exponentials; this normalization ensures that the sum of the components of the output vector is 1.
+    return resultArray.map((resultValue) => {
+      return Math.exp(resultValue - largestNumber) / sumOfExp;
+    });
+  }
+  function readImagenetClasses() {
+    try {
+        // Require the imagenet.js module
+        const imagenet = require('./imagenet.js');
+
+        // Access the imagenetClasses object
+        const classes = imagenet.imagenetClasses;
+
+        // Process or return the classes as needed
+        return classes;
+    } catch (error) {
+        console.error('Error reading the imagenetClasses:', error);
+    }
+}
+
+async function loadAndTransformImagenetClasses() {
+    // Read the content of the imagenet.js file
+    const response = await fetch('imagenet.js');
+    const data = await response.text();
+
+    // Temporary object to capture exports
+    const moduleExports = {};
+
+    // Evaluate the script in the context of the temporary object
+    eval('const exports = moduleExports; ' + data);
+
+    // Check if imagenetClasses is defined
+    if (moduleExports.imagenetClasses) {
+        const imagenetClasses = moduleExports.imagenetClasses;
+
+        // Transform the object
+        const transformedClasses = {};
+        for (const key in imagenetClasses) {
+            if (imagenetClasses.hasOwnProperty(key)) {
+                // Retain the key but change the value to a string (second element of the array)
+                transformedClasses[key] = imagenetClasses[key][1];
+            }
+        }
+
+        // console.log("transformedClasses",transformedClasses);
+        return transformedClasses;
+    } else {
+        console.error('imagenetClasses not found in the file.');
+    }
+}
+
+async function runInference_v2(session, preprocessedData) {
+    // Get start time to calculate inference time.
+    const start = new Date();
+    // create feeds with the input name from model export and the preprocessed data.
+    const feeds = {};
+    feeds[session.inputNames[0]] = preprocessedData;
+    // Run the session inference.
+    const outputData = await session.run(feeds);
+    // Get the end time to calculate inference time.
+    const end = new Date();
+    // Convert to seconds.
+    const inferenceTime = (end.getTime() - start.getTime())/1000;
+    // Get output results with the output name from the model export.
+    const output = outputData[session.outputNames[0]];
+    //Get the softmax of the output data. The softmax transforms values to be between 0 and 1
+    var outputSoftmax = softmax(Array.prototype.slice.call(output.data));
+    //Get the top 5 results.
+    var results = imagenetClassesTopK(outputSoftmax, 5);
+    console.log('results: ', results);
+    return [results, inferenceTime];
+  }
 
 document.getElementById('imageUpload').addEventListener('change', async (event) => {
     const file = event.target.files[0];
@@ -139,8 +247,11 @@ document.getElementById('imageUpload').addEventListener('change', async (event) 
         const session = await loadModel();
         const inputTensor = imageDataToTensor(image,[1, 3, 224, 224]);
         // const inputTensor = preprocessImage(image);
-        const results = await runInference(session, inputTensor.tensor, model_type);
+        // const results = await runInference(session, inputTensor.tensor, model_type);
+        
+        const results = await runInference(session, inputTensor.tensor);
         displayPreprocessedImage(inputTensor.imageData);
+
         // Draw results on the canvas (example: display detected class)
         ctx.font = '20px Arial';
         ctx.fillStyle = 'red';
