@@ -1,6 +1,6 @@
 
 async function loadModel() {
-    const session = await ort.InferenceSession.create('squeezenet1.1-7.onnx');
+    const session = await ort.InferenceSession.create('squeezenet1_1.onnx');
     // const session = await ort.InferenceSession.create('model.onnx', { executionProviders: ['webgl'], graphOptimizationLevel: 'all' });
     return session;
 }
@@ -62,13 +62,14 @@ function preprocessImage(image) {
 function imageDataToTensor(image, dims) {
     // Get the context and the image data from the canvas
     const ctx = canvas.getContext('2d');
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const imageData = ctx.getImageData(0, 0, dims[2], dims[3]);
 
     // Extract the R, G, and B values
     const data = imageData.data;
     // var imageBufferData = image.bitmap.data;
     const [redArray, greenArray, blueArray] = new Array(3).fill([]);
     // 2. Loop through the image buffer and extract the R, G, and B channels
+    console.log(data.length)
     for (let i = 0; i < data.length; i += 4) {
         redArray.push(data[i]);
         greenArray.push(data[i + 1]);
@@ -77,6 +78,7 @@ function imageDataToTensor(image, dims) {
 
     // Concatenate and normalize the RGB values
     const transposedData = redArray.concat(greenArray).concat(blueArray);
+    console.log("transposeddata",transposedData.length)
     const float32Data = new Float32Array(dims[1] * dims[2] * dims[3]);
     for (let i = 0; i < transposedData.length; i++) {
         float32Data[i] = transposedData[i] / 255.0;
@@ -157,30 +159,6 @@ function imagenetClassesTopK(classProbabilities, k = 5) {
     });
     return topK;
   }
-function softmax(resultArray) {
-    // Get the largest value in the array.
-    const largestNumber = Math.max(...resultArray);
-    // Apply exponential function to each result item subtracted by the largest number, use reduce to get the previous result number and the current number to sum all the exponentials results.
-    const sumOfExp = resultArray.map((resultItem) => Math.exp(resultItem - largestNumber)).reduce((prevNumber, currentNumber) => prevNumber + currentNumber);
-    //Normalizes the resultArray by dividing by the sum of all exponentials; this normalization ensures that the sum of the components of the output vector is 1.
-    return resultArray.map((resultValue) => {
-      return Math.exp(resultValue - largestNumber) / sumOfExp;
-    });
-  }
-  function readImagenetClasses() {
-    try {
-        // Require the imagenet.js module
-        const imagenet = require('./imagenet.js');
-
-        // Access the imagenetClasses object
-        const classes = imagenet.imagenetClasses;
-
-        // Process or return the classes as needed
-        return classes;
-    } catch (error) {
-        console.error('Error reading the imagenetClasses:', error);
-    }
-}
 
 async function loadAndTransformImagenetClasses() {
     // Read the content of the imagenet.js file
@@ -213,27 +191,6 @@ async function loadAndTransformImagenetClasses() {
     }
 }
 
-async function runInference_v2(session, preprocessedData) {
-    // Get start time to calculate inference time.
-    const start = new Date();
-    // create feeds with the input name from model export and the preprocessed data.
-    const feeds = {};
-    feeds[session.inputNames[0]] = preprocessedData;
-    // Run the session inference.
-    const outputData = await session.run(feeds);
-    // Get the end time to calculate inference time.
-    const end = new Date();
-    // Convert to seconds.
-    const inferenceTime = (end.getTime() - start.getTime())/1000;
-    // Get output results with the output name from the model export.
-    const output = outputData[session.outputNames[0]];
-    //Get the softmax of the output data. The softmax transforms values to be between 0 and 1
-    var outputSoftmax = softmax(Array.prototype.slice.call(output.data));
-    //Get the top 5 results.
-    var results = imagenetClassesTopK(outputSoftmax, 5);
-    console.log('results: ', results);
-    return [results, inferenceTime];
-  }
 
 document.getElementById('imageUpload').addEventListener('change', async (event) => {
     const file = event.target.files[0];
@@ -245,6 +202,8 @@ document.getElementById('imageUpload').addEventListener('change', async (event) 
         ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
         const model_type ="squeezenet"
         const session = await loadModel();
+        
+
         const inputTensor = imageDataToTensor(image,[1, 3, 224, 224]);
         // const inputTensor = preprocessImage(image);
         // const results = await runInference(session, inputTensor.tensor, model_type);
