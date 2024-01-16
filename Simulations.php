@@ -53,7 +53,7 @@
 
 <p><a class="link" href="http://phymath.com/NFC.php">Near Field Communication (NFC)</a></p>
 <p><a class="link" href="http://phymath.com/Simulations/Genetic Algorithm - Simulation.php">Genetic Algorithm - Simulation</a></p>
-<p><a class="link" href="http://phymath.com/Simulations/tech/app/object_detection.html">Object Detection</a></p>
+<p><a class="link" href="http://phymath.com/tech/app/object_detection.html">Object Detection</a></p>
 
             <!-- End Main Content -->
           </div>
