@@ -40,7 +40,7 @@
           <div class="col-md-9">
             <!-- Main Content -->
 <h1>
-  List of Simulations
+  List of Simulations and Useful Apps
 </h1>
 <p>
   I produce some simulations using javascript to demonstrate the concepts of physics, mathematics and technologies. Most of the simulations could be found in the articles, but there are some 'highlights' that I deem important to share here as a separate page.
@@ -53,6 +53,8 @@
 
 <p><a class="link" href="http://phymath.com/NFC.php">Near Field Communication (NFC)</a></p>
 <p><a class="link" href="http://phymath.com/Simulations/Genetic Algorithm - Simulation.php">Genetic Algorithm - Simulation</a></p>
+<p><a class="link" href="http://phymath.com/Simulations/tech/app/object_detection.html">Object Detection</a></p>
+
             <!-- End Main Content -->
           </div>
           <!-- End Main Column -->
