@@ -47,7 +47,7 @@
 <p><a class="link" href="http://phymath.com/tech/tensorflow/object_recognition_mobilenet.php">Mobilenet Object Recognition</a></p>
 <!-- <p><a class="link" href="http://phymath.com/tech/Visual_QR/object_recognition_saved_model.php">Custom Object Recogntion</a></p> -->
 <!-- <p><a class="link" href="http://phymath.com/tech/web-app-camera/rearcamera.html">CameraApp</a></p> -->
-<p><a class="link" href="http://phymath.com/tech/app/object_detection.html">Object Detection</a></p>
+<p><a class="link" href="http://phymath.com/tech/app/object_detection.html">Light Weight Onnyx Runtime Object Detection</a></p>
             <!-- End Main Content -->
           </div>
           <!-- End Main Column -->
