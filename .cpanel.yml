@@ -4,7 +4,8 @@ deployment:
  - export DEPLOYPATH_ORIGINAL=/home/sciwalker/public_html/
  - /bin/cp Natalic.ttf $DEPLOYPATH_ORIGINAL
  - /bin/cp robots.txt $DEPLOYPATH_ORIGINAL
- - /bin/cp Contact.php $DEPLOYPATH_ORIGINAL
+ - /bin/cp technologies.php $DEPLOYPATH_ORIGINAL
+  - /bin/cp README.md $DEPLOYPATH_ORIGINAL
 #  - /bin/cp merchandise/educational_puzzles.php $DEPLOYPATH_ORIGINAL
  - /bin/cp footer_2018.html $DEPLOYPATH_ORIGINAL
  - /bin/cp Simulations.php $DEPLOYPATH_ORIGINAL
