@@ -40,7 +40,7 @@
           <div class="col-md-9">
             <!-- Main Content -->
 <h1>
-  List of Simulations and Useful Apps
+Physics and Math Simulations
 </h1>
 <p>
   I produce some simulations using javascript to demonstrate the concepts of physics, mathematics and technologies. Most of the simulations could be found in the articles, but there are some 'highlights' that I deem important to share here as a separate page.

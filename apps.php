@@ -40,11 +40,10 @@
           <div class="col-md-9">
             <!-- Main Content -->
 <h1>
-Useful Apps
+Apps
 </h1>
 <p>
-Here are some of the useful apps that I made 
-
+Here are some of the useful applications that I made
 </p>
 
 <p><a class="link" href="http://phymath.com/tech/app/object_detection.html">Object Detection</a></p>
