@@ -5,7 +5,7 @@ deployment:
 #  - /bin/cp main.php $DEPLOYPATH_TECH
   - export DEPLOYPATH=/home/sciwalker/public_html/tech
   - /bin/cp -r /home/sciwalker/repositories/phymath/* $DEPLOYPATH
-  - export DEPLOYPATH_ORIGINAL=/home/sciwalker/public_html/
+  - export DEPLOYPATH_ORIGINAL=public_html/
   - /bin/cp Natalic.ttf $DEPLOYPATH_ORIGINAL
   - /bin/cp header_2018.html $DEPLOYPATH_ORIGINAL
   - /bin/cp apps.php $DEPLOYPATH_ORIGINAL
