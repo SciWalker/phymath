@@ -4,7 +4,7 @@ deployment:
 #  - export DEPLOYPATH_TECH=/public_html/tech/qr_code/
 #  - /bin/cp main.php $DEPLOYPATH_TECH
   - export DEPLOYPATH=/home/sciwalker/public_html/tech
-  - /bin/cp -r /home/sciwalker/repositories/phymath/tech* $DEPLOYPATH
+  - /bin/cp -r /home/sciwalker/repositories/phymath/tech/* $DEPLOYPATH
 #  - export DEPLOYPATH_ORIGINAL=/home/sciwalker/public_html/
 #  - /bin/cp Natalic.ttf $DEPLOYPATH_ORIGINAL
 #  - /bin/cp header_2018.html $DEPLOYPATH_ORIGINAL
