@@ -11,7 +11,7 @@ deployment:
  - /bin/cp Simulations.php $DEPLOYPATH_ORIGINAL
 #  - /bin/cp "formula-derivation-metre-rule-balanced-curved-surface.php" $DEPLOYPATH_ORIGINAL
 #  - /bin/cp -R "Physics Articles" $DEPLOYPATH_ORIGINAL
-#  - /bin/cp -R merchandise $DEPLOYPATH_ORIGINAL
+#  - /bin/cp -R merchandise $DEPLOYPATH_ORIGINAL 
  - /bin/cp -R tech $DEPLOYPATH_ORIGINAL
  - export DEPLOYPATH_ASSET=/home/sciwalker/public_html/assets/img/
  - /bin/cp assets/img/logo/logo-phymath.png $DEPLOYPATH_ASSET

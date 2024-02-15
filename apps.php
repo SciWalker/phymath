@@ -5,7 +5,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
   <!-- Title -->
-  <title>List of Simulations</title>
+  <title>Applications of Phymath by Elijah Wong</title>
   <!-- Meta -->
   
   <meta name="description" content="List of Simulations">
@@ -43,7 +43,7 @@
 Apps
 </h1>
 <p>
-Here are some of the useful applications that I made
+Here are some of the applications that I made
 </p>
 
 <p><a class="link" href="http://phymath.com/tech/app/object_detection.html">Object Detection</a></p>
