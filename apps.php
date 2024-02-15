@@ -47,6 +47,8 @@ Here are some of the useful applications that I made
 </p>
 
 <p><a class="link" href="http://phymath.com/tech/app/object_detection.html">Object Detection</a></p>
+<p><a class="link" href="http://phymath.com/tech/qr-code/main.php">QR code generator</a></p>
+
 
             <!-- End Main Content -->
           </div>
