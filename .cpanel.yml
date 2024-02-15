@@ -14,7 +14,7 @@ deployment:
 #  - /bin/cp -R merchandise $DEPLOYPATH_ORIGINAL 
  - /bin/cp tech $DEPLOYPATH_ORIGINAL
  - /bin/cp tech/qr_code/main.php $DEPLOYPATH_ORIGINAL
- - export DEPLOYPATH_ASSET=/home/sciwalker/public_html/assets/img/
+ - export DEPLOYPATH_ASSET=/home/sciwalker/public_html/assets/img/ 
  - /bin/cp assets/img/logo/logo-phymath.png $DEPLOYPATH_ASSET
 #  - export DEPLOYPATH_FOLDER=/home/sciwalker/public_html/merchandise/
 #  - /bin/cp style.css $DEPLOYPATH
