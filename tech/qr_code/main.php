@@ -25,7 +25,7 @@
         /*With some styles*/
         let qrcodeContainer2 = document.getElementById("qrcode-2");
         qrcodeContainer2.innerHTML = "";
-        new QRCode(qrcodeContainer2, {
+        new QRCode(qrcodeContainer2, { 
           text: website,
           width: 128,
           height: 128,
