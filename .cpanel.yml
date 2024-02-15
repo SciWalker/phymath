@@ -1,7 +1,7 @@
 ---
 deployment:
  tasks:
- - export DEPLOYPATH_TECH=public_html/tech/qr_code/
+ - export DEPLOYPATH_TECH=/public_html/tech/qr_code/
  - /bin/cp main.php $DEPLOYPATH_TECH
  - export DEPLOYPATH_ORIGINAL=/home/sciwalker/public_html/
  - /bin/cp Natalic.ttf $DEPLOYPATH_ORIGINAL
