@@ -40,7 +40,7 @@
           <div class="col-md-9">
             <!-- Main Content -->
 <h1>
-Apps
+Apps by Elijah Wong
 </h1>
 <p>
 Here are some of the applications that I made
