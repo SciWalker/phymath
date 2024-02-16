@@ -3,33 +3,27 @@
 <div class="form">
   <h1>QR Code using qrcodejs</h1>
   <form>
-    <input type="url" id="website" name="website" placeholder="https://webisora.com" required />
-    <button type="button" onclick="generateQRCode()">
-      Generate QR Code
-    </button>
+    <input type="url" id="website" name="website" placeholder="https://phymath.com" required />
+    <input type="color" id="qrColor" name="qrColor" value="#000000" /> <!-- Color picker added -->
+    <button type="button" onclick="generateQRCode()">Generate QR Code</button>
   </form>
 
   <div id="qrcode-container">
     <div id="qrcode" class="qrcode"></div>
-    <h4>With some styles</h4>
-    <div id="qrcode-2" class="qrcode"></div>
   </div>
 
   <script type="text/javascript">
     function generateQRCode() {
       let website = document.getElementById("website").value;
+      let color = document.getElementById("qrColor").value; // Get the selected color
       if (website) {
         let qrcodeContainer = document.getElementById("qrcode");
         qrcodeContainer.innerHTML = "";
-        new QRCode(qrcodeContainer, website);
-        /*With some styles*/
-        let qrcodeContainer2 = document.getElementById("qrcode-2");
-        qrcodeContainer2.innerHTML = "";
-        new QRCode(qrcodeContainer2, { 
+        new QRCode(qrcodeContainer, {
           text: website,
           width: 128,
           height: 128,
-          colorDark: "#5868bf",
+          colorDark: color, // Use the selected color for QR code
           colorLight: "#ffffff",
           correctLevel: QRCode.CorrectLevel.H
         });
