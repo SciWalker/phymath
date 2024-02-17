@@ -5,7 +5,7 @@
      crossorigin="anonymous"></script>
      </head>
 <div class="form max-w-md mx-auto mt-10">
-  <h1 class="text-xl font-bold text-center mb-4">QR Code Generator</h1>
+  <h1 class="text-xl font-bold text-center mb-4">PHYMATH QR Code Generator</h1>
   <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
     <div class="mb-4">
       <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="url" id="website" name="website" placeholder="https://phymath.com" required />
