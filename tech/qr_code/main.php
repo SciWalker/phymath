@@ -37,7 +37,7 @@
           colorLight: "#ffffff",
           correctLevel: QRCode.CorrectLevel.H
         });
-        document.getElementById("qrcode-container").style.display = "block";
+        document.getElementById("qrcode-container").style.display = "flex";
       } else {
         alert("Please enter a valid URL");
       }
