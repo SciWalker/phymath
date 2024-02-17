@@ -23,10 +23,11 @@
     <div id="qrcode" class="qrcode"></div>
   </div>
 </div>
-<div>
-For more advanced QR code generation, please visit my rapidAPI page:
+<p class="text-l text-center mb-4">For more advanced QR code generation, please visit my rapidAPI page</p>
 
-      </div>
+<h1 class="text-xl font-bold text-center mb-4">
+  <a href="https://rapidapi.com/elijahwongww/api/milesridge-qr1" target="_blank">https://rapidapi.com/elijahwongww/api/milesridge-qr1</a>
+</h1>
 
 
 <script type="text/javascript">
