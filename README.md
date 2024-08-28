@@ -1,7 +1,7 @@
 # phymath
 Website for physics and math resources as well as simulations, solution providers.
 # repo
-ssh://sciwalker@phymath.com/home/sciwalker/repositories/phymath
+ssh://sciwalker@phymath.com/home/sciwalker/repositories/phymath_v2
 https://github.com/SciWalker/phymath.git
 
 # If you want to push to a cpanel git repo, use this command:
