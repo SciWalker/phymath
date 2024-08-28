@@ -1,28 +1,7 @@
+---
 deployment:
   tasks:
-    # Uncomment these lines if you want to execute them
-    # - export DEPLOYPATH_TECH=/public_html/tech/qr_code/
-    # - /bin/cp main.php $DEPLOYPATH_TECH
-
     - export DEPLOYPATH=/home/sciwalker/public_html/tech
     - /bin/cp -R tech/qr_code $DEPLOYPATH
-
     - export DEPLOYPATH_ORIGINAL=/home/sciwalker/public_html/
     - /bin/cp header_2018.html $DEPLOYPATH_ORIGINAL
-
-    # Uncomment these lines if you want to execute them
-    # - /bin/cp Natalic.ttf $DEPLOYPATH_ORIGINAL
-    # - /bin/cp apps.php $DEPLOYPATH_ORIGINAL
-    # - /bin/cp README.md $DEPLOYPATH_ORIGINAL
-    # - /bin/cp merchandise/educational_puzzles.php $DEPLOYPATH_ORIGINAL
-    # - /bin/cp footer_2018.html $DEPLOYPATH_ORIGINAL
-    # - /bin/cp Simulations.php $DEPLOYPATH_ORIGINAL
-    # - /bin/cp "formula-derivation-metre-rule-balanced-curved-surface.php" $DEPLOYPATH_ORIGINAL
-    # - /bin/cp -R "Physics Articles" $DEPLOYPATH_ORIGINAL
-    # - /bin/cp -R merchandise $DEPLOYPATH_ORIGINAL 
-
-    # Uncomment these lines if you want to execute them
-    # - export DEPLOYPATH_ASSET=/home/sciwalker/public_html/assets/img/ 
-    # - /bin/cp assets/img/logo/logo-phymath.png $DEPLOYPATH_ASSET
-    # - export DEPLOYPATH_FOLDER=/home/sciwalker/public_html/merchandise/
-    # - /bin/cp style.css $DEPLOYPATH_FOLDER
