@@ -43,17 +43,19 @@
 Physics and Math Simulations
 </h1>
 <p>
-  I produce some simulations using javascript to demonstrate the concepts of physics, mathematics and technologies. Most of the simulations could be found in the articles, but there are some 'highlights' that I deem important to share here as a separate page.
-
-
+  Welcome to our interactive world of physics, mathematics, and technology simulations! Using cutting-edge JavaScript, we've crafted a series of engaging demonstrations that bring complex concepts to life. While many of these simulations are integrated into our articles, we've curated a special collection of standout examples on this page to provide you with quick access to some of our most illuminating and popular demonstrations.
 </p>
-<h2>Javascript</h2>
-<p>For the best experience, it is advised to use tablets or PC to open these simulations as they are made to fit the size of a medium to large screen browser.</p>
+
+<p>
+  These simulations are designed to offer an immersive learning experience, allowing you to manipulate variables and observe real-time results. To fully appreciate the intricate details and smooth animations, we recommend accessing these simulations on a tablet or desktop computer. The larger screen real estate ensures you can explore every aspect of the simulation without constraint, maximizing your understanding and enjoyment of the underlying principles at work.
+</p>
 <p><a class="link" href="http://phymath.com/Simulations/simplemomentum.php">Momentum and Collision Simulation</a></p>
 
 <p><a class="link" href="http://phymath.com/NFC.php">Near Field Communication (NFC)</a></p>
 <p><a class="link" href="http://phymath.com/Simulations/Genetic Algorithm - Simulation.php">Genetic Algorithm - Simulation</a></p>
 <p><a class="link" href="http://phymath.com/tech/app/object_detection.html">Object Detection</a></p>
+<p><a class="link" href="http://phymath.com/Simulations/simplegravity.php">Gravity Simulation</a></p>
+<p><a class="link" href="http://phymath.com/Simulations/simplegas.php">Gas Simulation</a></p>
 
             <!-- End Main Content -->
           </div>
