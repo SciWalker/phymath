@@ -43,23 +43,40 @@
         #controls label {
             margin-right: 5px;
         }
+        .simulation-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .content-div {
+            margin-top: 10px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .content-div h1 {
+            margin-top: 0;
+        }
     </style>
 </head>
 <body onload="startSimulation()">
     <?php include("../header_2018.html"); ?>
 
     <!-- Main Content -->
-    <div>
-        <h1>Gas Molecule Simulation</h1>
-        <canvas id="simulationCanvas" width="1400" height="520"></canvas>
-        <div id="controls">
-            <label for="temperature">Temperature (K):</label>
-            <input type="number" id="temperature" value="300" min="100" max="1000">
-            <label for="numParticles">Amount of Gas:</label>
-            <input type="number" id="numParticles" value="50" min="1" max="200">
-            <label for="volume">Volume (%):</label>
-            <input type="number" id="volume" value="100" min="50" max="100">
-            <button onclick="startSimulation()">Start Simulation</button>
+    <div class="simulation-container">
+        <div id="game-container">
+            <!-- Canvas will be inserted here by JavaScript -->
+        </div>
+        <div class="content-div">
+            <h1>Gas Molecule Simulation</h1>
+            <canvas id="simulationCanvas" width="1400" height="520"></canvas>
+            <div id="controls">
+                <label for="temperature">Temperature (K):</label>
+                <input type="number" id="temperature" value="300" min="100" max="1000">
+                <label for="numParticles">Amount of Gas:</label>
+                <input type="number" id="numParticles" value="50" min="1" max="200">
+                <label for="volume">Volume (%):</label>
+                <input type="number" id="volume" value="100" min="50" max="100">
+                <button onclick="startSimulation()">Start Simulation</button>
+            </div>
         </div>
     </div>
     <!-- End Main Content -->
