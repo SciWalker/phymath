@@ -25,17 +25,23 @@
       border: 1px solid #d3d3d3;
       background-color: #f1f1f1;
       display: block;
-      margin: 0 auto; /* Center the canvas horizontally */
+      margin: 0 auto;
     }
 
     .simulation-container {
-      text-align: center; /* Center the content */
+      text-align: center;
+      margin-top: 20px; /* Add this line to reduce space below the header */
     }
 
     .content-div {
-      margin-top: 20px; /* Bring the text closer to the canvas */
-      margin-bottom: 100px;
-      text-align: center; /* Center the text */
+      margin-top: 10px; /* Reduce this value */
+      margin-bottom: 50px; /* Reduce this value if needed */
+      text-align: center;
+    }
+
+    /* Add this new rule to reduce space above h1 */
+    .content-div h1 {
+      margin-top: 0;
     }
   </style>
 </head>
