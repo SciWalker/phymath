@@ -11,6 +11,8 @@ git push origin master -u --exec=/usr/local/cpanel/3rdparty/bin/git-receive-pack
 git add . && git commit -m "your commit message"
 git push phymath-cpanel-origin master -u --exec=/usr/local/cpanel/3rdparty/bin/git-receive-pack && git push origin master
 
+# local server
+php -S localhost:8000
 
 # tech/app/object_detection_v2
 The source code would be gotten from https://github.com/SciWalker/onnxruntime.git

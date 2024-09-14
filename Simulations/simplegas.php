@@ -66,19 +66,21 @@
             <!-- Canvas will be inserted here by JavaScript -->
         </div>
         <div class="content-div">
-            <h1>Gas Molecule Simulation</h1>
+            <h1>Gas Molecules Simulation</h1>
             <canvas id="simulationCanvas" width="1400" height="520"></canvas>
             <div id="controls">
                 <label for="temperature">Temperature (K):</label>
-                <input type="number" id="temperature" value="300" min="100" max="1000">
+                <input type="number" id="temperature" value="300" min="100" max="10000">
                 <label for="numParticles">Amount of Gas:</label>
                 <input type="number" id="numParticles" value="50" min="1" max="200">
                 <label for="volume">Volume (%):</label>
                 <input type="number" id="volume" value="100" min="50" max="100">
+                <label for="gravity">Gravity:</label>
+                <input type="number" id="gravity" value="0" min="0" max="1" step="0.1">
                 <button onclick="startSimulation()">Start Simulation</button>
             </div>
             <div id="limits-info">
-                <p>Limits: Temperature (100-1000 K), Gas Molecules (1-200), Volume (50-100%)</p>
+                <p>Limits: Temperature (100-10000 K), Gas Molecules (1-200), Volume (50-100%), Gravity (0-1)</p>
                 <p id="applied-values"></p>
             </div>
         </div>
@@ -97,6 +99,7 @@
         var numParticles = 50;
         var temperature = 300; // Kelvin
         var volumePercent = 100; // Percentage of canvas size
+        var gravity = 0; // Gravity strength
         var animationId;
 
         function Particle(x, y, vx, vy, radius, mass) {
@@ -109,6 +112,7 @@
         }
 
         Particle.prototype.update = function() {
+            this.vy += gravity; // Apply gravity
             this.x += this.vx;
             this.y += this.vy;
 
@@ -215,23 +219,27 @@
             var temperatureInput = document.getElementById('temperature');
             var numParticlesInput = document.getElementById('numParticles');
             var volumeInput = document.getElementById('volume');
+            var gravityInput = document.getElementById('gravity');
 
             var maxTemperature = parseInt(temperatureInput.getAttribute('max'));
             var maxParticles = parseInt(numParticlesInput.getAttribute('max'));
             var maxVolume = parseInt(volumeInput.getAttribute('max'));
+            var maxGravity = parseFloat(gravityInput.getAttribute('max'));
 
             temperature = Math.min(Math.max(parseFloat(temperatureInput.value), 100), maxTemperature);
             numParticles = Math.min(Math.max(parseInt(numParticlesInput.value), 1), maxParticles);
             volumePercent = Math.min(Math.max(parseInt(volumeInput.value), 50), maxVolume);
+            gravity = Math.min(Math.max(parseFloat(gravityInput.value), 0), maxGravity);
 
             // Update input values to reflect applied values
             temperatureInput.value = temperature;
             numParticlesInput.value = numParticles;
             volumeInput.value = volumePercent;
+            gravityInput.value = gravity;
 
             // Display applied values
             document.getElementById('applied-values').textContent = 
-                `Applied values: Temperature (${temperature} K), Gas Molecules (${numParticles}), Volume (${volumePercent}%)`;
+                `Applied values: Temperature (${temperature} K), Gas Molecules (${numParticles}), Volume (${volumePercent}%), Gravity (${gravity})`;
 
             // Fix: Adjust the canvas size without modifying its aspect ratio
             var originalWidth = 1400;
