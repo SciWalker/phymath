@@ -65,7 +65,7 @@
 
 <p><a class = "link" href="https://phymath.com/dimensions-and-dimensional-analysis.php">Dimensions and Dimensional Analysis</a></p>
 
-<p><a class = "link" href="https://phymath.com/Physics Articles/2023/Review on Oppenheimer Film.php">Review on *Oppenheimer* Film</a></p>
+<p><a class = "link" href="https://phymath.com/Physics Articles/2023/Review on Oppenheimer Film.php">Review on Oppenheimer Film</a></p>
             <!-- End Main Content -->
           </div>
           <!-- End Main Column -->
