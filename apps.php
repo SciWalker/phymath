@@ -5,7 +5,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
   <!-- Title -->
-  <title>Applications of Phymath by Elijah Wong</title>
+  <title>Applications</title>
   <!-- Meta -->
   
   <meta name="description" content="List of Simulations">
