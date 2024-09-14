@@ -208,7 +208,9 @@
 
         function startSimulation() {
             cancelAnimationFrame(animationId);
-            numParticles = parseInt(document.getElementById('numParticles').value);
+            var numParticlesInput = document.getElementById('numParticles');
+            var maxParticles = parseInt(numParticlesInput.getAttribute('max'));
+            numParticles = Math.min(parseInt(numParticlesInput.value), maxParticles);
             temperature = parseFloat(document.getElementById('temperature').value);
             volumePercent = parseInt(document.getElementById('volume').value);
 
@@ -220,7 +222,7 @@
 
             initParticles();
             update();
-            }
+        }
     </script>
     <!-- End JS -->
 

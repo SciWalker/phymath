@@ -30,7 +30,7 @@
 
     .simulation-container {
       text-align: center;
-      margin-top: 20px; /* Add this line to reduce space below the header */
+      margin-top: 20px; 
     }
 
     .content-div {
