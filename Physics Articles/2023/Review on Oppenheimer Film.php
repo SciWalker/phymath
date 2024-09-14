@@ -53,7 +53,7 @@
             </header>
 
             <h1>Review of *Oppenheimer*: A Fusion of Science and Leadership</h1>
-            <img src="../../images/Cillian-Murphy-Oppenheimer-19a28a1.jpg" alt="Cillian Murphy as J. Robert Oppenheimer" class="img-responsive img-rounded" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+            <img src="../../assets/img/Cillian-Murphy-Oppenheimer-19a28a1.jpg" alt="Cillian Murphy as J. Robert Oppenheimer" class="img-responsive img-rounded" style="max-width: 100%; height: auto; margin-bottom: 20px;">
             <p>
             Christopher Nolan's <em>Oppenheimer</em> delves deep into the intricate life of J. Robert Oppenheimer, not merely as the theoretical physicist behind the atomic bomb but as a visionary leader who orchestrated one of the most significant scientific endeavors in history. The film masterfully portrays the confluence of Oppenheimer's profound scientific acumen and his exceptional ability to unify a diverse group of brilliant minds toward a common, albeit daunting, goal.
             </p>
