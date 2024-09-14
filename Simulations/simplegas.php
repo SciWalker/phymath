@@ -77,6 +77,10 @@
                 <input type="number" id="volume" value="100" min="50" max="100">
                 <button onclick="startSimulation()">Start Simulation</button>
             </div>
+            <div id="limits-info">
+                <p>Limits: Temperature (100-1000 K), Gas Molecules (1-200), Volume (50-100%)</p>
+                <p id="applied-values"></p>
+            </div>
         </div>
     </div>
     <!-- End Main Content -->
@@ -208,11 +212,26 @@
 
         function startSimulation() {
             cancelAnimationFrame(animationId);
+            var temperatureInput = document.getElementById('temperature');
             var numParticlesInput = document.getElementById('numParticles');
+            var volumeInput = document.getElementById('volume');
+
+            var maxTemperature = parseInt(temperatureInput.getAttribute('max'));
             var maxParticles = parseInt(numParticlesInput.getAttribute('max'));
-            numParticles = Math.min(parseInt(numParticlesInput.value), maxParticles);
-            temperature = parseFloat(document.getElementById('temperature').value);
-            volumePercent = parseInt(document.getElementById('volume').value);
+            var maxVolume = parseInt(volumeInput.getAttribute('max'));
+
+            temperature = Math.min(Math.max(parseFloat(temperatureInput.value), 100), maxTemperature);
+            numParticles = Math.min(Math.max(parseInt(numParticlesInput.value), 1), maxParticles);
+            volumePercent = Math.min(Math.max(parseInt(volumeInput.value), 50), maxVolume);
+
+            // Update input values to reflect applied values
+            temperatureInput.value = temperature;
+            numParticlesInput.value = numParticles;
+            volumeInput.value = volumePercent;
+
+            // Display applied values
+            document.getElementById('applied-values').textContent = 
+                `Applied values: Temperature (${temperature} K), Gas Molecules (${numParticles}), Volume (${volumePercent}%)`;
 
             // Fix: Adjust the canvas size without modifying its aspect ratio
             var originalWidth = 1400;
