@@ -6,12 +6,9 @@ deployment:
     - export DEPLOYPATH_ORIGINAL=/home/sciwalker/public_html/
     - /bin/cp header_2018.html $DEPLOYPATH_ORIGINAL
     - /bin/cp Simulations.php $DEPLOYPATH_ORIGINAL
-    - /bin/cp -R Physics Articles/* $DEPLOYPATH_ORIGINAL/Physics Articles
-    - /bin/cp -R Math Articles/* $DEPLOYPATH_ORIGINAL/Math Articles
+    - /bin/cp -R "Physics Articles"/* "$DEPLOYPATH_ORIGINAL/Physics Articles"
+    - /bin/cp -R "Math Articles"/* "$DEPLOYPATH_ORIGINAL/Math Articles"
     - /bin/cp "List of Physics Articles.php" $DEPLOYPATH_ORIGINAL
     - /bin/cp sidebar_2018.html $DEPLOYPATH_ORIGINAL
     - export DEPLOYPATH_SIMULATIONS=/home/sciwalker/public_html/Simulations
     - /bin/cp -R Simulations/* $DEPLOYPATH_SIMULATIONS
-
-
-
