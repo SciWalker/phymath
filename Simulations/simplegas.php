@@ -78,6 +78,8 @@
                 <label for="gravity">Gravity:</label>
                 <input type="number" id="gravity" value="0" min="0" max="1" step="0.1">
                 <button onclick="startSimulation()">Start Simulation</button>
+                <!-- Add Wind Blow button -->
+                <button onclick="simulateWindBlow()">Wind Blow</button>
             </div>
             <div id="limits-info">
                 <p>Limits: Temperature (100-10000 K), Gas Molecules (1-200), Volume (50-100%), Gravity (0-1)</p>
@@ -249,6 +251,15 @@
 
             initParticles();
             update();
+        }
+
+        function simulateWindBlow() {
+            var windStrength = 200; // Adjust this value to change the strength of the wind
+            particles.forEach(particle => {
+                particle.vx -= windStrength*0.1; // Add velocity in the leftward direction
+                // Optionally, add a small random vertical component to make it more realistic
+                particle.vy += (Math.random() - 0.5) * windStrength * 0.2;
+            });
         }
     </script>
     <!-- End JS -->
