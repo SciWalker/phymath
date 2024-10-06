@@ -86,6 +86,19 @@ where $\mathbf{i}$ is the imaginary number, and
 $$
 X_0=\frac{n_0}{n_1} \cos (\nu_0-\nu_1), \ X_1=\frac{n_0}{n_1} \sin (\nu_0-\nu_1).
 $$
+
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8733815049329161"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-8733815049329161"
+                 data-ad-slot="2979287711"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
 An important implication of $h_0$ is that all points differed by a phase factor $U(1)$ in $S^3$ are mapped onto the same point in $S^2$, which indicates that every point on $S^2$ corresponds to a circle $S^1$ on $S^3$. The subsequent map $h_1$ describes an inverse stereographic projection from $S^2$ to a three-dimensional space, which is given in the following forms:
 $$
 x_0=\frac{2X_0}{1+X^2_0+X^2_1},x_1=\frac{2X_1}{1+X^2_0+X^2_1},x_2=\frac{X_0^2+X_1^2-1}{1+X^2_0+X^2_1}.
