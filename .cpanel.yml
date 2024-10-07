@@ -15,3 +15,4 @@ deployment:
     - /bin/cp -R merchandise/* $DEPLOYPATH_ORIGINAL/merchandise
     - /bin/cp footer_2018.html $DEPLOYPATH_ORIGINAL
     - /bin/cp home.php $DEPLOYPATH_ORIGINAL
+    - /bin/cp -R assets/* $DEPLOYPATH_ORIGINAL/assets
