@@ -142,53 +142,6 @@ Physics and Math Simulations
         </a>
     </div>
 </div>
-
-<div class="row">
-    <div class="col-md-4 mb-4">
-        <a href="http://phymath.com/tech/app/object_detection.html" class="text-decoration-none">
-            <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/images/object-detection.jpg" class="card-img-top" alt="Object Detection">
-                <div class="card-body">
-                    <h5 class="card-title">Object Detection</h5>
-                    <p class="card-text">Experience real-time object detection using advanced computer vision techniques.</p>
-                </div>
-                <div class="card-footer bg-transparent border-top-0">
-                    <small class="text-muted">Try Simulation</small>
-                </div>
-            </div>
-        </a>
-    </div>
-    
-    <div class="col-md-4 mb-4">
-        <a href="http://phymath.com/Simulations/simplegravity.php" class="text-decoration-none">
-            <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/images/gravity-simulation.jpg" class="card-img-top" alt="Gravity Simulation">
-                <div class="card-body">
-                    <h5 class="card-title">Gravity Simulation</h5>
-                    <p class="card-text">Observe the effects of gravity on celestial bodies in this interactive simulation.</p>
-                </div>
-                <div class="card-footer bg-transparent border-top-0">
-                    <small class="text-muted">Try Simulation</small>
-                </div>
-            </div>
-        </a>
-    </div>
-    
-    <div class="col-md-4 mb-4">
-        <a href="http://phymath.com/Simulations/simplegas.php" class="text-decoration-none">
-            <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/images/gas-simulation.jpg" class="card-img-top" alt="Gas Simulation">
-                <div class="card-body">
-                    <h5 class="card-title">Gas Simulation</h5>
-                    <p class="card-text">Explore the behavior of gas particles in various conditions with this simulation.</p>
-                </div>
-                <div class="card-footer bg-transparent border-top-0">
-                    <small class="text-muted">Try Simulation</small>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
             <!-- End Main Content -->
           </div>
           <!-- End Main Column -->
