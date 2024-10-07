@@ -68,7 +68,7 @@ Physics and Math Simulations
     <div class="col-md-4 mb-4">
         <a href="http://phymath.com/NFC.php" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/img/thumbsgallery/nfc.jpeg" class="card-img-top" alt="Near Field Communication (NFC)">
+                <img src="assets/img/thumbsgallery/nfc.png" class="card-img-top" alt="Near Field Communication (NFC)">
                 <div class="card-body">
                     <h5 class="card-title">Near Field Communication (NFC)</h5>
                     <p class="card-text">Learn about NFC technology and its applications in this interactive demo.</p>
@@ -83,7 +83,7 @@ Physics and Math Simulations
     <div class="col-md-4 mb-4">
         <a href="http://phymath.com/Simulations/Genetic Algorithm - Simulation.php" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/thumbsgallery/genetic algorithm.png" class="card-img-top" alt="Genetic Algorithm Simulation">
+                <img src="assets/img/thumbsgallery/genetic algorithm.png" class="card-img-top" alt="Genetic Algorithm Simulation">
                 <div class="card-body">
                     <h5 class="card-title">Genetic Algorithm Simulation</h5>
                     <p class="card-text">Witness evolution in action with this genetic algorithm simulation.</p>
@@ -100,7 +100,7 @@ Physics and Math Simulations
     <div class="col-md-4 mb-4">
         <a href="http://phymath.com/tech/app/object_detection.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/img/thumbsgallery/object-detection.webp" class="card-img-top" alt="Object Detection">
+                <img src="assets/img/thumbsgallery/object detection.webp" class="card-img-top" alt="Object Detection">
                 <div class="card-body">
                     <h5 class="card-title">Object Detection</h5>
                     <p class="card-text">Experience real-time object detection using advanced computer vision techniques.</p>
