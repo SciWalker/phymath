@@ -13,4 +13,5 @@ deployment:
     - export DEPLOYPATH_SIMULATIONS=/home/sciwalker/public_html/Simulations
     - /bin/cp -R Simulations/* $DEPLOYPATH_SIMULATIONS
     - /bin/cp -R merchandise/* $DEPLOYPATH_ORIGINAL/merchandise
-    
+    - /bin/cp footer_2018.html $DEPLOYPATH_ORIGINAL
+    - /bin/cp home.php $DEPLOYPATH_ORIGINAL

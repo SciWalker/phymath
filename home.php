@@ -63,10 +63,10 @@
           <!-- Carousel Images -->
           <div class="carousel-inner">
             <div class="item active">
-              <a href= "https://www.phymath.com/Quiz.php"><img  src="https://www.phymath.com/assets/img/TopImage/quiz time.png"></a>
+              <a href= "https://phymath.com/Simulations.php"><img  src="https://www.phymath.com/assets/img/TopImage/simulations.png"></a>
             </div>
             <div class="item">
-              <a href= "https://www.phymath.com/List of Physics Articles.php"><img  src="https://www.phymath.com/assets/img/TopImage/physics article with simulations.png"></a>
+              <a href= "https://phymath.com/Simulations.php"><img  src="https://www.phymath.com/assets/img/TopImage/tryout apps.png"></a>
             </div>
           </div>
           <!-- End Carousel Images -->
