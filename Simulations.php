@@ -82,7 +82,9 @@ Physics and Math Simulations
             </div>
         </div>
     </div>
-    
+</div>
+
+<div class="row">
     <div class="col-md-4 mb-4">
         <div class="card">
             <img src="assets/images/object-detection.jpg" class="card-img-top" alt="Object Detection">
