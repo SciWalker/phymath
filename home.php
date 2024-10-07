@@ -62,11 +62,11 @@
           <!-- End Carousel Indicators -->
           <!-- Carousel Images -->
           <div class="carousel-inner">
-            <div class="item active">
+            <div class="item">
               <a href= "https://phymath.com/Simulations.php"><img  src="https://www.phymath.com/assets/img/TopImage/simulations.png"></a>
             </div>
-            <div class="item">
-              <a href= "https://phymath.com/Simulations.php"><img  src="https://www.phymath.com/assets/img/TopImage/tryout apps.png"></a>
+            <div class="item active">
+              <a href= "https://phymath.com/apps.php"><img  src="https://www.phymath.com/assets/img/TopImage/tryout apps.png"></a>
             </div>
           </div>
           <!-- End Carousel Images -->

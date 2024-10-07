@@ -49,14 +49,73 @@ Physics and Math Simulations
 <p>
   These simulations are designed to offer an immersive learning experience, allowing you to manipulate variables and observe real-time results. To fully appreciate the intricate details and smooth animations, we recommend accessing these simulations on a tablet or desktop computer. The larger screen real estate ensures you can explore every aspect of the simulation without constraint, maximizing your understanding and enjoyment of the underlying principles at work.
 </p>
-<p><a class="link" href="http://phymath.com/Simulations/simplemomentum.php">Momentum and Collision Simulation</a></p>
-
-<p><a class="link" href="http://phymath.com/NFC.php">Near Field Communication (NFC)</a></p>
-<p><a class="link" href="http://phymath.com/Simulations/Genetic Algorithm - Simulation.php">Genetic Algorithm - Simulation</a></p>
-<p><a class="link" href="http://phymath.com/tech/app/object_detection.html">Object Detection</a></p>
-<p><a class="link" href="http://phymath.com/Simulations/simplegravity.php">Gravity Simulation</a></p>
-<p><a class="link" href="http://phymath.com/Simulations/simplegas.php">Gas Simulation</a></p>
-
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="assets/images/momentum-simulation.jpg" class="card-img-top" alt="Momentum and Collision Simulation">
+            <div class="card-body">
+                <h5 class="card-title">Momentum and Collision Simulation</h5>
+                <p class="card-text">Explore the principles of momentum and collisions in this interactive simulation.</p>
+                <a href="http://phymath.com/Simulations/simplemomentum.php" class="btn btn-primary">Try Simulation</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="assets/images/nfc-simulation.jpg" class="card-img-top" alt="Near Field Communication (NFC)">
+            <div class="card-body">
+                <h5 class="card-title">Near Field Communication (NFC)</h5>
+                <p class="card-text">Learn about NFC technology and its applications in this interactive demo.</p>
+                <a href="http://phymath.com/NFC.php" class="btn btn-primary">Try Simulation</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="assets/images/genetic-algorithm.jpg" class="card-img-top" alt="Genetic Algorithm Simulation">
+            <div class="card-body">
+                <h5 class="card-title">Genetic Algorithm Simulation</h5>
+                <p class="card-text">Witness evolution in action with this genetic algorithm simulation.</p>
+                <a href="http://phymath.com/Simulations/Genetic Algorithm - Simulation.php" class="btn btn-primary">Try Simulation</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="assets/images/object-detection.jpg" class="card-img-top" alt="Object Detection">
+            <div class="card-body">
+                <h5 class="card-title">Object Detection</h5>
+                <p class="card-text">Experience real-time object detection using advanced computer vision techniques.</p>
+                <a href="http://phymath.com/tech/app/object_detection.html" class="btn btn-primary">Try Simulation</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="assets/images/gravity-simulation.jpg" class="card-img-top" alt="Gravity Simulation">
+            <div class="card-body">
+                <h5 class="card-title">Gravity Simulation</h5>
+                <p class="card-text">Observe the effects of gravity on celestial bodies in this interactive simulation.</p>
+                <a href="http://phymath.com/Simulations/simplegravity.php" class="btn btn-primary">Try Simulation</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="assets/images/gas-simulation.jpg" class="card-img-top" alt="Gas Simulation">
+            <div class="card-body">
+                <h5 class="card-title">Gas Simulation</h5>
+                <p class="card-text">Explore the behavior of gas particles in various conditions with this simulation.</p>
+                <a href="http://phymath.com/Simulations/simplegas.php" class="btn btn-primary">Try Simulation</a>
+            </div>
+        </div>
+    </div>
+</div>
             <!-- End Main Content -->
           </div>
           <!-- End Main Column -->
