@@ -51,36 +51,48 @@ Physics and Math Simulations
 </p>
 <div class="row">
     <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="assets/images/momentum-simulation.jpg" class="card-img-top" alt="Momentum and Collision Simulation">
-            <div class="card-body">
-                <h5 class="card-title">Momentum and Collision Simulation</h5>
-                <p class="card-text">Explore the principles of momentum and collisions in this interactive simulation.</p>
-                <a href="http://phymath.com/Simulations/simplemomentum.php" class="btn btn-primary">Try Simulation</a>
+        <a href="http://phymath.com/Simulations/simplemomentum.php" class="text-decoration-none">
+            <div class="card h-100 shadow-sm hover-shadow">
+                <img src="assets/images/momentum-simulation.jpg" class="card-img-top" alt="Momentum and Collision Simulation">
+                <div class="card-body">
+                    <h5 class="card-title">Momentum and Collision Simulation</h5>
+                    <p class="card-text">Explore the principles of momentum and collisions in this interactive simulation.</p>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <small class="text-muted">Try Simulation</small>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     
     <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="assets/images/nfc-simulation.jpg" class="card-img-top" alt="Near Field Communication (NFC)">
-            <div class="card-body">
-                <h5 class="card-title">Near Field Communication (NFC)</h5>
-                <p class="card-text">Learn about NFC technology and its applications in this interactive demo.</p>
-                <a href="http://phymath.com/NFC.php" class="btn btn-primary">Try Simulation</a>
+        <a href="http://phymath.com/NFC.php" class="text-decoration-none">
+            <div class="card h-100 shadow-sm hover-shadow">
+                <img src="assets/images/nfc-simulation.jpg" class="card-img-top" alt="Near Field Communication (NFC)">
+                <div class="card-body">
+                    <h5 class="card-title">Near Field Communication (NFC)</h5>
+                    <p class="card-text">Learn about NFC technology and its applications in this interactive demo.</p>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <small class="text-muted">Try Simulation</small>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
     
     <div class="col-md-4 mb-4">
-        <div class="card">
-            <img src="assets/images/genetic-algorithm.jpg" class="card-img-top" alt="Genetic Algorithm Simulation">
-            <div class="card-body">
-                <h5 class="card-title">Genetic Algorithm Simulation</h5>
-                <p class="card-text">Witness evolution in action with this genetic algorithm simulation.</p>
-                <a href="http://phymath.com/Simulations/Genetic Algorithm - Simulation.php" class="btn btn-primary">Try Simulation</a>
+        <a href="http://phymath.com/Simulations/Genetic Algorithm - Simulation.php" class="text-decoration-none">
+            <div class="card h-100 shadow-sm hover-shadow">
+                <img src="assets/images/genetic-algorithm.jpg" class="card-img-top" alt="Genetic Algorithm Simulation">
+                <div class="card-body">
+                    <h5 class="card-title">Genetic Algorithm Simulation</h5>
+                    <p class="card-text">Witness evolution in action with this genetic algorithm simulation.</p>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <small class="text-muted">Try Simulation</small>
+                </div>
             </div>
-        </div>
+        </a>
     </div>
 </div>
 
