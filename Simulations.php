@@ -53,7 +53,7 @@ Physics and Math Simulations
     <div class="col-md-4 mb-4">
         <a href="http://phymath.com/Simulations/simplemomentum.php" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/images/momentum-simulation.jpg" class="card-img-top" alt="Momentum and Collision Simulation">
+                <img src="assets/img/thumbsgallery/momentum-simulation.png" class="card-img-top" alt="Momentum and Collision Simulation">
                 <div class="card-body">
                     <h5 class="card-title">Momentum and Collision Simulation</h5>
                     <p class="card-text">Explore the principles of momentum and collisions in this interactive simulation.</p>
@@ -68,7 +68,7 @@ Physics and Math Simulations
     <div class="col-md-4 mb-4">
         <a href="http://phymath.com/NFC.php" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/images/nfc-simulation.jpg" class="card-img-top" alt="Near Field Communication (NFC)">
+                <img src="assets/img/thumbsgallery/nfc.jpeg" class="card-img-top" alt="Near Field Communication (NFC)">
                 <div class="card-body">
                     <h5 class="card-title">Near Field Communication (NFC)</h5>
                     <p class="card-text">Learn about NFC technology and its applications in this interactive demo.</p>
@@ -83,7 +83,7 @@ Physics and Math Simulations
     <div class="col-md-4 mb-4">
         <a href="http://phymath.com/Simulations/Genetic Algorithm - Simulation.php" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/images/genetic-algorithm.jpg" class="card-img-top" alt="Genetic Algorithm Simulation">
+                <img src="assets/thumbsgallery/genetic algorithm.png" class="card-img-top" alt="Genetic Algorithm Simulation">
                 <div class="card-body">
                     <h5 class="card-title">Genetic Algorithm Simulation</h5>
                     <p class="card-text">Witness evolution in action with this genetic algorithm simulation.</p>
@@ -100,7 +100,7 @@ Physics and Math Simulations
     <div class="col-md-4 mb-4">
         <a href="http://phymath.com/tech/app/object_detection.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/images/object-detection.jpg" class="card-img-top" alt="Object Detection">
+                <img src="assets/img/thumbsgallery/object-detection.webp" class="card-img-top" alt="Object Detection">
                 <div class="card-body">
                     <h5 class="card-title">Object Detection</h5>
                     <p class="card-text">Experience real-time object detection using advanced computer vision techniques.</p>
@@ -115,7 +115,7 @@ Physics and Math Simulations
     <div class="col-md-4 mb-4">
         <a href="http://phymath.com/Simulations/simplegravity.php" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/images/gravity-simulation.jpg" class="card-img-top" alt="Gravity Simulation">
+                <img src="assets/img/thumbsgallery/gravity simulation.png" class="card-img-top" alt="Gravity Simulation">
                 <div class="card-body">
                     <h5 class="card-title">Gravity Simulation</h5>
                     <p class="card-text">Observe the effects of gravity on celestial bodies in this interactive simulation.</p>
@@ -130,7 +130,7 @@ Physics and Math Simulations
     <div class="col-md-4 mb-4">
         <a href="http://phymath.com/Simulations/simplegas.php" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/images/gas-simulation.jpg" class="card-img-top" alt="Gas Simulation">
+                <img src="assets/img/thumbsgallery/gas simulation.png" class="card-img-top" alt="Gas Simulation">
                 <div class="card-body">
                     <h5 class="card-title">Gas Simulation</h5>
                     <p class="card-text">Explore the behavior of gas particles in various conditions with this simulation.</p>
