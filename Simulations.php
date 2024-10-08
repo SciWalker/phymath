@@ -58,9 +58,6 @@ Physics and Math Simulations
                     <h5 class="card-title">Momentum and Collision Simulation</h5>
                     <p class="card-text">Explore the principles of momentum and collisions in this interactive simulation.</p>
                 </div>
-                <div class="card-footer bg-transparent border-top-0">
-                    <small class="text-muted">Try Simulation</small>
-                </div>
             </div>
         </a>
     </div>
@@ -73,9 +70,6 @@ Physics and Math Simulations
                     <h5 class="card-title">Near Field Communication (NFC)</h5>
                     <p class="card-text">Learn about NFC technology and its applications in this interactive demo.</p>
                 </div>
-                <div class="card-footer bg-transparent border-top-0">
-                    <small class="text-muted">Try Simulation</small>
-                </div>
             </div>
         </a>
     </div>
@@ -87,9 +81,6 @@ Physics and Math Simulations
                 <div class="card-body">
                     <h5 class="card-title">Genetic Algorithm Simulation</h5>
                     <p class="card-text">Witness evolution in action with this genetic algorithm simulation.</p>
-                </div>
-                <div class="card-footer bg-transparent border-top-0">
-                    <small class="text-muted">Try Simulation</small>
                 </div>
             </div>
         </a>
@@ -105,9 +96,6 @@ Physics and Math Simulations
                     <h5 class="card-title">Object Detection</h5>
                     <p class="card-text">Experience real-time object detection using advanced computer vision techniques.</p>
                 </div>
-                <div class="card-footer bg-transparent border-top-0">
-                    <small class="text-muted">Try Simulation</small>
-                </div>
             </div>
         </a>
     </div>
@@ -120,9 +108,6 @@ Physics and Math Simulations
                     <h5 class="card-title">Gravity Simulation</h5>
                     <p class="card-text">Observe the effects of gravity on celestial bodies in this interactive simulation.</p>
                 </div>
-                <div class="card-footer bg-transparent border-top-0">
-                    <small class="text-muted">Try Simulation</small>
-                </div>
             </div>
         </a>
     </div>
@@ -134,9 +119,6 @@ Physics and Math Simulations
                 <div class="card-body">
                     <h5 class="card-title">Gas Simulation</h5>
                     <p class="card-text">Explore the behavior of gas particles in various conditions with this simulation.</p>
-                </div>
-                <div class="card-footer bg-transparent border-top-0">
-                    <small class="text-muted">Try Simulation</small>
                 </div>
             </div>
         </a>

@@ -16,3 +16,4 @@ deployment:
     - /bin/cp footer_2018.html $DEPLOYPATH_ORIGINAL
     - /bin/cp home.php $DEPLOYPATH_ORIGINAL
     - /bin/cp -R assets/* $DEPLOYPATH_ORIGINAL/assets
+    - /bin/cp privacy.php $DEPLOYPATH_ORIGINAL
