@@ -61,12 +61,12 @@
     <div class="col-md-6" style="display: flex; padding: 0;">
         <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
             <a href="https://amzn.to/3BE9Fb9" target="_blank">
-                <img src="https://drive.google.com/thumbnail?id=1pgt7KNgVF-lmNhEyotWI5oAdWUFdQwaT" alt="Oppenheimer Book" class="img-responsive" style="width: 100%; height: 100%; object-fit: contain;">
+                <img src="https://drive.google.com/thumbnail?id=1pgt7KNgVF-lmNhEyotWI5oAdWUFdQwaT" alt="Oppenheimer Book" class="img-responsive" style="width: 100%; height: 100%; ">
             </a>
         </div>
     </div>
     <div class="col-md-6" style="display: flex; flex-direction: column; padding: 0;">
-        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; background-color: #f8f9fa;">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; background-color: #f8f9fa; padding: 15px;">
             <div>
                 <h4>American Prometheus: The Inspiration for the Major Motion Picture OPPENHEIMER [BOOK]</h4>
                 <p>The book that inspired Christopher Nolan to make this film.</p>
