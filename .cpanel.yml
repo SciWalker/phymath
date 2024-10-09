@@ -18,3 +18,4 @@ deployment:
     - /bin/cp -R assets/* $DEPLOYPATH_ORIGINAL/assets
     - /bin/cp privacy.php $DEPLOYPATH_ORIGINAL
     - /bin/cp apps.php $DEPLOYPATH_ORIGINAL
+    - /bin/cp why-does-astronaut-move-in-slow-motion-on-the-moon.php $DEPLOYPATH_ORIGINAL
