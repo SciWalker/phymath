@@ -45,9 +45,42 @@ Apps by Elijah Wong
 <p>
 Here are some of the applications that I made
 </p>
+<div class="row">
+  <div class="col-md-4 mb-4">
+        <a href="http://phymath.com/NFC.php" class="text-decoration-none">
+            <div class="card h-100 shadow-sm hover-shadow">
+                <img src="assets/img/thumbsgallery/nfc.png" class="card-img-top" alt="Near Field Communication (NFC)">
+                <div class="card-body">
+                    <h5 class="card-title">Near Field Communication (NFC)</h5>
+                    <p class="card-text">Learn about NFC technology and its applications in this interactive demo.</p>
+                </div>
+            </div>
+        </a>
+  </div>
+  <div class="col-md-4 mb-4">
+        <a href="https://www.phymath.com/tech/app/object_detection.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm hover-shadow">
+                <img src="assets/img/thumbsgallery/nfc.png" class="card-img-top" alt="Near Field Communication (NFC)">
+                <div class="card-body">
+                    <h5 class="card-title">Object Detection</h5>
+                    <p class="card-text">Detect objects in real time</p>
+                </div>
+            </div>
+        </a>
+  </div>
+  <div class="col-md-4 mb-4">
+        <a href="https://phymath.com/tech/qr_code/main.php" class="text-decoration-none">
+            <div class="card h-100 shadow-sm hover-shadow">
+                <img src="assets/img/thumbsgallery/qr-code.png" class="card-img-top" alt="QR Code Generator">
+                <div class="card-body">
+                    <h5 class="card-title">QR Code Generator</h5>
+                    <p class="card-text">Create custom QR codes for your marketing needs.</p>
+                </div>
+            </div>
+        </a>
+  </div>
+</div>
 
-<p><a class="link" href="http://phymath.com/tech/app/object_detection.html">Object Detection</a></p>
-<p><a class="link" href="http://phymath.com/tech/qr_code/main.php">QR code generator</a></p>
 
 
             <!-- End Main Content -->
