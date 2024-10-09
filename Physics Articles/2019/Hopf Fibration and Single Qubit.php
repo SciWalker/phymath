@@ -57,21 +57,27 @@ table, th, td {
 This article is a continuation of the <a class="link" href ="https://www.phymath.com/Mathematics%20Articles/2019/Hopf%20Fibration%20-%20stereographic%20projection.php">previous article</a> , now we will explore more about the geometry of single qubit using the tool of Hopf fibration.
 The space of a single qubit is a two-dimensional complex Hilbert space, which renders the visualization of the space a non-trivial task. However, by reducing the Hilbert space into Hopf bundle and study its constituent vectors in base space and total space, it is possible to describe the geometrical structure and even visualize it.
 
-<div class="row">
-    <div class="col-md-6">
-        <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
-            <img src="https://drive.google.com/thumbnail?id=1q-TgSUmDEXImgkrnYXLSjfBFRGZ5CnbQ" alt="Quantum Computing Book" class="img-responsive" style="width: 100%; height: auto; object-fit: contain;">
+<div class="row" style="display: flex; align-items: stretch;">
+    <div class="col-md-6" style="display: flex;">
+        <div style="width: 100%; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa; padding: 15px;">
+            <img src="https://drive.google.com/thumbnail?id=1q-TgSUmDEXImgkrnYXLSjfBFRGZ5CnbQ" alt="Quantum Computing Book" class="img-responsive" style="max-width: 100%; max-height: 100%; object-fit: contain;">
         </div>
     </div>
-    <div class="col-md-6">
-        <h4>Geometry of Qauntum States [BOOK]</h4>
-        <p>One of the best books on the subject of quantum computing on the market that is also not afraid to delve into the geometry aspects.</p>
-        <ul>
-            <li>Covers fundamental principles and recent advances</li>
-            <li>Includes practical examples and exercises</li>
-            <li>Written by Ingemar Bengtsson and Karol Zyczkowski, the latter work of which was my main reference in my Master's thesis</li>
-        </ul>
-        <a href="https://amzn.to/3BE9Fb9" class="btn btn-primary" target="_blank">Buy Now on Amazon</a>
+    <div class="col-md-6" style="display: flex; flex-direction: column;">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; background-color: #f8f9fa; padding: 15px;">
+            <div>
+                <h4>Geometry of Quantum States [BOOK]</h4>
+                <p>One of the best books on the subject of quantum computing on the market that is also not afraid to delve into the geometry aspects.</p>
+                <ul>
+                    <li>Covers fundamental principles and recent advances</li>
+                    <li>Includes practical examples and exercises</li>
+                    <li>Written by Ingemar Bengtsson and Karol Zyczkowski, the latter work of which was my main reference in my Master's thesis</li>
+                </ul>
+            </div>
+            <div>
+                <a href="https://amzn.to/3BE9Fb9" class="btn btn-primary" target="_blank">Buy Now on Amazon</a>
+            </div>
+        </div>
     </div>
 </div>
 
