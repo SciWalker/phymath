@@ -55,6 +55,23 @@ table, th, td {
 
 Our world consists of 3 spatial dimensions and 1 time dimension. But how to perceive or visualize 4 spatial dimensions? Well, there are a number of ways to do so. There are several good examples <a class = "link" href="https://www.quora.com/How-can-one-visualize-4-dimensional-space" >here</a>  and  <a class = "link" href = "https://futurism.com/new-perspectives-imagining-a-4d-world">there </a> of visualizing the 4 dimensions using a hypercube (A cube that lives in 4-dimensional space). Here we are going to discuss another way of visualizing the 4-dimensional world by dissecting a <i>sphere</i> that lives in 4 spatial dimensions, a 3-sphere. 
 
+<div class="row">
+                <div class="col-md-6">
+                    <img src="https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91Hy1Ue0qOL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png" alt="Hopf Fibration T-Shirt" class="img-responsive">
+                </div>
+                <div class="col-md-6">
+                    <h4>Hopf Fibration T-Shirt</h4>
+                    <p>Show off your love for advanced mathematics with this stylish Hopf fibration t-shirt. Perfect for mathematicians, physicists, and anyone who appreciates the elegance of higher-dimensional geometry.</p>
+                    <ul>
+                        <li>High-quality print of the Hopf fibration</li>
+                        <li>Available in various sizes</li>
+                        <li>100% cotton for comfort</li>
+                        <li>Great conversation starter!</li>
+                    </ul>
+                    <a href="https://amzn.to/4dGfh1Z" class="btn btn-primary" target="_blank">Buy Now on Amazon</a>
+                </div>
+            </div>
+
 We usually think of a sphere, but the term 'sphere' has a more precise meaning in mathematics. Namely, an n-sphere is a set of points that fulfill this condition:
   \begin{equation}
   x_0^2+x_1^2+...+x_{n+1}^2=r
