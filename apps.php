@@ -80,9 +80,6 @@ Here are some of the applications that I made
         </a>
   </div>
 </div>
-
-
-
             <!-- End Main Content -->
           </div>
           <!-- End Main Column -->

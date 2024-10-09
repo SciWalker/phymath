@@ -63,12 +63,12 @@ Physics and Math Simulations
     </div>
     
     <div class="col-md-4 mb-4">
-        <a href="http://phymath.com/NFC.php" class="text-decoration-none">
+        <a href="http://phymath.com/Simulations/Hopf.php" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/img/thumbsgallery/nfc.png" class="card-img-top" alt="Near Field Communication (NFC)">
+                <img src="assets/img/thumbsgallery/hopf.png" class="card-img-top" alt="Near Field Communication (NFC)">
                 <div class="card-body">
-                    <h5 class="card-title">Near Field Communication (NFC)</h5>
-                    <p class="card-text">Learn about NFC technology and its applications in this interactive demo.</p>
+                    <h5 class="card-title">Hopf Fibration</h5>
+                    <p class="card-text">Try out the Hopf Fibration Simulation</p>
                 </div>
             </div>
         </a>
