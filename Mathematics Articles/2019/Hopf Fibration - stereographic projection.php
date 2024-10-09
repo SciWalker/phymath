@@ -57,7 +57,7 @@ Our world consists of 3 spatial dimensions and 1 time dimension. But how to perc
 
 <div class="row">
                 <div class="col-md-6">
-                    <img src="https://drive.google.com/thumbnail?id=1EYYjrL6J4ebir0ivlSXA6h7WyJgUAOJb" alt="Hopf Fibration T-Shirt" class="img-responsive">
+                    <img src="https://drive.google.com/thumbnail?id=1u6-fsI7-4mFmVr0QE2fucliZ1gdsJcfQ" alt="Hopf Fibration T-Shirt" class="img-responsive">
                 </div>
                 <div class="col-md-6">
                     <h4>Hopf Fibration T-Shirt</h4>
