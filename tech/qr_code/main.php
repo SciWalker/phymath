@@ -1,8 +1,6 @@
 <head>
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8733815049329161"
-     crossorigin="anonymous"></script>
      </head>
 <div class="form max-w-md mx-auto mt-10">
   <h1 class="text-xl font-bold text-center mb-4">PHYMATH QR Code Generator</h1>
