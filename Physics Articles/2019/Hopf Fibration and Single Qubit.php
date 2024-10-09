@@ -57,13 +57,15 @@ table, th, td {
 This article is a continuation of the <a class="link" href ="https://www.phymath.com/Mathematics%20Articles/2019/Hopf%20Fibration%20-%20stereographic%20projection.php">previous article</a> , now we will explore more about the geometry of single qubit using the tool of Hopf fibration.
 The space of a single qubit is a two-dimensional complex Hilbert space, which renders the visualization of the space a non-trivial task. However, by reducing the Hilbert space into Hopf bundle and study its constituent vectors in base space and total space, it is possible to describe the geometrical structure and even visualize it.
 
-<div class="row" style="display: flex; align-items: stretch;">
-    <div class="col-md-6" style="display: flex;">
-        <div style="width: 100%; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa; padding: 15px;">
-            <img src="https://drive.google.com/thumbnail?id=1q-TgSUmDEXImgkrnYXLSjfBFRGZ5CnbQ" alt="Quantum Computing Book" class="img-responsive" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+<div class="row" style="display: flex; align-items: stretch; min-height: 300px;">
+    <div class="col-md-6" style="display: flex; padding: 0;">
+        <div style="width: 100%; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
+            <a href="https://amzn.to/3BE9Fb9" target="_blank">
+                <img src="https://drive.google.com/thumbnail?id=1q-TgSUmDEXImgkrnYXLSjfBFRGZ5CnbQ" alt="Quantum Computing Book" class="img-responsive" style="width: 100%; height: 100%; object-fit: contain;">
+            </a>
         </div>
     </div>
-    <div class="col-md-6" style="display: flex; flex-direction: column;">
+    <div class="col-md-6" style="display: flex; flex-direction: column; padding: 0;">
         <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; background-color: #f8f9fa; padding: 15px;">
             <div>
                 <h4>Geometry of Quantum States [BOOK]</h4>

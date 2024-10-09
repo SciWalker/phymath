@@ -55,24 +55,32 @@ table, th, td {
 
 Our world consists of 3 spatial dimensions and 1 time dimension. But how to perceive or visualize 4 spatial dimensions? Well, there are a number of ways to do so. There are several good examples <a class = "link" href="https://www.quora.com/How-can-one-visualize-4-dimensional-space" >here</a>  and  <a class = "link" href = "https://futurism.com/new-perspectives-imagining-a-4d-world">there </a> of visualizing the 4 dimensions using a hypercube (A cube that lives in 4-dimensional space). Here we are going to discuss another way of visualizing the 4-dimensional world by dissecting a <i>sphere</i> that lives in 4 spatial dimensions, a 3-sphere. 
 
-<div class="row">
-                <div class="col-md-6">
-                <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
-            <img src="https://drive.google.com/thumbnail?id=1u6-fsI7-4mFmVr0QE2fucliZ1gdsJcfQ" alt="Hopf Fibration T-Shirt" class="img-responsive" style="width: 100%; height: auto; object-fit: contain;">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                    <h4>Hopf Fibration T-Shirt</h4>
-                    <p>Show off your love for advanced mathematics with this stylish Hopf fibration t-shirt. Perfect for anyone who appreciates the elegance of higher-dimensional geometry.</p>
-                    <ul>
-                        <li>High-quality print of the Hopf fibration</li>
-                        <li>Available in various sizes</li>
-                        <li>100% cotton for comfort</li>
-                        <li>Great conversation starter!</li>
-                    </ul>
-                    <a href="https://amzn.to/4dGfh1Z" class="btn btn-primary" target="_blank">Buy Now on Amazon</a>
-                </div>
+<div class="row" style="display: flex; align-items: stretch; min-height: 300px;">
+    <div class="col-md-6" style="display: flex; padding: 0;">
+        <div style="width: 100%; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
+            <a href="https://amzn.to/4dGfh1Z" target="_blank">
+                <img src="https://drive.google.com/thumbnail?id=1u6-fsI7-4mFmVr0QE2fucliZ1gdsJcfQ" alt="Hopf Fibration T-Shirt" class="img-responsive" style="width: 100%; height: 100%; object-fit: contain;">
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6" style="display: flex; flex-direction: column; padding: 0;">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; background-color: #f8f9fa; padding: 15px;">
+            <div>
+                <h4>Hopf Fibration T-Shirt</h4>
+                <p>Show off your love for advanced mathematics with this stylish Hopf fibration t-shirt. Perfect for anyone who appreciates the elegance of higher-dimensional geometry.</p>
+                <ul>
+                    <li>High-quality print of the Hopf fibration</li>
+                    <li>Available in various sizes</li>
+                    <li>100% cotton for comfort</li>
+                    <li>Great conversation starter!</li>
+                </ul>
             </div>
+            <div>
+                <a href="https://amzn.to/4dGfh1Z" class="btn btn-primary" target="_blank">Buy Now on Amazon</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 We usually think of a sphere, but the term 'sphere' has a more precise meaning in mathematics. Namely, an n-sphere is a set of points that fulfill this condition:
   \begin{equation}

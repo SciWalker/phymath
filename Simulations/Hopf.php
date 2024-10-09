@@ -52,35 +52,33 @@
   </div>
 
   <script>
-  function generateQubitStates(numPoints, numFibers) {
+    function generateQubitStates(numPoints, numFibers) {
       const data = [];
-      const phiStep = (2 * Math.PI) / numFibers;
-      const thetaStep = Math.PI / numFibers;
       
       for (let f = 0; f < numFibers; f++) {
-          const x = [], y = [], z = [], w = [];
-          const phi = f * phiStep;
-          const theta = f * thetaStep;
+        const x = [], y = [], z = [], w = [];
+        const phi = Math.random() * Math.PI * 2;
+        const theta = Math.random() * Math.PI;
+        
+        for (let t = 0; t < numPoints; t++) {
+          const psi = (t / (numPoints - 1)) * Math.PI * 2;
           
-          for (let t = 0; t < numPoints; t++) {
-              const psi = (t / (numPoints - 1)) * Math.PI * 2;
-              
-              const x4 = Math.cos(theta) * Math.cos(psi);
-              const y4 = Math.cos(theta) * Math.sin(psi);
-              const z4 = Math.sin(theta) * Math.cos(phi + psi);
-              const w4 = Math.sin(theta) * Math.sin(phi + psi);
-              
-              x.push(x4);
-              y.push(y4);
-              z.push(z4);
-              w.push(w4);
-          }
+          const x4 = Math.cos(theta) * Math.cos(psi);
+          const y4 = Math.cos(theta) * Math.sin(psi);
+          const z4 = Math.sin(theta) * Math.cos(phi + psi);
+          const w4 = Math.sin(theta) * Math.sin(phi + psi);
           
-          data.push({x, y, z, w});
+          x.push(x4);
+          y.push(y4);
+          z.push(z4);
+          w.push(w4);
+        }
+        
+        data.push({x, y, z, w});
       }
       
       return data;
-  }
+    }
 
     function projectToHopfFibration(qubitStates) {
       const data = [];
@@ -113,54 +111,24 @@
     }
 
     const layout = {
-  scene: {
-    xaxis: {range: [-8, 8]},
-    yaxis: {range: [-8, 8]},
-    zaxis: {range: [-8, 8]},
-    aspectmode: 'cube'
-  },
-  margin: {l: 0, r: 0, b: 0, t: 0},
-  autosize: true
-};
-
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-  try {
-    const slider = document.getElementById('axisRange');
-    const rangeValue = document.getElementById('rangeValue');
-
-    if (slider && rangeValue) {
-      slider.addEventListener('input', function() {
-        const value = parseInt(this.value);
-        rangeValue.textContent = value;
-        
-        layout.scene.xaxis.range = [-value, value];
-        layout.scene.yaxis.range = [-value, value];
-        layout.scene.zaxis.range = [-value, value];
-        
-        Plotly.relayout('hopfGraph', layout);
-      });
-    } else {
-      console.error('Slider or range value element not found');
-    }
+      scene: {
+        xaxis: {range: [-8, 8]},
+        yaxis: {range: [-8, 8]},
+        zaxis: {range: [-8, 8]},
+        aspectmode: 'cube'
+      },
+      margin: {l: 0, r: 0, b: 0, t: 0},
+      autosize: true
+    };
 
     const qubitStates = generateQubitStates(100, 50);
     const projectedData = projectToHopfFibration(qubitStates);
-    Plotly.newPlot('hopfGraph', projectedData, layout).then(() => {
-      console.log('Graph plotted successfully');
-    }).catch(err => {
-      console.error('Error plotting graph:', err);
+    Plotly.newPlot('hopfGraph', projectedData, layout);
+
+    // Make the graph responsive
+    window.addEventListener('resize', function() {
+      Plotly.Plots.resize('hopfGraph');
     });
-
-  } catch (error) {
-    console.error('An error occurred:', error);
-  }
-});
-
-// Make the graph responsive
-window.addEventListener('resize', function() {
-  Plotly.Plots.resize('hopfGraph');
-});
   </script>
 
   <!-- JS -->
