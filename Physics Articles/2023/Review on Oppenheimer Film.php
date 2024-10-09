@@ -66,7 +66,7 @@
         </div>
     </div>
     <div class="col-md-6" style="display: flex; flex-direction: column; padding: 0;">
-        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; background-color: #f8f9fa; padding: 15px;">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; background-color: #f8f9fa;">
             <div>
                 <h4>American Prometheus: The Inspiration for the Major Motion Picture OPPENHEIMER [BOOK]</h4>
                 <p>The book that inspired Christopher Nolan to make this film.</p>
