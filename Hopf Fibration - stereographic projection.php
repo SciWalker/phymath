@@ -162,6 +162,26 @@ and the expressions for stereographic projection in polar coordinates:
 <p>Stereographic projection is conformal, i.e. it preserves angles,  such that the angle between any two lines on three-sphere must be the same between when these lines are projected to the hyperplane in $\mathbb{R}^3$. Moreover, the coordinates under stereographic projection only has one point that is not covered, i.e. the central point (south pole). At this point, all the great circles that pass through this point will be projected into a line with infinite length as is indicated in figure below. </p>
 <div style="width:image width px; font-size:80%; text-align:center;"><img src="villarceau circles.PNG" alt="Villarceau circles" style="padding-bottom:0.5em;" />Top view of the stereographic projection with fewer circles, it shows the Villarceau circles which are linked together (in a non-intersecting way as shown by previous figure) to form the nest tori.</div>
 
+            <h3>Hopf Fibration Merchandise</h3>
+            <p>Fascinated by the beauty and complexity of the Hopf fibration? Now you can wear this mathematical marvel!</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C91Hy1Ue0qOL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png" alt="Hopf Fibration T-Shirt" class="img-responsive">
+                </div>
+                <div class="col-md-6">
+                    <h4>Hopf Fibration T-Shirt</h4>
+                    <p>Show off your love for advanced mathematics with this stylish Hopf fibration t-shirt. Perfect for mathematicians, physicists, and anyone who appreciates the elegance of higher-dimensional geometry.</p>
+                    <ul>
+                        <li>High-quality print of the Hopf fibration</li>
+                        <li>Available in various sizes</li>
+                        <li>100% cotton for comfort</li>
+                        <li>Great conversation starter!</li>
+                    </ul>
+                    <a href="https://amzn.to/4dGfh1Z" class="btn btn-primary" target="_blank">Buy Now on Amazon</a>
+                </div>
+            </div>
+
 
             <!-- End Main Content -->
           </div>
