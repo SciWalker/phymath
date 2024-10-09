@@ -57,11 +57,13 @@ Our world consists of 3 spatial dimensions and 1 time dimension. But how to perc
 
 <div class="row">
                 <div class="col-md-6">
-                    <img src="https://drive.google.com/thumbnail?id=1u6-fsI7-4mFmVr0QE2fucliZ1gdsJcfQ" alt="Hopf Fibration T-Shirt" class="img-responsive">
+                <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+            <img src="https://drive.google.com/thumbnail?id=1u6-fsI7-4mFmVr0QE2fucliZ1gdsJcfQ" alt="Hopf Fibration T-Shirt" class="img-responsive" style="width: 100%; height: auto; object-fit: contain;">
+                  </div>
                 </div>
                 <div class="col-md-6">
                     <h4>Hopf Fibration T-Shirt</h4>
-                    <p>Show off your love for advanced mathematics with this stylish Hopf fibration t-shirt. Perfect for mathematicians, physicists, and anyone who appreciates the elegance of higher-dimensional geometry.</p>
+                    <p>Show off your love for advanced mathematics with this stylish Hopf fibration t-shirt. Perfect for anyone who appreciates the elegance of higher-dimensional geometry.</p>
                     <ul>
                         <li>High-quality print of the Hopf fibration</li>
                         <li>Available in various sizes</li>
