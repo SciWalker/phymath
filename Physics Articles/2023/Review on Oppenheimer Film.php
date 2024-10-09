@@ -58,27 +58,23 @@
             Christopher Nolan's <em>Oppenheimer</em> film is a masterpiece, not just as a tremendous historical film, but also as a deep philosophical exploration of the human condition in the face of national emergencies. The film delves into the intricate life of J. Robert Oppenheimer, who started his career as a theoretical physicist behind the atomic bomb before transformed into a visionary leader who orchestrated one of the most significant scientific endeavors in history. The film portrays Oppenheimer's profound scientific acumen and his exceptional ability to unify a diverse group of brilliant minds toward a common, albeit daunting, goal of the world's first nuclear bomb.
             </p>
             <div class="row" style="display: flex; align-items: stretch; min-height: 300px;">
-    <div class="col-md-6" style="display: flex; padding: 0;">
-        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
-            <a href="https://amzn.to/3BE9Fb9" target="_blank">
-                <img src="https://drive.google.com/thumbnail?id=1pgt7KNgVF-lmNhEyotWI5oAdWUFdQwaT" alt="Oppenheimer Book" class="img-responsive" style="width: 100%; height: 100%; ">
-            </a>
-        </div>
+    <div class="col-md-6" style="position: relative; padding: 0;">
+        <a href="https://amzn.to/3BE9Fb9" target="_blank" style="display: block; height: 100%;">
+            <img src="https://drive.google.com/thumbnail?id=1pgt7KNgVF-lmNhEyotWI5oAdWUFdQwaT" alt="Oppenheimer Book" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        </a>
     </div>
-    <div class="col-md-6" style="display: flex; flex-direction: column; padding: 0;">
-        <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; background-color: #f8f9fa; padding: 15px;">
-            <div>
-                <h4>American Prometheus: The Inspiration for the Major Motion Picture OPPENHEIMER [BOOK]</h4>
-                <p>The book that inspired Christopher Nolan to make this film.</p>
-                <ul>
-                    <li> NEW YORK TIMES BESTSELLER • </li>
-                    <li>PULITZER PRIZE WINNER</li>
-                    <li>Kai Bird and Martin Sherwin capture Oppenheimer’s life and times</li>
-                </ul>
-            </div>
-            <div>
-                <a href="https://amzn.to/487Hwp6" class="btn btn-primary" target="_blank">Buy Now on Amazon</a>
-            </div>
+    <div class="col-md-6" style="display: flex; flex-direction: column; padding: 15px; background-color: #f8f9fa;">
+        <div style="flex-grow: 1;">
+            <h4>American Prometheus: The Inspiration for the Major Motion Picture OPPENHEIMER [BOOK]</h4>
+            <p>The book that inspired Christopher Nolan to make this film.</p>
+            <ul>
+                <li>NEW YORK TIMES BESTSELLER •</li>
+                <li>PULITZER PRIZE WINNER</li>
+                <li>Kai Bird and Martin Sherwin capture Oppenheimer's life and times</li>
+            </ul>
+        </div>
+        <div>
+            <a href="https://amzn.to/487Hwp6" class="btn btn-primary" target="_blank">Buy Now on Amazon</a>
         </div>
     </div>
 </div>
