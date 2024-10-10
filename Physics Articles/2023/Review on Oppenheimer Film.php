@@ -52,7 +52,7 @@
             </style>
             </header>
 
-                <h1>Review of <em>Oppenheimer</em>: Where Physics and Leadership Meet</h1>
+                <h1>Review of <em>Oppenheimer</em>: The story of a Scientist turned Leader of the Biggest and Most Dangerous Project in Human History</h1>
             <img src="../../assets/img/Cillian-Murphy-Oppenheimer-19a28a1.jpg" alt="Cillian Murphy as J. Robert Oppenheimer" class="img-responsive img-rounded" style="max-width: 100%; height: auto; margin-bottom: 20px;">
             <p>
             Christopher Nolan's <em>Oppenheimer</em> film is a masterpiece, not just as a tremendous historical film, but also as a deep philosophical exploration of the human condition in the face of national emergencies. The film delves into the intricate life of J. Robert Oppenheimer, who started his career as a theoretical physicist behind the atomic bomb before transformed into a visionary leader who orchestrated one of the most significant scientific endeavors in history. The film portrays Oppenheimer's profound scientific acumen and his exceptional ability to unify a diverse group of brilliant minds toward a common, albeit daunting, goal of the world's first nuclear bomb.
@@ -77,7 +77,7 @@
                 </ul>
             </div>
             <div>
-                <a href="https://amzn.to/487Hwp6" class="btn btn-primary" target="_blank">Buy Now on Amazon</a>
+                <a href="https://amzn.to/3NngT5X" class="btn btn-primary" target="_blank">Buy Now on Amazon</a>
             </div>
         </div>
     </div>
