@@ -124,7 +124,25 @@
     const qubitStates = generateQubitStates(100, 50);
     const projectedData = projectToHopfFibration(qubitStates);
     Plotly.newPlot('hopfGraph', projectedData, layout);
+    // Add event listener for the slider
+    const axisRangeSlider = document.getElementById('axisRange');
+    const rangeValueSpan = document.getElementById('rangeValue');
 
+    axisRangeSlider.addEventListener('input', function() {
+      const value = this.value;
+      rangeValueSpan.textContent = value;
+      
+      // Update the layout with new axis ranges
+      const newLayout = {
+        scene: {
+          xaxis: {range: [-value, value]},
+          yaxis: {range: [-value, value]},
+          zaxis: {range: [-value, value]},
+        }
+      };
+      
+      Plotly.relayout('hopfGraph', newLayout);
+    });
     // Make the graph responsive
     window.addEventListener('resize', function() {
       Plotly.Plots.resize('hopfGraph');
