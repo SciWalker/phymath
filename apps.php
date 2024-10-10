@@ -60,7 +60,7 @@ Here are some of the applications that I made
   <div class="col-md-4 mb-4">
         <a href="https://www.phymath.com/tech/app/object_detection.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/img/thumbsgallery/nfc.png" class="card-img-top" alt="Near Field Communication (NFC)">
+                <img src="assets/img/thumbsgallery/object detection.webp" class="card-img-top" alt="Near Field Communication (NFC)">
                 <div class="card-body">
                     <h5 class="card-title">Object Detection</h5>
                     <p class="card-text">Detect objects in real time</p>
@@ -71,7 +71,7 @@ Here are some of the applications that I made
   <div class="col-md-4 mb-4">
         <a href="https://phymath.com/tech/qr_code/main.php" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-shadow">
-                <img src="assets/img/thumbsgallery/qr-code.png" class="card-img-top" alt="QR Code Generator">
+                <img src="assets/img/thumbsgallery/animated_qr.gif" class="card-img-top" alt="QR Code Generator">
                 <div class="card-body">
                     <h5 class="card-title">QR Code Generator</h5>
                     <p class="card-text">Create custom QR codes for your marketing needs.</p>
