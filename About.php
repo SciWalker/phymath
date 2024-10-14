@@ -42,7 +42,7 @@
             <!-- Main Content -->
 <h2>About Me</h2>
 
-<p> Elijah Wong is a physicist currently teaching in a university college. He enjoys doing all things related to science, philosophy, theology and part-time programming.</p>
+<p> Elijah Wong is a physics trained AI lead. He enjoys doing all things related to science, philosophy, theology and programming.</p>
 
 <h1>About this website</h1>
 

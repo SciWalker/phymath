@@ -45,8 +45,7 @@
           <div class="col-md-9">
             <!-- Main Content -->
 
-            <h1>List of Physics Quizzes</h1>
-            <p><a class="link" href="spm_physics_set_1.php">SPM Physics Quiz Set 1</a></p>
+<?php include("/home/sciwalker/public_html/quiz html/spm physics paper(set 1).html");?>
             <!-- End Main Content -->
           </div>
           <!-- End Main Column -->

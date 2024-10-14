@@ -57,8 +57,9 @@
       
       for (let f = 0; f < numFibers; f++) {
         const x = [], y = [], z = [], w = [];
-        const phi = Math.random() * Math.PI * 2;
-        const theta = Math.random() * Math.PI;
+        // Use fixed intervals for phi and theta
+        const phi = (f / numFibers) * Math.PI * 2;
+        const theta = Math.acos(1 - 2 * (f + 0.5) / numFibers);
         
         for (let t = 0; t < numPoints; t++) {
           const psi = (t / (numPoints - 1)) * Math.PI * 2;
