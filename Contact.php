@@ -55,70 +55,109 @@ $action = $_REQUEST['action'];
 
 if ($action == "") {
     /* Display the contact form */
+    display_contact_form();
+} elseif ($action == "submit") {
+    /* Send the submitted data */
 
-    // Your existing contact form code here:
+    $name = trim($_REQUEST['name']);
+    $email = trim($_REQUEST['email']);
+    $message = trim($_REQUEST['message']);
+    $subject = trim($_REQUEST['subject']);
+    $enteredCaptcha = trim($_POST['captcha']);
+
+    // Captcha verification
+    if (!empty($enteredCaptcha)) {
+        if (strcasecmp($_SESSION['captcha'], $enteredCaptcha) != 0) {
+            // Captcha failed
+            echo "<p style='color:red;'>Captcha verification failed. Please try again.</p>";
+            // Regenerate captcha
+            regenerate_captcha();
+            // Redisplay the form
+            display_contact_form();
+        } else {
+            // Captcha is correct, process the contact form here.
+            if (empty($name) || empty($email) || empty($message)) {
+                echo "<p style='color:red;'>All fields are required, please fill the form again.</p>";
+                // Regenerate captcha
+                regenerate_captcha();
+                // Redisplay the form
+                display_contact_form();
+            } else {
+                $from = "From: $name<$email>\r\nReturn-path: $email";
+                $subject = "$subject";
+                if (mail("admin@phymath.com", $subject, $message, $from)) {
+                    echo "<p style='color:green;'>Email sent successfully!</p>";
+                } else {
+                    echo "<p style='color:red;'>Failed to send email. Please try again.</p>";
+                }
+                // Optionally, regenerate captcha after successful submission
+                regenerate_captcha();
+                // Redisplay the form
+                display_contact_form();
+            }
+        }
+    } else {
+        echo "<p style='color:red;'>Please enter the captcha code.</p>";
+        // Regenerate captcha
+        regenerate_captcha();
+        // Redisplay the form
+        display_contact_form();
+    }
+}
+
+/**
+ * Function to display the contact form
+ */
+function display_contact_form() {
     ?>
     <form action="" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="action" value="submit">
-        Your name:<br>
+        <label>Your name:</label><br>
         <input name="name" type="text" value="" size="30"/><br>
-        Your email:<br>
+        <label>Your email:</label><br>
         <input name="email" type="text" value="" size="30"/><br>
-		Subject:<br>
+        <label>Subject:</label><br>
         <input name="subject" type="text" value="" size="30"/><br>
-        Message:<br>
+        <label>Message:</label><br>
         <textarea name="message" rows="7" cols="30"></textarea><br>
         <label><strong>Enter Captcha:</strong></label><br />
-        <input type="text" name="captcha" />
-        <p><br />
+        <input type="text" name="captcha" /><br/>
+        <p>
             <img src="Captcha.php?rand=<?php echo rand(); ?>" id='captcha_image'>
         </p>
         <p>Can't read the image?
             <a href='javascript: refreshCaptcha();'>click here</a>
-            to refresh</p>
+            to refresh
+        </p>
         <input type="submit" value="Send email"/>
     </form>
-    <?php
-} else {
-    /* Send the submitted data */
-
-    $name = $_REQUEST['name'];
-    $email = $_REQUEST['email'];
-    $message = $_REQUEST['message'];
-	$subject = $_REQUEST['subject'];
-
-    // Captcha verification code (same as before)
-    if (isset($_POST['captcha']) && ($_POST['captcha'] != '')) {
-        // Validation: Checking entered captcha code with the generated captcha code
-        if (strcasecmp($_SESSION['captcha'], $_POST['captcha']) != 0) {
-            // Note: the captcha code is compared case insensitively.
-            // if you want case sensitive match, check above with strcmp()
-            echo "Captcha verification failed. Please try again.";
-        } else {
-            // Captcha is correct, process the contact form here.
-			$enteredCaptcha = $_POST['captcha']; 
-            if (($name == "") || ($email == "") || ($message == "")) {
-                echo "All fields are required, please fill <a href=\"\">the form</a> again.";
-            } else {
-                $from = "From: $name<$email>\r\nReturn-path: $email";
-                $subject = "$enteredCaptcha: $subject";
-                mail("admin@phymath.com", $subject, $message, $from);
-                echo "Email sent!";
-            }
+    <script>
+        // Refresh Captcha
+        function refreshCaptcha() {
+            var img = document.getElementById('captcha_image');
+            img.src = 'Captcha.php?rand=' + Math.random();
         }
-    } else {
-        echo "Please enter the captcha code.";
-    }
+    </script>
+    <?php
+}
+
+/**
+ * Function to regenerate the captcha
+ */
+function regenerate_captcha() {
+    // Unset the current captcha session
+    unset($_SESSION['captcha']);
+    // Optionally, you can regenerate the captcha here if not handled in Captcha.php
+    // For example:
+    // $_SESSION['captcha'] = generate_new_captcha();
 }
 ?>
 
 <script>
     // Refresh Captcha
     function refreshCaptcha() {
-        var img = document.images['captcha_image'];
-        img.src = img.src.substring(
-            0, img.src.lastIndexOf("?")
-        ) + "?rand=" + Math.random() * 1000;
+        var img = document.getElementById('captcha_image');
+        img.src = 'Captcha.php?rand=' + Math.random();
     }
 </script>
 						<!-- End Main Content -->
