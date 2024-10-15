@@ -45,7 +45,7 @@
           <div class="col-md-9">
             <!-- Main Content -->
 
-<?php include("/home/sciwalker/public_html/quizzes/spm_mathematics_set1.html");?>
+<?php include("spm_mathematics_set1.html");?>
             <!-- End Main Content -->
           </div>
           <!-- End Main Column -->

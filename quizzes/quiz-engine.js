@@ -12,29 +12,127 @@ const removeAllChildren = (parent) => {
     node.innerHTML = ``
 }
 
-// Initialization functions go here
-const init = () => {
-    cr_ContinueButton()
-    ad_QuestionIteration()
-    loadQuestion(quiz.questions[0], true)
+// Add this function at the beginning of the file
+function loadMathJax() {
+    return new Promise((resolve, reject) => {
+        if (typeof MathJax !== 'undefined') {
+            // MathJax is already loaded
+            resolve();
+        } else {
+            // Load MathJax from the local folder
+            const script = document.createElement('script');
+            script.src = '../MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+            script.async = true;
+            script.onload = () => {
+                MathJax.Hub.Config({
+                    tex2jax: {
+                        inlineMath: [['$', '$'], ['\\(', '\\)']],
+                        processEscapes: true
+                    },
+                    "HTML-CSS": {
+                        styles: {
+                            ".MathJax .math": {
+                                "font-style": "normal"
+                            }
+                        }
+                    }
+                });
+                MathJax.Hub.Startup.onload();
+                resolve();
+            };
+            script.onerror = reject;
+            document.head.appendChild(script);
+        }
+    });
 }
 
-// Loads a multiple choice quiz question
-const loadQuestion = async (question, init) => {
-    updateProgessBarStatus()
-    cr_QuizQuestionText(question.question)
-    if (question.type == `multiple` || question.type == `single`) {
-        loadMultipleChoiceQuestion(question)
-        loadPreviousEnteredChoice(question.entered)
-    } else if (question.type == `short` || question.type == `long`) {
-        loadTextFormQuestion()
-        loadPreviousEnteredText(question.entered)
+// Add this function to create and append a style element
+const addStyles = () => {
+    const style = document.createElement('style');
+    style.textContent = `
+        .quiz-question-text-item {
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .quiz-answer-text-item {
+            max-width: 100%;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Add these variables at the beginning of the file
+let score = 0;
+let totalQuestions = 0;
+let questionScores = [];
+
+// New function to check answer correctness
+const checkAnswer = (question, index) => {
+    let rawScore = 0;
+    if (question.type === 'single' || question.type === 'multiple') {
+        if (question.entered.length > 0) {
+            const correctAnswer = question.correct;
+            const enteredAnswerIndex = parseInt(question.entered[0]) - 65;
+            const enteredAnswer = question.answers[enteredAnswerIndex];
+            
+            if (question.type === 'single') {
+                rawScore = enteredAnswer === correctAnswer ? 1 : 0;
+            } else {
+                // For multiple choice, you might need to implement a different logic
+                // This is a placeholder for now
+            }
+        }
+    } else if (question.type === 'short' || question.type === 'long') {
+        // For future implementation of non-multiple choice questions
     }
+    
+    questionScores[index] = rawScore;
+    return rawScore;
+};
+
+// Modified calculateScore function
+const calculateScore = () => {
+    totalQuestions = quiz.questions.length;
+    score = questionScores.reduce((sum, score) => sum + score, 0);
+    return (score / totalQuestions) * 100;
+};
+
+// Modify the init function to load MathJax before initializing the quiz
+const init = async () => {
+    await loadMathJax();
+    addStyles();
+    cr_ContinueButton();
+    ad_QuestionIteration();
+    loadQuestion(quiz.questions[0], true);
+}
+
+// Modify the loadQuestion function to typeset math after loading the question
+const loadQuestion = async (question, init) => {
+    removeAllChildren(`quiz-question-text-container`);
+    removeAllChildren(`quiz-answer-list`);
+    
+    cr_QuizQuestionText(question.question);
+    
+    if (question.type == `multiple` || question.type == `single`) {
+        loadMultipleChoiceQuestion(question);
+        loadPreviousEnteredChoice(question.entered);
+    } else if (question.type == `short` || question.type == `long`) {
+        loadTextFormQuestion();
+        loadPreviousEnteredText(question.entered);
+    }
+    
     // Skips loading animation on initialization
     if (!init) {
-        await MoveQuestionContainerMiddle()
+        await MoveQuestionContainerMiddle();
     }
-    ShowHideContinueButton(quiz.questions[currentQuestionIndex])
+    
+    ShowHideContinueButton(question);
+    
+    // Typeset math after loading the question
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
 }
 
 // Creates elements for multiple choice questions (checkboxes & radios)
@@ -56,7 +154,7 @@ const loadMultipleChoiceQuestion = (question) => {
         ed_QuizQuestionElements(question.type, quizQuestionPress, quizQuestionNumerator, quizQuestionDIV, quizQuestionText)
         // Convert ASCII code to text for multiple choice selection
         quizQuestionNumerator.innerText = String.fromCharCode(i + 65)
-        quizQuestionText.innerText = question.answers[i]
+        quizQuestionText.innerHTML = question.answers[i];
         // Psuedoparent append
         quizQuestionDIV.append(quizQuestionPress, quizQuestionNumerator, quizQuestionText)
         // Main parent append
@@ -79,7 +177,10 @@ const loadTextFormQuestion = () => {
 
 // Saves short and long form objects to local object
 const SaveWrittenAnswers = () => {
-    quiz.questions[currentQuestionIndex].entered[0] = document.getElementById(`questionTextarea`).innerHTML
+    quiz.questions[currentQuestionIndex].entered[0] = document.getElementById(`questionTextarea`).innerHTML;
+    // Check the answer and update the score
+    checkAnswer(quiz.questions[currentQuestionIndex], currentQuestionIndex);
+    updateProgressBarStatus();
 }
 
 
@@ -153,12 +254,11 @@ const ed_QuizQuestionElements = (type, press, numerator, container, text) => {
 
 // Assigns the question's text 
 const cr_QuizQuestionText = (question) => {
-    // Generating question text
-    let quizQuestionTextDIV = document.getElementById(`quiz-question-text-container`)
-    let quizQuestionTextSPAN = document.createElement(`span`)
-    quizQuestionTextSPAN.className = `quiz-question-text-item`
-    quizQuestionTextSPAN.innerText = question
-    quizQuestionTextDIV.appendChild(quizQuestionTextSPAN)
+    let quizQuestionTextDIV = document.getElementById(`quiz-question-text-container`);
+    let quizQuestionTextSPAN = document.createElement(`span`);
+    quizQuestionTextSPAN.className = `quiz-question-text-item`;
+    quizQuestionTextSPAN.innerHTML = question;
+    quizQuestionTextDIV.appendChild(quizQuestionTextSPAN);
 }
 
 // Creates continue button
@@ -172,9 +272,14 @@ const cr_ContinueButton = () => {
     continueSPAN.className = `quiz-continue-text`
     continueSPAN.id = `quiz-continue-text`
     continueBUTTON.innerHTML = `OK`
-    // Moves to next question on click
+    // Moves to next question on click or ends quiz if it's the last question
     continueBUTTON.onclick = function() {
-        loadNewQuestion(`next-question-load`)
+        if (currentQuestionIndex >= quiz.questions.length - 1) {
+            endQuiz();
+        } else {
+            loadNewQuestion(`next-question-load`);
+            updateProgressBarStatus();
+        }
     }
     continueSPAN.innerHTML = `press ENTER`
     continueDIV.append(continueBUTTON, continueSPAN)
@@ -184,24 +289,41 @@ const cr_ContinueButton = () => {
     ShowHideContinueButton(quiz.questions[currentQuestionIndex])
 }
 
+// Add this new function to handle the end of the quiz
+const endQuiz = () => {
+    const finalScore = calculateScore();
+    displayFinalScore(finalScore);
+}
+
 // Only shows a continue button if a question is selected
 const ShowHideContinueButton = (question) => {
-    if (question.type == 'short' || question.type == `long`) {
-        document.getElementById(`quiz-continue-button-container`).style.display = `initial`
-        document.getElementById(`quiz-continue-text`).style.display = `none`
+    const continueButtonContainer = document.getElementById(`quiz-continue-button-container`);
+    const continueText = document.getElementById(`quiz-continue-text`);
+    const answerList = document.getElementById(`quiz-answer-list`);
+
+    if (!continueButtonContainer || !continueText) {
+        console.error('Continue button elements not found');
+        return;
+    }
+
+    if (question.type === 'short' || question.type === `long`) {
+        continueButtonContainer.style.display = `initial`;
+        continueText.style.display = `none`;
     } else {
-        let show = document.getElementById(`quiz-answer-list`).children
-        let buttonContainer = document.getElementById(`quiz-continue-button-container`)
-        document.getElementById(`quiz-continue-text`).style.display = `initial`
-        // Checks if an answer has been selected. If so, shows continue button
-        for (let i = 0; i < show.length; i++) {
-            if (show[i].classList.contains(`selected-answer`)) {
-                buttonContainer.style.display = `initial`
-                return
-            }
+        continueText.style.display = `initial`;
+        
+        if (!answerList) {
+            console.error('Answer list element not found');
+            continueButtonContainer.style.display = `none`;
+            return;
         }
-        // If no answer is selected, don't display button
-        buttonContainer.style.display = `none`
+
+        // Checks if an answer has been selected. If so, shows continue button
+        const hasSelectedAnswer = Array.from(answerList.children).some(child => 
+            child.classList.contains(`selected-answer`)
+        );
+
+        continueButtonContainer.style.display = hasSelectedAnswer ? `initial` : `none`;
     }
 }
 
@@ -220,8 +342,8 @@ const loadNewQuestion = async (adjustment) => {
         // Displays previous questions. Does nothing if no questions to load.
         if (adjustment == `previous-question-load`) {
             loadQuestion(quiz.questions[currentQuestionIndex])
-            // Displays next question. Does nothing if no questions to load.
-        } else if (adjustment == `next-question-load` && currentQuestionIndex <= quiz.questions.length) {
+        // Displays next question. Does nothing if no questions to load.
+        } else if (adjustment == `next-question-load` && currentQuestionIndex < quiz.questions.length) {
             loadQuestion(quiz.questions[currentQuestionIndex])
         }
     }
@@ -277,16 +399,18 @@ const selectAnswer = (key, previous) => {
             answer.classList.remove(`unselected-answer`)
             indicateSelectedAnswer(answer)
             if (!previous) {
-                storeAnswers(true, key)
+                storeAnswers(true, key);
+                // Check the answer and update the score
+                checkAnswer(quiz.questions[currentQuestionIndex], currentQuestionIndex);
+                updateProgressBarStatus();
             }
-            // If answer is already selected, unselect it
         } else if (answer.classList.contains(`selected-answer`)) {
             answer.classList.add(`unselected-answer`)
             answer.classList.remove(`selected-answer`)
             // Unhighlight selected answer buttons
             unselectAnswerButton(answer.children)
             if (!previous) {
-                storeAnswers(false, key)
+                storeAnswers(false, key);
             }
         }
     }
@@ -344,7 +468,7 @@ const unselectAnswerButton = (child) => {
 }
 
 // Change progress bar styling as quiz is completed
-const updateProgessBarStatus = () => {
+const updateProgressBarStatus = () => {
     // Assigning attributes
     let progress = document.getElementById('quiz-progress-bar')
     let text = document.getElementById('progress-bar-text')
@@ -387,20 +511,39 @@ const ad_QuestionIteration = () => {
     }
 }
 
+// Add this function to display the final score
+const displayFinalScore = (finalScore) => {
+    removeAllChildren('quiz-question-container');
+    const scoreContainer = document.createElement('div');
+    scoreContainer.className = 'final-score-container';
+    scoreContainer.innerHTML = `
+        <h2>Quiz Completed!</h2>
+        <p>Your score: ${finalScore.toFixed(2)}%</p>
+        <p>Correct answers: ${score} out of ${totalQuestions}</p>
+    `;
+    document.getElementById('quiz-question-container').appendChild(scoreContainer);
+};
+
 // Listener for key presses for quiz interaction.
 document.onkeydown = function(evt) {
     evt = evt || window.event;
-    // console.log(evt.keyCode)
     // Registers key selectors for A to J on multiple choice questions.
     if (evt.keyCode >= 65 && evt.keyCode < 90 || evt.keyCode == 8 || evt.keyCode == 46) {
-        selectAnswer(evt.keyCode.toString())
+        selectAnswer(evt.keyCode.toString());
+        updateProgressBarStatus();
     }
     if (evt.keyCode == 38) {
-        loadNewQuestion('previous-question-load')
+        loadNewQuestion('previous-question-load');
+        updateProgressBarStatus();
     }
     // Moves to next question on down arrow tap or enter. Disables iteration using enter key for open ended questions
-    let type = quiz.questions[currentQuestionIndex].type
+    let type = quiz.questions[currentQuestionIndex].type;
     if (evt.keyCode == 40 || ((type == `single` || type == `multiple`) && evt.keyCode == 13)) {
-        loadNewQuestion('next-question-load')
+        if (currentQuestionIndex >= quiz.questions.length - 1) {
+            endQuiz();
+        } else {
+            loadNewQuestion('next-question-load');
+            updateProgressBarStatus();
+        }
     }
 };

@@ -417,3 +417,22 @@ div[contenteditable] {
     position: relative;
     top: 2px;
 }
+
+/* Add these styles at the end of the file */
+.final-score-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f9fa;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.final-score-container h2 {
+    color: rgb(56, 189, 207);
+    margin-bottom: 20px;
+}
+
+.final-score-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
