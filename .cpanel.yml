@@ -22,4 +22,5 @@ deployment:
     - /bin/cp spm_physics_set1.php $DEPLOYPATH_ORIGINAL
     - /bin/cp Quiz.php $DEPLOYPATH_ORIGINAL
     - /bin/cp -R quizzes/* $DEPLOYPATH_ORIGINAL/quizzes
+    - /bin/cp Contact.php $DEPLOYPATH_ORIGINAL
 
