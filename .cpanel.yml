@@ -19,7 +19,7 @@ deployment:
     - /bin/cp privacy.php $DEPLOYPATH_ORIGINAL
     - /bin/cp apps.php $DEPLOYPATH_ORIGINAL
     - /bin/cp why-does-astronaut-move-in-slow-motion-on-the-moon.php $DEPLOYPATH_ORIGINAL
-    - /bin/cp spm_physics_set_1.php $DEPLOYPATH_ORIGINAL
+    - /bin/cp spm_physics_set1.php $DEPLOYPATH_ORIGINAL
     - /bin/cp Quiz.php $DEPLOYPATH_ORIGINAL
     - /bin/cp -R quizzes/* $DEPLOYPATH_ORIGINAL/quizzes
-    
+
