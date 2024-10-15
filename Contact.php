@@ -77,7 +77,6 @@ function display_contact_form() {
                             <p> Email: <a class="link" href="mailto:admin@phymath.com">admin@phymath.com</a></p>
                             <p>Facebook: <a class="link" href="https://www.facebook.com/phymathpage">https://www.facebook.com/phymathpage</a></p>
                             <p>Twitter: <a class="link" href="https://twitter.com/PhyMath_Admin">https://twitter.com/PhyMath_Admin</a></p>
-                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfuZi0B-h09BrLowx2KLKLGaOgNb9WEiciPK0L4yFJP8uVVA/viewform?embedded=true" width="640" height="781" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
                             <!-- Contact Form -->
                             <?php if (isset($_SESSION['form_error'])): ?>
