@@ -60,6 +60,9 @@
             <div class="item active">
               <a href= "https://phymath.com/apps.php"><img  src="https://www.phymath.com/assets/img/TopImage/tryout apps.png"></a>
             </div>
+            <div class="item">
+              <a href= "https://phymath.com/Quiz.php"><img  src="https://www.phymath.com/assets/img/TopImage/quizzes.png"></a>
+            </div>
           </div>
           <!-- End Carousel Images -->
           <!-- Carousel Controls -->
