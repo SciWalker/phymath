@@ -45,25 +45,7 @@
           <div class="col-md-9">
             <!-- Main Content -->
 
-            <h1>List of Physics Quizzes</h1>
-            <p><a class="link" href="spm_physics_set1.php">SPM Physics Quiz Set 1</a></p>
-            <h1>List of Maths Quizzes</h1>
-            <p><a class="link" href="quizzes/spm_mathematics_set1.php">SPM Maths Quiz Set 1</a></p>
-
-            <h2>Coming Soon: Interactive Quiz Generator</h2>
-            <div class="well">
-                <p>We're excited to announce that we're developing an interactive quiz generator to enhance your learning experience!</p>
-                <p><strong>Expected Launch:</strong> Q4 2024</p>
-                <p>Our new quiz generator will allow you to:</p>
-                <ul>
-                    <li>Create custom quizzes tailored to your study needs</li>
-                    <li>Choose from a wide range of subjects and difficulty levels</li>
-                    <li>Track your progress and identify areas for improvement</li>
-                    <li>Share quizzes with friends and classmates</li>
-                </ul>
-                <h3>Join our waitlist</h3>
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSea7OABQx3ZDG1wvdh4RrHIJHrIXRhnBY71naes-RQj7twP5g/viewform?embedded=true" width="640" height="788" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-            </div>
+<?php include("/home/sciwalker/public_html/quiz html/spm physics paper(set 1).html");?>
             <!-- End Main Content -->
           </div>
           <!-- End Main Column -->
