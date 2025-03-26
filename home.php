@@ -27,9 +27,10 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
 
-  <!-- Include oidc-client-ts library -->
-  <script src="https://unpkg.com/oidc-client-ts@2.0.0/dist/oidc-client-ts.min.js"></script>
-  <!-- Include auth.js for Cognito configuration -->
+  <!-- Include oidc-client-ts library via CDN (using v2.2.0 which is more stable) -->
+  <script src="https://cdn.jsdelivr.net/npm/oidc-client-ts@2.2.0/dist/browser/oidc-client-ts.min.js"></script>
+  
+  <!-- Include auth.js after the library is loaded -->
   <script src="auth.js"></script>
 </head>
 <body>
@@ -208,14 +209,36 @@
 
   <!-- Sign-In Script -->
   <script>
-    document.getElementById("signIn").addEventListener("click", function() {
-      if (typeof userManager !== 'undefined') {
-        userManager.signinRedirect().catch(function(error) {
-          console.error("Sign-in error:", error);
-        });
-      } else {
-        console.error("User manager not initialized");
-        alert("Authentication system is not properly loaded. Please refresh the page and try again.");
+    // Wait for DOM content to load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check if the library is loaded by looking at window.Oidc
+      console.log('DOM Content loaded, checking Oidc availability');
+      console.log('Oidc available in window:', typeof window.Oidc !== 'undefined');
+      
+      // Set up sign-in button
+      document.getElementById("signIn").addEventListener("click", function() {
+        console.log('Sign-in button clicked');
+        if (typeof userManager !== 'undefined') {
+          console.log('UserManager is defined, proceeding with sign-in redirect');
+          userManager.signinRedirect().catch(function(error) {
+            console.error("Sign-in error:", error);
+          });
+        } else {
+          console.error("User manager not initialized");
+          alert("Authentication system is not properly loaded. Please refresh the page and try again.");
+        }
+      });
+
+      // Handle the callback if applicable
+      if (window.location.href.indexOf('code=') !== -1) {
+        console.log('Authorization code detected, handling callback');
+        if (typeof userManager !== 'undefined') {
+          userManager.signinCallback().then(function(user) {
+            console.log('Successfully signed in:', user);
+          }).catch(function(error) {
+            console.error('Error during callback processing:', error);
+          });
+        }
       }
     });
   </script>
