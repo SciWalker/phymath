@@ -31,34 +31,22 @@
   <script src="https://unpkg.com/oidc-client-ts@2.0.0/dist/oidc-client-ts.min.js"></script>
   <!-- Include auth.js for Cognito configuration -->
   <script src="auth.js"></script>
-
-  <!-- CSS to hide elements -->
-  <style>
-    .hidden { display: none; }
-  </style>
 </head>
 <body>
   <?php include("header_2018.html"); ?>
   <!-- === END HEADER === -->
 
-  <!-- Authentication Container -->
-  <div id="auth-container" class="container">
+  <!-- Sign-Up/Sign-In Button -->
+  <div class="container">
     <div class="row margin-top-30">
       <div class="col-md-12 text-center">
-        <h2>Please sign in to access the content</h2>
-        <button id="signIn">Sign In</button>
+        <button id="signIn">Sign In / Sign Up</button>
       </div>
     </div>
   </div>
 
   <!-- === BEGIN CONTENT === -->
-  <div id="content" class="container hidden">
-    <div class="row margin-top-30">
-      <div class="col-md-12 text-right">
-        <button id="signOut">Sign Out</button>
-      </div>
-    </div>
-    <p>Welcome, <span id="user-email"></span>!</p>
+  <div id="content" class="container">
     <div class="row margin-top-30">
       <div class="col-md-12 text-center">
         <h2 class="text-center">PhyMath: Physics and Mathematics Resources</h2>
@@ -100,6 +88,7 @@
       <!-- End Carousel Slideshow -->
     </div>
 
+    <!-- Rest of the content remains unchanged -->
     <div class="row margin-vert-30">
       <!-- Main Text -->
       <div class="col-md-9">
@@ -202,61 +191,26 @@
 
   <!-- === BEGIN FOOTER === -->
   <?php include("footer_2018.html"); ?>
-  <!-- End Footer Menu -->
 
   <!-- JS -->
   <script type="text/javascript" src="assets/js/jquery.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="assets/js/scripts.js"></script>
-  <!-- Isotope - Portfolio Sorting -->
   <script type="text/javascript" src="assets/js/jquery.isotope.js"></script>
-  <!-- Mobile Menu - Slicknav -->
   <script type="text/javascript" src="assets/js/jquery.slicknav.js"></script>
-  <!-- Animate on Scroll -->
   <script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
-  <!-- Slimbox2 -->
   <script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
-  <!-- Modernizr -->
   <script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
-  <!-- Perfect Tense Script -->
-  <script src="https://cdn.jsdelivr.net/npm/perfecttense-editor@latest/dist/pte.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/perfecttense-editor@latest/dist/pte/umd.js"></script>
   <script>
     PerfectTenseEditor({ clientId: "62cad3096f6b7d3cf42b3583" });
   </script>
 
-  <!-- Authentication Script -->
+  <!-- Sign-In Script -->
   <script>
     document.getElementById("signIn").addEventListener("click", function() {
       userManager.signinRedirect();
     });
-
-    document.getElementById("signOut").addEventListener("click", function() {
-      signOutRedirect();
-    });
-
-    function showContent(user) {
-      document.getElementById("auth-container").classList.add("hidden");
-      document.getElementById("content").classList.remove("hidden");
-      document.getElementById("user-email").textContent = user.profile.email;
-    }
-
-    if (window.location.search.includes("code=")) {
-      userManager.signinRedirectCallback().then(function(user) {
-        window.history.replaceState({}, document.title, window.location.pathname);
-        showContent(user);
-      }).catch(function(error) {
-        console.error("Sign-in callback error:", error);
-      });
-    } else {
-      userManager.getUser().then(function(user) {
-        if (user) {
-          showContent(user);
-        } else {
-          document.getElementById("auth-container").classList.remove("hidden");
-          document.getElementById("content").classList.add("hidden");
-        }
-      });
-    }
   </script>
 </body>
 </html>
