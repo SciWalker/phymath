@@ -7,7 +7,7 @@ const cognitoAuthConfig = {
     client_id: "12ap4v63fqjdm1ld22nj79vhpe",
     redirect_uri: "https://www.phymath.com",
     response_type: "code",
-    scope: "email openid profile"
+    scope: "email openid phone"
 };
 
 // Create a UserManager instance
