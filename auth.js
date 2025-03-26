@@ -5,7 +5,7 @@ console.log('Auth.js is loaded');
 const cognitoAuthConfig = {
     authority: "https://cognito-idp.ap-southeast-1.amazonaws.com/ap-southeast-1_imx2kjxuI",
     client_id: "3u0mj5hp80bou7ujghs7q9gffe",
-    redirect_uri: "https://www.phymath.com", // Keep your current redirect URI
+    redirect_uri: "https://d84l1y8p4kdic.cloudfront.net", // Using the exact redirect URI from your Cognito config
     response_type: "code",
     scope: "email openid phone"
 };
@@ -27,7 +27,7 @@ if (typeof Oidc !== 'undefined') {
 // Sign out redirect function
 function signOutRedirect() {
     const clientId = "3u0mj5hp80bou7ujghs7q9gffe";
-    const logoutUri = "https://www.phymath.com";
+    const logoutUri = "https://d84l1y8p4kdic.cloudfront.net"; // Also update logout URI to match
     const cognitoDomain = "https://ap-southeast-1imx2kjxui.auth.ap-southeast-1.amazoncognito.com";
     window.location.href = `${cognitoDomain}/logout?client_id=${clientId}&logout_uri=${encodeURIComponent(logoutUri)}`;
 }
