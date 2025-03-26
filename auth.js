@@ -6,10 +6,10 @@ const cognitoAuthConfig = {
     scope: "email openid profile"
 };
 
-// Make sure the oidc object is available before creating userManager
+// Make sure the OIDC library is available before creating userManager
 let userManager;
-if (typeof oidc !== 'undefined') {
-    userManager = new oidc.UserManager(cognitoAuthConfig);
+if (typeof Oidc !== 'undefined') {
+    userManager = new Oidc.UserManager(cognitoAuthConfig);
 } else {
     console.error("OIDC library not loaded properly");
 }
