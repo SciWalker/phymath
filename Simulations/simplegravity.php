@@ -124,6 +124,8 @@
           if (this.y > rockbottom) {
               this.y = rockbottom;
               this.gravitySpeed = 0;
+              // End the game when the object touches the ground
+              endGame();
           }
       }
       this.crashWith = function(otherobj) {
@@ -153,6 +155,11 @@
       showpos.text="Position = "+myGamePiece.x.toFixed(2)+", "+myGamePiece.y.toFixed(2);
       showpos.update();
       myGamePiece.update();
+    
+      // Add this line to check if the game should end
+      if (myGamePiece.y >= myGameArea.canvas.height - myGamePiece.height) {
+          endGame();
+      }
   }
 
   function everyinterval(n) {

@@ -4,6 +4,7 @@ deployment:
     - export DEPLOYPATH=/home/sciwalker/public_html/tech
     - /bin/cp -R tech/qr_code $DEPLOYPATH
     - export DEPLOYPATH_ORIGINAL=/home/sciwalker/public_html/
+    - /bin/cp auth.js $DEPLOYPATH_ORIGINAL
     - /bin/cp header_2018.html $DEPLOYPATH_ORIGINAL
     - /bin/cp Simulations.php $DEPLOYPATH_ORIGINAL
     - /bin/cp -R "Physics Articles"/* "$DEPLOYPATH_ORIGINAL/Physics Articles"

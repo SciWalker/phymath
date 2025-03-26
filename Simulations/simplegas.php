@@ -2,6 +2,7 @@
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<script src="https://unpkg.com/oidc-client-ts@2.0.0/dist/oidc-client-ts.min.js"></script>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <!-- Title -->
