@@ -27,11 +27,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
 
-  <!-- Include oidc-client-ts library via CDN (using v2.2.0 which is more stable) -->
-  <script src="https://cdn.jsdelivr.net/npm/oidc-client-ts@2.2.0/dist/browser/oidc-client-ts.min.js"></script>
-  
-  <!-- Include auth.js after the library is loaded -->
-  <script src="auth.js"></script>
+  <!-- Using original oidc-client instead of oidc-client-ts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.11.5/oidc-client.min.js"></script>
 </head>
 <body>
   <?php include("header_2018.html"); ?>
@@ -207,19 +204,43 @@
     PerfectTenseEditor({ clientId: "62cad3096f6b7d3cf42b3583" });
   </script>
 
-  <!-- Sign-In Script -->
+  <!-- Cognito Auth Config Script (Inline instead of external file) -->
   <script>
-    // Wait for DOM content to load
+    console.log('Script loaded, checking Oidc availability');
+    console.log('Oidc global:', typeof Oidc !== 'undefined' ? 'available' : 'not available');
+    
+    // Define Auth configuration
+    const cognitoAuthConfig = {
+      authority: "https://cognito-idp.ap-southeast-1.amazonaws.com/ap-southeast-1_g2114GZQr",
+      client_id: "12ap4v63fqjdm1ld22nj79vhpe",
+      redirect_uri: "https://www.phymath.com",
+      response_type: "code",
+      scope: "email openid profile"
+    };
+
+    // Create UserManager instance
+    let userManager;
+    if (typeof Oidc !== 'undefined') {
+      userManager = new Oidc.UserManager(cognitoAuthConfig);
+      console.log('UserManager initialized successfully');
+    } else {
+      console.error("OIDC library not loaded properly");
+    }
+    
+    // Function to handle sign-out redirection
+    function signOutRedirect() {
+      const clientId = "12ap4v63fqjdm1ld22nj79vhpe";
+      const logoutUri = "https://www.phymath.com";
+      const cognitoDomain = "https://phymath.auth.ap-southeast-1.amazoncognito.com";
+      window.location.href = `${cognitoDomain}/logout?client_id=${clientId}&logout_uri=${encodeURIComponent(logoutUri)}`;
+    }
+
+    // Set up sign-in button
     document.addEventListener('DOMContentLoaded', function() {
-      // Check if the library is loaded by looking at window.Oidc
-      console.log('DOM Content loaded, checking Oidc availability');
-      console.log('Oidc available in window:', typeof window.Oidc !== 'undefined');
-      
-      // Set up sign-in button
       document.getElementById("signIn").addEventListener("click", function() {
         console.log('Sign-in button clicked');
         if (typeof userManager !== 'undefined') {
-          console.log('UserManager is defined, proceeding with sign-in redirect');
+          console.log('Initiating sign-in redirect...');
           userManager.signinRedirect().catch(function(error) {
             console.error("Sign-in error:", error);
           });
@@ -233,7 +254,7 @@
       if (window.location.href.indexOf('code=') !== -1) {
         console.log('Authorization code detected, handling callback');
         if (typeof userManager !== 'undefined') {
-          userManager.signinCallback().then(function(user) {
+          userManager.signinRedirectCallback().then(function(user) {
             console.log('Successfully signed in:', user);
           }).catch(function(error) {
             console.error('Error during callback processing:', error);
