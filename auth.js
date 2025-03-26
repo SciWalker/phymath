@@ -13,13 +13,16 @@ const cognitoAuthConfig = {
 // Create a UserManager instance
 // When loaded via script tag, the library creates a global 'Oidc' object
 let userManager;
-if (typeof window !== 'undefined') {
-    if (window.Oidc) {
-        console.log('Oidc global is available from window.Oidc');
-        userManager = new window.Oidc.UserManager(cognitoAuthConfig);
-    } else {
-        console.error('Oidc global not found in window');
+if (typeof Oidc !== 'undefined') {
+    console.log('Oidc global is available');
+    try {
+        userManager = new Oidc.UserManager(cognitoAuthConfig);
+        console.log('UserManager created successfully');
+    } catch (error) {
+        console.error('Error creating UserManager:', error);
     }
+} else {
+    console.error("OIDC library not loaded properly");
 }
 
 // Function to handle sign-out redirection

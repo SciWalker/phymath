@@ -27,8 +27,9 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
 
-  <!-- Using original oidc-client instead of oidc-client-ts -->
+  <!-- Include oidc-client library and auth.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.11.5/oidc-client.min.js"></script>
+  <script src="auth.js"></script>
 </head>
 <body>
   <?php include("header_2018.html"); ?>
@@ -204,39 +205,11 @@
     PerfectTenseEditor({ clientId: "62cad3096f6b7d3cf42b3583" });
   </script>
 
-  <!-- Cognito Auth Config Script (Inline instead of external file) -->
+  <!-- Sign-In Script -->
   <script>
-    console.log('Script loaded, checking Oidc availability');
-    console.log('Oidc global:', typeof Oidc !== 'undefined' ? 'available' : 'not available');
-    
-    // Define Auth configuration
-    const cognitoAuthConfig = {
-      authority: "https://cognito-idp.ap-southeast-1.amazonaws.com/ap-southeast-1_g2114GZQr",
-      client_id: "12ap4v63fqjdm1ld22nj79vhpe",
-      redirect_uri: "https://www.phymath.com",
-      response_type: "code",
-      scope: "email openid phone"
-    };
-
-    // Create UserManager instance
-    let userManager;
-    if (typeof Oidc !== 'undefined') {
-      userManager = new Oidc.UserManager(cognitoAuthConfig);
-      console.log('UserManager initialized successfully');
-    } else {
-      console.error("OIDC library not loaded properly");
-    }
-    
-    // Function to handle sign-out redirection
-    function signOutRedirect() {
-      const clientId = "12ap4v63fqjdm1ld22nj79vhpe";
-      const logoutUri = "https://www.phymath.com";
-      const cognitoDomain = "https://phymath.auth.ap-southeast-1.amazoncognito.com";
-      window.location.href = `${cognitoDomain}/logout?client_id=${clientId}&logout_uri=${encodeURIComponent(logoutUri)}`;
-    }
-
-    // Set up sign-in button
+    // Wait for DOM content to load
     document.addEventListener('DOMContentLoaded', function() {
+      // Set up sign-in button
       document.getElementById("signIn").addEventListener("click", function() {
         console.log('Sign-in button clicked');
         if (typeof userManager !== 'undefined') {
