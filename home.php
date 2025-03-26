@@ -209,7 +209,14 @@
   <!-- Sign-In Script -->
   <script>
     document.getElementById("signIn").addEventListener("click", function() {
-      userManager.signinRedirect();
+      if (typeof userManager !== 'undefined') {
+        userManager.signinRedirect().catch(function(error) {
+          console.error("Sign-in error:", error);
+        });
+      } else {
+        console.error("User manager not initialized");
+        alert("Authentication system is not properly loaded. Please refresh the page and try again.");
+      }
     });
   </script>
 </body>
