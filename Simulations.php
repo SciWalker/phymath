@@ -7,7 +7,20 @@
   <!-- Title -->
   <title>List of Simulations</title>
   <!-- Meta -->
-  
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <div id="paywall-container" class="hidden" style="text-align: center; margin-top: 20px;">
+  <h2>Subscribe to Access</h2>
+  <button onclick="subscribe()">Subscribe Now ($5/month)</button>
+</div>
+
+
+  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<stripe-pricing-table pricing-table-id="prctbl_1R7GxGE6woLWOq8PQvE9H1IQ"
+publishable-key="pk_live_51LOHCQE6woLWOq8PNwhvnvh5VknLnow1ybGwRiWBXE4i4lnl2QC01GV4w5N91JITwEuzvI0MYCvSBLUjqXVSdP1s00XDl0jRHd">
+</stripe-pricing-table>
+
+
   <meta name="description" content="List of Simulations">
   <meta name="author" content="Elijah Wong Wen Wei">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
