@@ -68,17 +68,17 @@
                     </li>
                     <!-- Buy me a coffee button -->
                     <li>
-                        <div id="bmc-button-container" style="display: inline-block; vertical-align: middle;">
+                        <div id="bmc-button-container" style="display: inline-block; vertical-align: middle; transform: scale(0.7); transform-origin: right center;">
                             <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="elijahwong" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
                         </div>
                     </li>
                     <!-- Authentication buttons -->
                     <li style="margin-left: 10px;">
                         <div style="display: inline-block; vertical-align: middle;">
-                            <button id="signUp" class="btn" style="background-color: #000; color: white; border-radius: 25px; padding: 8px 20px; font-weight: 500; border: none; margin-right: 5px;">
+                            <button id="signUp" class="btn" style="background-color: #000; color: white; border-radius: 25px; padding: 6px 15px; font-weight: 500; border: none; margin-right: 5px; font-size: 14px;">
                                 <i class="fa fa-user" style="margin-right: 5px;"></i> Sign up
                             </button>
-                            <button id="signIn" class="btn" style="background-color: white; color: #000; border-radius: 25px; padding: 8px 20px; font-weight: 500; border: 1px solid #ccc;">
+                            <button id="signIn" class="btn" style="background-color: white; color: #000; border-radius: 25px; padding: 6px 15px; font-weight: 500; border: 1px solid #ccc; font-size: 14px;">
                                 Sign in
                             </button>
                         </div>
@@ -92,6 +92,37 @@
 </div>
 
 <!-- === END HEADER === -->
+
+<!-- Add responsive styles to ensure buttons remain visible -->
+<style>
+    @media (max-width: 1200px) {
+        #hornav ul.nav > li > a, 
+        #hornav ul.nav > li > span {
+            padding: 10px 8px;
+            font-size: 14px;
+        }
+        
+        /* Make sure auth buttons stay visible on smaller screens */
+        #hornav .btn {
+            padding: 5px 10px !important;
+            font-size: 12px !important;
+        }
+        
+        /* Keep the BMC button smaller */
+        #bmc-button-container {
+            transform: scale(0.6) !important;
+        }
+    }
+    
+    /* Always show auth buttons even in mobile view */
+    @media (max-width: 991px) {
+        #hornav .auth-buttons {
+            display: block !important;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+</style>
 
 <!-- Authentication Script -->
 <script>
