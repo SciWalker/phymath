@@ -72,6 +72,17 @@
                             <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="elijahwong" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
                         </div>
                     </li>
+                    <!-- Authentication buttons -->
+                    <li style="margin-left: 10px;">
+                        <div style="display: inline-block; vertical-align: middle;">
+                            <button id="signUp" class="btn" style="background-color: #000; color: white; border-radius: 25px; padding: 8px 20px; font-weight: 500; border: none; margin-right: 5px;">
+                                <i class="fa fa-user" style="margin-right: 5px;"></i> Sign up
+                            </button>
+                            <button id="signIn" class="btn" style="background-color: white; color: #000; border-radius: 25px; padding: 8px 20px; font-weight: 500; border: 1px solid #ccc;">
+                                Sign in
+                            </button>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -81,5 +92,43 @@
 </div>
 
 <!-- === END HEADER === -->
+
+<!-- Authentication Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set up sign-in button
+        if (document.getElementById("signIn")) {
+            document.getElementById("signIn").addEventListener("click", function() {
+                console.log('Sign-in button clicked');
+                if (typeof userManager !== 'undefined') {
+                    console.log('Initiating sign-in redirect...');
+                    userManager.signinRedirect({ prompt: 'login' }).catch(function(error) {
+                        console.error("Sign-in error:", error);
+                    });
+                } else {
+                    console.error("User manager not initialized");
+                    alert("Authentication system is not properly loaded. Please refresh the page and try again.");
+                }
+            });
+        }
+
+        // Set up sign-up button
+        if (document.getElementById("signUp")) {
+            document.getElementById("signUp").addEventListener("click", function() {
+                console.log('Sign-up button clicked');
+                if (typeof userManager !== 'undefined') {
+                    console.log('Initiating sign-up redirect...');
+                    // Redirect to the sign-up page by adding prompt=signup
+                    userManager.signinRedirect({ prompt: 'signup' }).catch(function(error) {
+                        console.error("Sign-up error:", error);
+                    });
+                } else {
+                    console.error("User manager not initialized");
+                    alert("Authentication system is not properly loaded. Please refresh the page and try again.");
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>

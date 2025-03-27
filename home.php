@@ -35,20 +35,6 @@
   <?php include("header_2018.html"); ?>
   <!-- === END HEADER === -->
 
-  <!-- Sign-Up/Sign-In Buttons -->
-  <div class="container">
-    <div class="row margin-top-30">
-      <div class="col-md-12 text-center">
-        <button id="signIn" class="btn btn-primary btn-lg" style="margin-right: 10px;">
-          <i class="fa fa-sign-in"></i> Sign In
-        </button>
-        <button id="signUp" class="btn btn-success btn-lg">
-          <i class="fa fa-user-plus"></i> Sign Up
-        </button>
-      </div>
-    </div>
-  </div>
-
   <!-- === BEGIN CONTENT === -->
   <div id="content" class="container">
     <div class="row margin-top-30">
@@ -214,35 +200,6 @@
   <script>
     // Wait for DOM content to load
     document.addEventListener('DOMContentLoaded', function() {
-      // Set up sign-in button
-      document.getElementById("signIn").addEventListener("click", function() {
-        console.log('Sign-in button clicked');
-        if (typeof userManager !== 'undefined') {
-          console.log('Initiating sign-in redirect...');
-          userManager.signinRedirect({ prompt: 'login' }).catch(function(error) {
-            console.error("Sign-in error:", error);
-          });
-        } else {
-          console.error("User manager not initialized");
-          alert("Authentication system is not properly loaded. Please refresh the page and try again.");
-        }
-      });
-
-      // Set up sign-up button
-      document.getElementById("signUp").addEventListener("click", function() {
-        console.log('Sign-up button clicked');
-        if (typeof userManager !== 'undefined') {
-          console.log('Initiating sign-up redirect...');
-          // Redirect to the sign-up page by adding prompt=signup
-          userManager.signinRedirect({ prompt: 'signup' }).catch(function(error) {
-            console.error("Sign-up error:", error);
-          });
-        } else {
-          console.error("User manager not initialized");
-          alert("Authentication system is not properly loaded. Please refresh the page and try again.");
-        }
-      });
-
       // Handle the callback if applicable
       if (window.location.href.indexOf('code=') !== -1) {
         console.log('Authorization code detected, handling callback');
