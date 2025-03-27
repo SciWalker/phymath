@@ -33,9 +33,9 @@
         <!-- Top Menu -->
         <div class="col-md-12 margin-top-30">
             <div id="hornav" class="pull-right visible-lg">
-                <ul class="nav navbar-nav" style="display: flex; align-items: center;">
+                <ul class="nav navbar-nav" style="display: flex; align-items: center; gap: 15px;">
                     <!-- Main navigation items -->
-                    <li><span>Blogs</span>
+                    <li><span style="font-size: 14px; font-weight: 400;">Blogs</span>
                         <ul>
                             <li><a href="https://phymath.com/List of Physics Articles.php">Physics</a></li>
                             <li><a href="https://phymath.com/Math Articles List.php">Mathematics</a></li>
@@ -45,7 +45,7 @@
 							<li><a href="https://phymath.com/merchandise/educational_puzzles.php">Educational Puzzles</a></li>
                         </ul>
                     </li>
-                    <li><span>Services</span>
+                    <li><span style="font-size: 14px; font-weight: 400;">Services</span>
                         <ul>
                             <li><a href="https://phymath.com/Quiz.php">Quizzes</a></li>
                             <li><a href="https://phymath.com/online_tuition.php">Online Tuition</a></li>
@@ -53,8 +53,13 @@
                             <li><a href="https://phymath.com/apps.php">Applications</a></li>
                         </ul>
                     </li>
-                    <li><a href="https://phymath.com/Simulations.php">Simulations</a></li>
-                    <li><span>Downloads</span>
+                                        <!-- <li><a>Merchandise</a>
+                        <ul>
+                            <li><a href="https://phymath.com/merchandise/educational_puzzles.php">Educational Puzzles</a></li>
+                        </ul>
+                    </li> -->
+                    <li><a href="https://phymath.com/Simulations.php" style="font-size: 14px; font-weight: 400;">Simulations</a></li>
+                    <li><span style="font-size: 14px; font-weight: 400;">Downloads</span>
                         <ul>
                             <li><a href="https://phymath.com/CIE_past_years.php">CIE A Level Physics Past Years</a></li>
                             <li><a href="https://phymath.com/CIE_maths_past_years.php">CIE A Level Maths Past Years</a></li>
@@ -63,19 +68,27 @@
                     </li>
                     <!-- Buy me a coffee button -->
                     <li>
-                        <div id="bmc-button-container" style="display: inline-block; vertical-align: middle; transform: scale(0.7); transform-origin: right center;">
+                        <div id="bmc-button-container" style="display: inline-block; vertical-align: middle; transform: scale(0.6); transform-origin: right center;">
                             <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="elijahwong" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
                         </div>
                     </li>
-                    <!-- Authentication buttons -->
-                    <li style="margin-left: 10px;">
+                    <!-- User account icon -->
+                    <li>
                         <div style="display: inline-block; vertical-align: middle;">
-                            <button id="signUp" class="btn" style="background-color: #000; color: white; border-radius: 25px; padding: 6px 15px; font-weight: 500; border: none; margin-right: 5px; font-size: 14px;">
-                                <i class="fa fa-user" style="margin-right: 5px;"></i> Sign up
+                            <button id="userAccountBtn" class="btn" style="background-color: transparent; color: #000; border: none; padding: 5px;" onclick="toggleAccountOptions()">
+                                <i class="fa fa-user-circle" style="font-size: 20px;"></i>
                             </button>
-                            <button id="signIn" class="btn" style="background-color: white; color: #000; border-radius: 25px; padding: 6px 15px; font-weight: 500; border: 1px solid #ccc; font-size: 14px;">
-                                Sign in
-                            </button>
+                            <!-- Hidden dropdown for account options -->
+                            <div id="accountDropdown" style="display: none; position: absolute; background-color: white; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1000; border-radius: 8px; margin-top: 5px; right: 0;">
+                                <div style="padding: 12px; text-align: center;">
+                                    <button id="signIn" class="btn btn-block" style="margin-bottom: 8px; text-align: left; font-size: 14px;">
+                                        Sign in
+                                    </button>
+                                    <button id="signUp" class="btn btn-block" style="text-align: left; font-size: 14px;">
+                                        Create account
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -90,34 +103,96 @@
 
 <!-- Add responsive styles to ensure buttons remain visible -->
 <style>
+    /* Tesla-like navbar styling */
+    #hornav ul.nav > li > a, 
+    #hornav ul.nav > li > span {
+        padding: 8px 4px;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+    }
+    
+    /* Ensure navigation stays visible and properly spaced */
+    #hornav ul.nav {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 15px;
+    }
+    
+    #hornav ul.nav > li {
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Account dropdown styling */
+    #accountDropdown button {
+        background: transparent;
+        border: none;
+        width: 100%;
+        transition: background-color 0.2s;
+    }
+    
+    #accountDropdown button:hover {
+        background-color: #f5f5f5;
+    }
+    
     @media (max-width: 1200px) {
+        /* Basic styling for reduced navbar size */
         #hornav ul.nav > li > a, 
         #hornav ul.nav > li > span {
-            padding: 10px 8px;
-            font-size: 14px;
-        }
-        
-        /* Make sure auth buttons stay visible on smaller screens */
-        #hornav .btn {
-            padding: 5px 10px !important;
-            font-size: 12px !important;
+            padding: 6px 4px;
+            font-size: 13px;
         }
         
         /* Keep the BMC button smaller */
         #bmc-button-container {
-            transform: scale(0.6) !important;
+            transform: scale(0.5) !important;
         }
     }
     
-    /* Always show auth buttons even in mobile view */
+    /* Mobile optimizations */
     @media (max-width: 991px) {
-        #hornav .auth-buttons {
+        /* Force display of nav items */
+        #hornav {
             display: block !important;
-            text-align: center;
-            margin-top: 10px;
+        }
+        
+        #hornav ul.nav {
+            display: flex !important;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        #hornav ul.nav > li {
+            display: inline-flex !important;
+            align-items: center;
         }
     }
 </style>
+
+<!-- Add JavaScript for account dropdown -->
+<script>
+    function toggleAccountOptions() {
+        var dropdown = document.getElementById("accountDropdown");
+        if (dropdown.style.display === "none" || dropdown.style.display === "") {
+            dropdown.style.display = "block";
+        } else {
+            dropdown.style.display = "none";
+        }
+    }
+    
+    // Close dropdown when clicking outside
+    window.onclick = function(event) {
+        if (!event.target.matches('#userAccountBtn') && !event.target.matches('.fa-user-circle')) {
+            var dropdown = document.getElementById("accountDropdown");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            }
+        }
+    }
+</script>
 
 <!-- Authentication Script -->
 <script>
