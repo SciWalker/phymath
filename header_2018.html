@@ -16,6 +16,8 @@
           enable_page_level_ads: true
      });
 </script>
+<!-- Add Font Awesome 5 for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -75,8 +77,8 @@
                     <!-- User account icon -->
                     <li>
                         <div style="display: inline-block; vertical-align: middle;">
-                            <button id="userAccountBtn" class="btn" style="background-color: transparent; color: #000; border: none; padding: 5px;" onclick="toggleAccountOptions()">
-                                <i class="fa fa-user-circle" style="font-size: 20px;"></i>
+                            <button id="userAccountBtn" class="btn" style="background-color: transparent; border: none; padding: 5px;" onclick="toggleAccountOptions()">
+                                <span class="fas fa-user" style="font-size: 18px;"></span>
                             </button>
                             <!-- Hidden dropdown for account options -->
                             <div id="accountDropdown" style="display: none; position: absolute; background-color: white; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1000; border-radius: 8px; margin-top: 5px; right: 0;">
@@ -185,7 +187,7 @@
     
     // Close dropdown when clicking outside
     window.onclick = function(event) {
-        if (!event.target.matches('#userAccountBtn') && !event.target.matches('.fa-user-circle')) {
+        if (!event.target.matches('#userAccountBtn') && !event.target.matches('.fa-user')) {
             var dropdown = document.getElementById("accountDropdown");
             if (dropdown.style.display === "block") {
                 dropdown.style.display = "none";
