@@ -39,9 +39,9 @@
         <!-- Top Menu -->
         <div class="col-md-12 margin-top-30">
             <div id="hornav" class="pull-right visible-lg">
-                <ul class="nav navbar-nav" style="display: flex; align-items: center; gap: 15px;">
+                <ul class="nav navbar-nav" style="margin: 0; padding: 0; list-style: none;">
                     <!-- Main navigation items -->
-                    <li><span style="font-size: 14px; font-weight: 400;">Blogs</span>
+                    <li style="display: inline-block; position: relative; margin-right: 15px;"><span style="font-size: 14px; font-weight: 400;">Blogs</span>
                         <ul>
                             <li><a href="https://phymath.com/List of Physics Articles.php">Physics</a></li>
                             <li><a href="https://phymath.com/Math Articles List.php">Mathematics</a></li>
@@ -51,7 +51,7 @@
 							<li><a href="https://phymath.com/merchandise/educational_puzzles.php">Educational Puzzles</a></li>
                         </ul>
                     </li>
-                    <li><span style="font-size: 14px; font-weight: 400;">Services</span>
+                    <li style="display: inline-block; position: relative; margin-right: 15px;"><span style="font-size: 14px; font-weight: 400;">Services</span>
                         <ul>
                             <li><a href="https://phymath.com/Quiz.php">Quizzes</a></li>
                             <li><a href="https://phymath.com/online_tuition.php">Online Tuition</a></li>
@@ -59,13 +59,8 @@
                             <li><a href="https://phymath.com/apps.php">Applications</a></li>
                         </ul>
                     </li>
-                                        <!-- <li><a>Merchandise</a>
-                        <ul>
-                            <li><a href="https://phymath.com/merchandise/educational_puzzles.php">Educational Puzzles</a></li>
-                        </ul>
-                    </li> -->
-                    <li><a href="https://phymath.com/Simulations.php" style="font-size: 14px; font-weight: 400;">Simulations</a></li>
-                    <li><span style="font-size: 14px; font-weight: 400;">Downloads</span>
+                    <li style="display: inline-block; position: relative; margin-right: 15px;"><a href="https://phymath.com/Simulations.php" style="font-size: 14px; font-weight: 400;">Simulations</a></li>
+                    <li style="display: inline-block; position: relative; margin-right: 15px;"><span style="font-size: 14px; font-weight: 400;">Downloads</span>
                         <ul>
                             <li><a href="https://phymath.com/CIE_past_years.php">CIE A Level Physics Past Years</a></li>
                             <li><a href="https://phymath.com/CIE_maths_past_years.php">CIE A Level Maths Past Years</a></li>
@@ -73,15 +68,15 @@
                         </ul>
                     </li>
                     <!-- Buy me a coffee button -->
-                    <li>
+                    <li style="display: inline-block; position: relative; margin-right: 15px;">
                         <div id="bmc-button-container" style="display: inline-block; vertical-align: middle; transform: scale(0.6); transform-origin: right center;">
                             <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="elijahwong" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
                         </div>
                     </li>
                     <!-- User account icon -->
-                    <li>
+                    <li style="display: inline-block; position: relative;">
                         <div style="display: inline-block; vertical-align: middle;">
-                            <button id="userAccountBtn" class="btn" style="background-color: #000; color: white; border-radius: 50%; width: 35px; height: 35px; padding: 0; display: flex; align-items: center; justify-content: center; border: none;" onclick="toggleAccountOptions()">
+                            <button id="userAccountBtn" class="btn" style="background-color: #000; color: white; border-radius: 50%; width: 35px; height: 35px; padding: 0; margin: 0; border: none;" onclick="toggleAccountOptions()">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                                     <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
                                 </svg>
@@ -111,42 +106,28 @@
 
 <!-- Add responsive styles to ensure buttons remain visible -->
 <style>
-    /* Base navigation styling with Safari fixes */
-    #hornav {
-        display: block;
+    /* Reset and base styles */
+    #hornav ul.nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
     
-    /* Tesla-like navbar styling with Safari compatibility fixes */
+    #hornav ul.nav > li {
+        display: inline-block;
+        position: relative;
+        margin-right: 15px;
+        vertical-align: middle;
+    }
+    
     #hornav ul.nav > li > a, 
     #hornav ul.nav > li > span {
+        display: inline-block;
         padding: 8px 4px;
         font-size: 14px;
         font-weight: 400;
         letter-spacing: 0.2px;
         white-space: nowrap;
-    }
-    
-    /* Ensure navigation stays visible and properly spaced - with Safari fixes */
-    #hornav ul.nav {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        gap: 15px;
-    }
-    
-    #hornav ul.nav > li {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        float: none;
     }
     
     /* Account dropdown styling */
@@ -161,49 +142,18 @@
         background-color: #f5f5f5;
     }
     
-    @media (max-width: 1200px) {
-        /* Basic styling for reduced navbar size */
-        #hornav ul.nav > li > a, 
-        #hornav ul.nav > li > span {
-            padding: 6px 4px;
-            font-size: 13px;
-        }
-        
-        /* Keep the BMC button smaller */
-        #bmc-button-container {
-            transform: scale(0.5) !important;
-        }
-    }
-    
-    /* Mobile optimizations */
+    /* Mobile responsive fixes */
     @media (max-width: 991px) {
-        /* Force horizontal display for Safari */
         #hornav {
             display: block !important;
             text-align: center;
             width: 100%;
-        }
-        
-        #hornav ul.nav {
-            display: -webkit-inline-box !important;
-            display: -ms-inline-flexbox !important;
-            display: inline-flex !important;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            gap: 10px;
             float: none;
         }
         
-        #hornav ul.nav > li {
-            display: -webkit-inline-box !important;
-            display: -ms-inline-flexbox !important;
-            display: inline-flex !important;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
+        #hornav ul.nav {
+            display: inline-block;
+            text-align: center;
             float: none;
         }
     }
