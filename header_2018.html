@@ -111,26 +111,42 @@
 
 <!-- Add responsive styles to ensure buttons remain visible -->
 <style>
-    /* Tesla-like navbar styling */
+    /* Base navigation styling with Safari fixes */
+    #hornav {
+        display: block;
+    }
+    
+    /* Tesla-like navbar styling with Safari compatibility fixes */
     #hornav ul.nav > li > a, 
     #hornav ul.nav > li > span {
         padding: 8px 4px;
         font-size: 14px;
         font-weight: 400;
         letter-spacing: 0.2px;
+        white-space: nowrap;
     }
     
-    /* Ensure navigation stays visible and properly spaced */
+    /* Ensure navigation stays visible and properly spaced - with Safari fixes */
     #hornav ul.nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
         gap: 15px;
     }
     
     #hornav ul.nav > li {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        float: none;
     }
     
     /* Account dropdown styling */
@@ -161,21 +177,34 @@
     
     /* Mobile optimizations */
     @media (max-width: 991px) {
-        /* Force display of nav items */
+        /* Force horizontal display for Safari */
         #hornav {
             display: block !important;
+            text-align: center;
+            width: 100%;
         }
         
         #hornav ul.nav {
-            display: flex !important;
+            display: -webkit-inline-box !important;
+            display: -ms-inline-flexbox !important;
+            display: inline-flex !important;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
             gap: 10px;
+            float: none;
         }
         
         #hornav ul.nav > li {
+            display: -webkit-inline-box !important;
+            display: -ms-inline-flexbox !important;
             display: inline-flex !important;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+            float: none;
         }
     }
 </style>
